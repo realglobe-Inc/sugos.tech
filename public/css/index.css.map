@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "index.css",
+	"sources": [
+		"../../lib/stylesheets/index.scss",
+		"../../lib/stylesheets/variables/colors.scss"
+	],
+	"sourcesContent": [
+		"@import \"./variables/colors\";\n\n#index-wrap {\n  a:link,\n  a:visited {\n    color: $dominant-color;\n  }\n\n  a:hover {\n    cursor: pointer;\n    text-decoration: underline;\n  }\n}\n",
+		"$dominant-color: #3A8;"
+	],
+	"mappings": "AAEA,AACG,WADQ,CACT,CAAC,AAAA,KAAK;AADR,AAEG,WAFQ,CAET,CAAC,AAAA,QAAQ,CAAC;EACR,KAAK,ECLQ,IAAI,GDMlB;;AAJH,AAMG,WANQ,CAMT,CAAC,AAAA,MAAM,CAAC;EACN,MAAM,EAAE,OAAQ;EAChB,eAAe,EAAE,SAAU,GAC5B",
+	"names": []
+}

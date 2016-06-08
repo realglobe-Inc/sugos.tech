@@ -1,0 +1,13 @@
+@import "./variables/colors";
+
+#index-wrap {
+  a:link,
+  a:visited {
+    color: $dominant-color;
+  }
+
+  a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

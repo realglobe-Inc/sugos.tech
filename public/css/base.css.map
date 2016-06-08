@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "base.css",
+	"sources": [
+		"../../lib/stylesheets/base.scss",
+		"../../lib/stylesheets/variables/colors.scss",
+		"../../lib/stylesheets/components/logo.scss"
+	],
+	"sourcesContent": [
+		"@import \"variables/colors\";\n\nbody {\n  padding: 8px;\n}\n\n@import \"./components/logo\";",
+		"$dominant-color: #3A8;",
+		"@import \"../variables/colors\";\n"
+	],
+	"mappings": "AAEA,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,GAAI,GACd",
+	"names": []
+}
