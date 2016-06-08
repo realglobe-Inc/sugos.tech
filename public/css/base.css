@@ -1,4 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
 body {
   padding: 8px; }
+
+.header .logo {
+  font-size: 24px;
+  padding: 0 4px; }
+
+.header .logo-capital {
+  font-size: 32px;
+  text-shadow: none; }
+
+.header .logo-line {
+  display: inline-block; }
+
+.header .logo-text-inner {
+  display: none; }
+
+.logo-container {
+  text-align: center;
+  background: #f9d611; }
+
+.logo {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-family: 'Cherry Cream Soda', cursive; }
+
+.logo-font {
+  font-family: 'Cherry Cream Soda', cursive; }
+
+.ap-view-body {
+  box-sizing: border-box;
+  min-height: 100%; }
+
+.splash-view .ap-jumbotron {
+  color: #311; }
+
+.splash-view .ap-jumbotron h1, .splash-view .ap-jumbotron-title {
+  text-shadow: none; }
 
 /*# sourceMappingURL=base.css.map */

@@ -1,12 +1,20 @@
 'use strict'
 
 import React, {PropTypes as types} from 'react'
-import {ApPage, ApMain} from 'apeman-react-basic'
+import {ApPage, ApMain, ApViewStack} from 'apeman-react-basic'
 import Header from './fragments/header'
+import SplashView from './views/splash_view'
 
 const IndexComponent = React.createClass({
   getInitialState () {
+    return {}
+  },
+  getDefaultProps () {
     return {
+      stacker: new (ApViewStack.Stacker)({
+        root: SplashView,
+        rootProps: {}
+      })
     }
   },
   componentWillMount () {
@@ -14,11 +22,12 @@ const IndexComponent = React.createClass({
   },
   render () {
     const s = this
+    let {props} = s
     return (
       <ApPage>
         <Header />
         <ApMain>
-          This is the index
+          <ApViewStack stacker={ props.stacker }/>
         </ApMain>
       </ApPage>
     )

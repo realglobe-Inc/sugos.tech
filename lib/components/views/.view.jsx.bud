@@ -1,0 +1,19 @@
+/**
+ * Bud file for views
+ */
+'use strict'
+
+const stringcase = require('stringcase')
+
+module.exports = require('./.views').map((name) => ({
+  force: false,
+  mode: '644',
+  path: `${stringcase.snakecase(name)}_view.jsx`,
+  data: {
+    name
+  }
+}))
+
+if (!module.parent) {
+  require('coz').render(__filename)
+}

@@ -1,1 +1,23 @@
 @import "../variables/colors";
+@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
+
+$large-font-size: 4em;
+$small-font-size: 1.5em;
+
+.logo-container {
+  text-align: center;
+  background: $dominant-color;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-family: 'Cherry Cream Soda', cursive;
+}
+
+.logo-font {
+  font-family: 'Cherry Cream Soda', cursive;
+}
+

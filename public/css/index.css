@@ -1,9 +1,8 @@
 #index-wrap a:link,
 #index-wrap a:visited {
-  color: #3A8; }
+  color: #f9d611; }
 
 #index-wrap a:hover {
-  cursor: pointer;
-  text-decoration: underline; }
+  cursor: pointer; }
 
 /*# sourceMappingURL=index.css.map */

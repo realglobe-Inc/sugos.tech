@@ -9,11 +9,12 @@ import pkg from '../../package.json'
 
 import {ApHtml, ApHead, ApBody, ApFaIconStyle, ApIonIconStyle} from 'apeman-react-basic'
 import {ApThemeStyle} from 'apeman-react-theme'
+import {ApBackgroundStyle} from 'apeman-react-background'
 
 import IndexComponent from '../components/index.component'
+import {DOMINANT} from '../colors.json'
 
 const FAVICON_URL = 'https://raw.githubusercontent.com/apeman-asset-labo/apeman-asset-images/master/dist/favicon/mock-favicon.png'
-const DOMINANT_COLOR = '#38A'
 
 const IndexHtml = React.createClass({
   render () {
@@ -23,11 +24,12 @@ const IndexHtml = React.createClass({
                 title={ pkg.name }
                 version={ pkg.version }
                 icon={ FAVICON_URL }
-                css={ [ '../css/index.css' ] }
+                css={ [ '../css/base.css', '../css/index.css' ] }
                 js={ [ '../js/external.cc.js', '../js/index.js' ] }>
-          <ApThemeStyle dominant={ DOMINANT_COLOR }/>
+          <ApThemeStyle dominant={ DOMINANT }/>
           <ApFaIconStyle />
           <ApIonIconStyle />
+          <ApBackgroundStyle />
         </ApHead>
         <ApBody style={ {padding: 5} }>
           <div id="index-wrap">

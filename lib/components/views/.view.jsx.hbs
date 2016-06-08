@@ -1,0 +1,28 @@
+/**
+ * View for {{name}}
+ * @class {{pascalcase name}}
+ */
+'use strict'
+
+import React, {PropTypes as types} from 'react'
+import {
+  ApView,
+  ApViewHeader, ApViewBody, ApViewFooter
+} from 'apeman-react-basic'
+
+const {{pascalcase name}}View = React.createClass({
+  render () {
+    const s = this
+    return (
+      <ApView className="{{spinalcase name}}-view">
+        <ApViewHeader/>
+        <ApViewBody>
+          This is the {{spinalcase name}} view
+        </ApViewBody>
+      </ApView>
+    )
+  }
+})
+
+module.exports = {{pascalcase name}}View
+
