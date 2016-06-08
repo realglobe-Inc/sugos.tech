@@ -35,9 +35,12 @@ body {
   min-height: 100%; }
 
 .splash-view .ap-jumbotron {
-  color: #311; }
+  color: #331;
+  text-align: center; }
 
 .splash-view .ap-jumbotron h1, .splash-view .ap-jumbotron-title {
-  text-shadow: none; }
+  text-shadow: none;
+  font-size: 72px;
+  line-height: 72px; }
 
 /*# sourceMappingURL=base.css.map */

@@ -1,0 +1,33 @@
+{
+  "_": {
+    "SITE": "Yabee Stream"
+  },
+  "buttons": {
+  },
+  "dropdown": {
+  },
+  "errors": {},
+  "guides": {},
+  "jumbotron": {
+    "SPLASH_MESSAGE": "__your_shiny_splash__",
+    "SPLASH_TITLE": "#{titles.UI_TITLE}"
+  },
+  "labels": {
+  },
+  "links": {},
+  "logo": {
+  },
+  "menu": {},
+  "messages": {
+  },
+  "notices": {},
+  "org": {},
+  "pages": {
+  },
+  "placeholders": {},
+  "sections": {
+  },
+  "titles": {
+  },
+  "toasts": {}
+}

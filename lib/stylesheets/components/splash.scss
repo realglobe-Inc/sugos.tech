@@ -1,10 +1,13 @@
 
-
 .splash-view {
   .ap-jumbotron {
-    color: #311;
+    color: #331;
+    text-align: center;
   }
+  $large-font-size: 72px;
   .ap-jumbotron h1, .ap-jumbotron-title {
     text-shadow: none;
+    font-size: $large-font-size;
+    line-height: $large-font-size;
   }
 }

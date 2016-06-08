@@ -6,9 +6,9 @@
 		"../../lib/stylesheets/variables/colors.scss"
 	],
 	"sourcesContent": [
-		"@import \"./variables/colors\";\n\n#index-wrap {\n  a:link,\n  a:visited {\n    color: $dominant-color;\n  }\n\n  a:hover {\n    cursor: pointer;\n  }\n}\n",
+		"@import \"./variables/colors\";",
 		"$dominant-color: #f9d611;\n\n$sparse-color: #ffe345;\n$dense-color: #ffa500;\n\n"
 	],
-	"mappings": "AAEA,AACG,WADQ,CACT,CAAC,AAAA,KAAK;AADR,AAEG,WAFQ,CAET,CAAC,AAAA,QAAQ,CAAC;EACR,KAAK,ECLQ,OAAO,GDMrB;;AAJH,AAMG,WANQ,CAMT,CAAC,AAAA,MAAM,CAAC;EACN,MAAM,EAAE,OAAQ,GACjB",
+	"mappings": "",
 	"names": []
 }

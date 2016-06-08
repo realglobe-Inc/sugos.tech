@@ -1,0 +1,37 @@
+{
+  "_": {
+  },
+  "buttons": {
+  },
+  "dropdown": {
+  },
+  "errors": {},
+  "guides": {},
+  "jumbotron": {
+    "SPLASH_MESSAGE": "Super Ultra Gorgeous Outstanding Special",
+    "SPLASH_TITLE": "#{titles.UI_TITLE}"
+  },
+
+  "labels": {
+  },
+  "links": {},
+  "logo": {
+    "UI_LOGO": "SUGOS"
+  },
+  "menu": {},
+  "messages": {
+  },
+  "notices": {},
+  "org": {
+  },
+  "pages": {
+    "DOCS_PAGE": "Docs",
+    "DEMO_PAGE": "Demo"
+  },
+  "placeholders": {},
+  "sections": {
+  },
+  "titles": {
+  },
+  "toasts": {}
+}

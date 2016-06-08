@@ -33,6 +33,7 @@
     "apeman-react-basic": "^6.2.1",
     "apeman-react-decorative": "^2.0.4",
     "apeman-react-handy": "^4.0.2",
+    "apeman-react-mixins": "^5.1.0",
     "apeman-react-style": "^4.0.0",
     "apeman-react-theme": "^4.2.1",
     "co": "^4.6.0",
