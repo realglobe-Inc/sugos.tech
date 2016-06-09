@@ -51,7 +51,7 @@ const ShowcaseView = React.createClass({
     }
     return (
       <ApView className="showcase-view">
-        <ApViewHeader/>
+        <ApViewHeader titleText={ l('titles.SHOWCASE_TITLE') }/>
         <ApViewBody>
           <article>
             { [
@@ -64,7 +64,7 @@ const ShowcaseView = React.createClass({
                   translateY: -30
                 },
                 video2: {
-                  src: '../videos/mock-mp4.mp4',
+                  src: '../videos/mock-mp4-2.mp4',
                   translateX: -60,
                   translateY: -40
                 }
@@ -78,7 +78,7 @@ const ShowcaseView = React.createClass({
                   translateY: -60
                 },
                 video2: {
-                  src: '../videos/mock-mp4.mp4',
+                  src: '../videos/mock-mp4-2.mp4',
                   translateX: -30,
                   translateY: 0
                 }
@@ -92,7 +92,7 @@ const ShowcaseView = React.createClass({
                   translateY: -10
                 },
                 video2: {
-                  src: '../videos/mock-mp4.mp4',
+                  src: '../videos/mock-mp4-2.mp4',
                   translateX: -140,
                   translateY: -70
                 }

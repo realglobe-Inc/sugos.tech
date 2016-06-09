@@ -6,7 +6,7 @@
 
 import React, {PropTypes as types} from 'react'
 import CasesComponent from '../components/cases.component'
-import {DOMINANT} from '../colors.json'
+import {DOMINANT} from '../constants/color_constants.json'
 
 import Html from './html'
 

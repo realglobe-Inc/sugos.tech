@@ -11,7 +11,7 @@ import {ApHtml, ApHead, ApBody, ApStyle, ApFaIconStyle, ApIonIconStyle} from 'ap
 import {ApThemeStyle} from 'apeman-react-theme'
 import {ApBackgroundStyle} from 'apeman-react-background'
 import loc from '../../loc'
-import {DOMINANT} from '../colors.json'
+import {DOMINANT} from '../constants/color_constants.json'
 
 const FAVICON_URL = 'https://raw.githubusercontent.com/apeman-asset-labo/apeman-asset-images/master/dist/favicon/mock-favicon.png'
 const { LANG } = process.env

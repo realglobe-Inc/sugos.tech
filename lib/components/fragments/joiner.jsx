@@ -3,7 +3,7 @@
 import React, {PropTypes as types} from 'react'
 import {ApLayoutMixin, ApPureMixin} from 'apeman-react-mixins'
 import classnames from 'classnames'
-import {DOMINANT} from '../../colors.json'
+import {DOMINANT} from '../../constants/color_constants.json'
 
 const Joiner = React.createClass({
   propTypes: {
