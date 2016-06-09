@@ -14,8 +14,10 @@ const DocsHtml = React.createClass({
   render () {
     const s = this
     return (
-      <Html name="docs"
+      <Html js={ ['../js/docs.js'] }
+            css={ ['../css/docs.css'] }
             wrapId="docs-wrap"
+            title="DOCS_TITLE"
             component={ DocsComponent }
       />)
   }

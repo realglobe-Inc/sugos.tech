@@ -22,26 +22,24 @@ if (!locale) {
 
 const Html = React.createClass({
   propTypes: {
-    name: types.string,
+    js: types.arrayOf(types.string),
+    css: types.arrayOf(types.string),
     wrapId: types.string.isRequired,
     component: types.func
   },
+
   render () {
     const s = this
     let { props } = s
-    let title = pkg.name
-    var subTitle = locale.titles[ `${String(props.name).toUpperCase()}_NAME` ]
-    if (subTitle) {
-      title = [ subTitle, title ].join(' - ')
-    }
+
     return (
       <ApHtml>
         <ApHead chaset="utf-8"
-                title={ title }
+                title={ s.getTitle() }
                 version={ pkg.version }
                 icon={ FAVICON_URL }
-                css={ [ '../css/base.css', '../css/index.css' ] }
-                js={ [ '../js/external.cc.js', `../js/${props.name}.js`] }
+                css={ s.getCss() }
+                js={ s.getJs() }
                 viewport={ { initialScale: 1 } }
                 globals={ { locale } }
         >
@@ -57,6 +55,31 @@ const Html = React.createClass({
         </ApBody>
       </ApHtml>
     )
+  },
+
+  getCss () {
+    const s = this
+    let { props } = s
+    return [ '../css/base.css' ]
+      .concat(props.css || [])
+  },
+
+  getJs () {
+    const s = this
+    let { props } = s
+    return [ '../js/external.cc.js' ]
+      .concat(props.js || [])
+  },
+
+  getTitle () {
+    const s = this
+    let { props } = s
+    return [
+      pkg.name,
+      locale.titles[ props.title ]
+    ]
+      .filter((component) => !!component)
+      .join(' - ')
   }
 })
 

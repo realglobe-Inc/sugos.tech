@@ -14,8 +14,10 @@ const CasesHtml = React.createClass({
   render () {
     const s = this
     return (
-      <Html name="cases"
+      <Html js={ ['../js/cases.js'] }
+            css={ ['../css/cases.css'] }
             wrapId="cases-wrap"
+            title="CASES_TITLE"
             component={ CasesComponent }
       />)
   }
