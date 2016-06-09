@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "index.css",
+	"sources": [
+		"../../lib/stylesheets/index.scss",
+		"../../lib/stylesheets/variables/colors.scss"
+	],
+	"sourcesContent": [
+		"@import \"./variables/colors\";",
+		"$dominant-color: #d6b810;\n\n"
+	],
+	"mappings": "",
+	"names": []
+}

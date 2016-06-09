@@ -17,7 +17,7 @@ const GuideView = React.createClass({
       <ApView className="guide-view">
         <ApViewHeader/>
         <ApViewBody>
-          This is the guide view
+          Coming soon!
         </ApViewBody>
       </ApView>
     )

@@ -14,8 +14,8 @@ const IndexHtml = React.createClass({
   render () {
     const s = this
     return (
-      <Html js={ ['../js/index.js'] }
-            css={ ['../css/index.css'] }
+      <Html js={ ['../javascripts/index.js'] }
+            css={ ['../stylesheets/index.css'] }
             wrapId="index-wrap"
             component={ IndexComponent }
       />)

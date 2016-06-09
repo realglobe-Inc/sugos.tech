@@ -11,4 +11,4 @@ const Logo = React.createClass({
   }
 })
 
-module.exports = Logo
+export default  Logo

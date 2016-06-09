@@ -60,14 +60,14 @@ const Html = React.createClass({
   getCss () {
     const s = this
     let { props } = s
-    return [ '../css/base.css' ]
+    return [ '../stylesheets/base.css' ]
       .concat(props.css || [])
   },
 
   getJs () {
     const s = this
     let { props } = s
-    return [ '../js/external.cc.js' ]
+    return [ '../javascripts/external.cc.js' ]
       .concat(props.js || [])
   },
 
@@ -75,8 +75,8 @@ const Html = React.createClass({
     const s = this
     let { props } = s
     return [
-      pkg.name,
-      locale.titles[ props.title ]
+      locale.titles[ props.title ],
+      locale.titles[ 'UI_TITLE' ]
     ]
       .filter((component) => !!component)
       .join(' - ')

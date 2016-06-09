@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
+body {
+  padding: 8px; }
+
+.header .logo {
+  font-size: 24px;
+  padding: 0 4px; }
+
+.header .logo-capital {
+  font-size: 32px;
+  text-shadow: none; }
+
+.header .logo-line {
+  display: inline-block; }
+
+.header .logo-text-inner {
+  display: none; }
+
+.logo-container {
+  text-align: center;
+  background: #d6b810; }
+
+.logo {
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  font-family: 'Cherry Cream Soda', cursive; }
+
+.logo-font {
+  font-family: 'Cherry Cream Soda', cursive; }
+
+body .ap-view-stack {
+  top: 78px; }
+
+.ap-view-body {
+  box-sizing: border-box;
+  min-height: 100%; }
+
+@media (min-width: 768px) {
+  body .ap-view-stack {
+    top: 44px; } }
+
+.splash-view .ap-jumbotron {
+  color: #331;
+  text-align: center; }
+
+.splash-view .ap-jumbotron h1, .splash-view .ap-jumbotron-title {
+  text-shadow: none;
+  font-size: 72px;
+  line-height: 72px; }
+
+.splash-view .ap-view-body {
+  padding-top: 0; }
+
+.showcase-view .showcase-section {
+  margin-top: 16px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #F0F0F0; }
+  .showcase-view .showcase-section .ap-section-header {
+    border-bottom: 1px solid #F0F0F0; }
+  .showcase-view .showcase-section .ap-section-body {
+    padding: 4px;
+    display: flex;
+    flex-wrap: wrap; }
+
+.showcase-view .showcase-video {
+  display: block;
+  width: 148px;
+  height: 148px;
+  border: 4px solid #d6b810;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33) inset;
+  background: #FAFAFA;
+  overflow: hidden;
+  position: relative; }
+  .showcase-view .showcase-video .video-overlay {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none; }
+
+.showcase-view .showcase-text-container {
+  width: 100%;
+  box-sizing: border-box; }
+
+.showcase-view .showcase-video-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; }
+
+.showcase-view .showcase-joiner {
+  flex: 4;
+  overflow: hidden; }
+
+@media (min-width: 768px) {
+  .showcase-view .showcase-text-container {
+    width: 50%; }
+  .showcase-view .showcase-video-container {
+    width: 50%; }
+  .showcase-view .showcase-section .ap-section-body {
+    flex-wrap: nowrap; }
+  .showcase-view .showcase-section:nth-child(even) .ap-section-body {
+    text-align: right;
+    flex-direction: row-reverse; } }
+
+.joiner svg {
+  display: block;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=base.css.map */

@@ -14,8 +14,8 @@ const apeCompiling = require('ape-compiling')
 const co = require('co')
 const fs = require('fs')
 
-let dest = 'public/js/external.js'
-let destCC = 'public/js/external.cc.js'
+let dest = 'public/javascripts/external.js'
+let destCC = 'public/javascripts/external.cc.js'
 
 apeTasking.runTasks('postinstall', [
   () => co(function * () {

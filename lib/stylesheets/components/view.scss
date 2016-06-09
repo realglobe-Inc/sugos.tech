@@ -4,17 +4,15 @@ body .ap-view-stack {
   top: $header-height + 34px;
 }
 
-@media (min-width: $small-media-width) {
-  body {
-
-    .ap-view-stack {
-      top: $header-height;
-    }
-  }
-}
-
 .ap-view-body {
   box-sizing: border-box;
   min-height: 100%;
 }
 
+@media (min-width: $small-media-width) {
+  body {
+    .ap-view-stack {
+      top: $header-height;
+    }
+  }
+}

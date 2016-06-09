@@ -19,4 +19,4 @@ const Snippet = React.createClass({
   }
 })
 
-module.exports = Snippet
+export default  Snippet

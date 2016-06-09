@@ -44,8 +44,9 @@
     ]
   },
   "titles": {
-    "CASES_TITLE": "Cases",
-    "DOCS_TITLE": "Docs"
+    "UI_TITLE": "SUGOS",
+    "CASES_PAGE_TITLE": "Cases",
+    "DOCS_PAGE_TITLE": "Docs"
   },
   "toasts": {}
 }

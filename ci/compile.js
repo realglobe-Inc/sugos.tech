@@ -17,6 +17,8 @@ const apeCompiling = require('ape-compiling')
 const React = require('react')
 const ReactDOM = require('react-dom/server')
 
+const publicDir = 'public'
+
 apeTasking.runTasks('compile', [
   () => apeCompiling.compileReactJsx('**/*.jsx', {
     cwd: 'lib',
@@ -29,7 +31,7 @@ apeTasking.runTasks('compile', [
     for (let filename of filenames) {
       yield apeCompiling.browserifyJs(
         path.join('lib/browser', filename),
-        path.join('public/js', filename.replace(/\.browser\.js$/, '.js')),
+        path.join(`${publicDir}/javascripts`, filename.replace(/\.browser\.js$/, '.js')),
         {
           external: require('./config/external.config.json'),
           debug: true
@@ -43,7 +45,7 @@ apeTasking.runTasks('compile', [
     })
     for (let filename of filenames) {
       let lib = path.join('lib/stylesheets', filename)
-      let dest = path.join('public/css', filename.replace(/\.scss$/, '.css'))
+      let dest = path.join(`${publicDir}/stylesheets`, filename.replace(/\.scss$/, '.css'))
       yield apeCompiling.compileScss(lib, dest)
     }
   }),
@@ -53,7 +55,7 @@ apeTasking.runTasks('compile', [
     })
     yield coz.render(
       filenames.map((filename) => ({
-        path: path.resolve('public/html', filename.replace(/\.html\.js$/, '.html')),
+        path: path.resolve(`${publicDir}/html`, filename.replace(/\.html\.js$/, '.html')),
         mkdirp: true,
         force: true,
         tmpl: (data) => {
