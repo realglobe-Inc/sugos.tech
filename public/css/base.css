@@ -18,7 +18,7 @@ body {
 
 .logo-container {
   text-align: center;
-  background: #f9d611; }
+  background: #d6b810; }
 
 .logo {
   margin: 0;
@@ -29,6 +29,13 @@ body {
 
 .logo-font {
   font-family: 'Cherry Cream Soda', cursive; }
+
+body .ap-view-stack {
+  top: 78px; }
+
+@media (min-width: 768px) {
+  body .ap-view-stack {
+    top: 44px; } }
 
 .ap-view-body {
   box-sizing: border-box;
@@ -42,5 +49,8 @@ body {
   text-shadow: none;
   font-size: 72px;
   line-height: 72px; }
+
+.splash-view .ap-view-body {
+  padding-top: 0; }
 
 /*# sourceMappingURL=base.css.map */

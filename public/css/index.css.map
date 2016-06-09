@@ -7,7 +7,7 @@
 	],
 	"sourcesContent": [
 		"@import \"./variables/colors\";",
-		"$dominant-color: #f9d611;\n\n$sparse-color: #ffe345;\n$dense-color: #ffa500;\n\n"
+		"$dominant-color: #d6b810;\n\n"
 	],
 	"mappings": "",
 	"names": []

@@ -11,7 +11,8 @@
   },
   "repository": "realglobe-Inc/sugos.tech",
   "keywords": [
-    "apeman"
+    "apeman",
+    "site"
   ],
   "author": {
     "email": "okunishitaka.com@gmail.com",
@@ -39,6 +40,7 @@
     "co": "^4.6.0",
     "execcli": "^4.0.5",
     "http-server": "^0.9.0",
+    "sg-react-components": "^1.2.5",
     "stringcase": "^2.0.1"
   },
   "devDependencies": {
@@ -64,5 +66,8 @@
   "engines": {
     "node": ">=6",
     "npm": ">=3"
+  },
+  "publishConfig": {
+    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
   }
 }

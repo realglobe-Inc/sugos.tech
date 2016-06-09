@@ -43,7 +43,7 @@ const DocsComponent = React.createClass({
     let l = s.getLocale()
     return (
       <ApPage>
-        <Header selected="DOCS"/>
+        <Header tab="DOCS"/>
         <ApMain>
           <ApViewStack stacker={ props.stacker }/>
         </ApMain>

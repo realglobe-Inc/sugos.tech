@@ -16,7 +16,6 @@ const SplashView = React.createClass({
     const s = this
     return (
       <ApView className="splash-view">
-        <ApViewHeader/>
         <ApViewBody>
           <ApJumbotron className="jumbotron"
                        imgSrc="../images/jumbotron.jpg">

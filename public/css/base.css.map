@@ -7,16 +7,20 @@
 		"../../lib/stylesheets/components/header.scss",
 		"../../lib/stylesheets/components/logo.scss",
 		"../../lib/stylesheets/components/view.scss",
-		"../../lib/stylesheets/components/splash.scss"
+		"../../lib/stylesheets/variables/sizes.scss",
+		"../../lib/stylesheets/components/splash.scss",
+		"../../lib/stylesheets/components/showcase.scss"
 	],
 	"sourcesContent": [
-		"@import \"variables/colors\";\n\nbody {\n  padding: 8px;\n}\n\n@import \"./components/header\";\n@import \"./components/logo\";\n@import \"./components/view\";\n@import \"./components/splash\";",
-		"$dominant-color: #f9d611;\n\n$sparse-color: #ffe345;\n$dense-color: #ffa500;\n\n",
+		"@import \"variables/colors\";\n\nbody {\n  padding: 8px;\n}\n\n\n@import \"./components/header\";\n@import \"./components/logo\";\n@import \"./components/view\";\n@import \"./components/splash\";\n@import \"./components/showcase\";",
+		"$dominant-color: #d6b810;\n\n",
 		".header {\n  .logo {\n    font-size: 24px;\n    padding: 0 4px;\n  }\n  .logo-capital {\n    font-size: 32px;\n    text-shadow: none;\n  }\n  .logo-line {\n    display: inline-block;\n  }\n  .logo-text-inner {\n    display: none;\n  }\n}",
 		"@import \"../variables/colors\";\n@import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);\n\n$large-font-size: 4em;\n$small-font-size: 1.5em;\n\n.logo-container {\n  text-align: center;\n  background: $dominant-color;\n}\n\n.logo {\n  margin: 0;\n  padding: 0;\n  display: inline-flex;\n  flex-wrap: wrap;\n  font-family: 'Cherry Cream Soda', cursive;\n}\n\n.logo-font {\n  font-family: 'Cherry Cream Soda', cursive;\n}\n\n",
-		".ap-view-body {\n  box-sizing: border-box;\n  min-height: 100%;\n}",
-		"\n.splash-view {\n  .ap-jumbotron {\n    color: #331;\n    text-align: center;\n  }\n  $large-font-size: 72px;\n  .ap-jumbotron h1, .ap-jumbotron-title {\n    text-shadow: none;\n    font-size: $large-font-size;\n    line-height: $large-font-size;\n  }\n}"
+		"@import \"../variables/sizes\";\n\nbody .ap-view-stack {\n  top: $header-height + 34px;\n}\n\n@media (min-width: $small-media-width) {\n  body {\n\n    .ap-view-stack {\n      top: $header-height;\n    }\n  }\n}\n\n.ap-view-body {\n  box-sizing: border-box;\n  min-height: 100%;\n}\n\n",
+		"$small-media-width: 768px;\n$header-height: 44px;",
+		"\n.splash-view {\n  .ap-jumbotron {\n    color: #331;\n    text-align: center;\n  }\n  $large-font-size: 72px;\n  .ap-jumbotron h1, .ap-jumbotron-title {\n    text-shadow: none;\n    font-size: $large-font-size;\n    line-height: $large-font-size;\n  }\n\n  .ap-view-body {\n    padding-top: 0;\n  }\n}",
+		".showcase-view {\n\n  .showcase-description {\n  }\n\n  .showcase-section {\n\n  }\n}"
 	],
-	"mappings": "AGCA,OAAO,CAAC,8DAAI;AHCZ,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,GAAI,GACd;;AEJD,AACE,OADK,CACL,KAAK,CAAC;EACJ,SAAS,EAAE,IAAK;EAChB,OAAO,EAAE,KAAM,GAChB;;AAJH,AAKE,OALK,CAKL,aAAa,CAAC;EACZ,SAAS,EAAE,IAAK;EAChB,WAAW,EAAE,IAAK,GACnB;;AARH,AASE,OATK,CASL,UAAU,CAAC;EACT,OAAO,EAAE,YAAa,GACvB;;AAXH,AAYE,OAZK,CAYL,gBAAgB,CAAC;EACf,OAAO,EAAE,IAAK,GACf;;ACRH,AAAA,eAAe,CAAC;EACd,UAAU,EAAE,MAAO;EACnB,UAAU,EFRK,OAAO,GESvB;;AAED,AAAA,KAAK,CAAC;EACJ,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;EACX,OAAO,EAAE,WAAY;EACrB,SAAS,EAAE,IAAK;EAChB,WAAW,EAAE,4BAA6B,GAC3C;;AAED,AAAA,UAAU,CAAC;EACT,WAAW,EAAE,4BAA6B,GAC3C;;ACrBD,AAAA,aAAa,CAAC;EACZ,UAAU,EAAE,UAAW;EACvB,UAAU,EAAE,IAAK,GAClB;;ACFD,AACE,YADU,CACV,aAAa,CAAC;EACZ,KAAK,EAAE,IAAK;EACZ,UAAU,EAAE,MAAO,GACpB;;AAJH,AAMgB,YANJ,CAMV,aAAa,CAAC,EAAE,EANlB,AAMoB,YANR,CAMQ,mBAAmB,CAAC;EACpC,WAAW,EAAE,IAAK;EAClB,SAAS,EAHO,IAAI;EAIpB,WAAW,EAJK,IAAI,GAKrB",
+	"mappings": "AGCA,OAAO,CAAC,8DAAI;AHCZ,AAAA,IAAI,CAAC;EACH,OAAO,EAAE,GAAI,GACd;;AEJD,AACE,OADK,CACL,KAAK,CAAC;EACJ,SAAS,EAAE,IAAK;EAChB,OAAO,EAAE,KAAM,GAChB;;AAJH,AAKE,OALK,CAKL,aAAa,CAAC;EACZ,SAAS,EAAE,IAAK;EAChB,WAAW,EAAE,IAAK,GACnB;;AARH,AASE,OATK,CASL,UAAU,CAAC;EACT,OAAO,EAAE,YAAa,GACvB;;AAXH,AAYE,OAZK,CAYL,gBAAgB,CAAC;EACf,OAAO,EAAE,IAAK,GACf;;ACRH,AAAA,eAAe,CAAC;EACd,UAAU,EAAE,MAAO;EACnB,UAAU,EFRK,OAAO,GESvB;;AAED,AAAA,KAAK,CAAC;EACJ,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;EACX,OAAO,EAAE,WAAY;EACrB,SAAS,EAAE,IAAK;EAChB,WAAW,EAAE,4BAA6B,GAC3C;;AAED,AAAA,UAAU,CAAC;EACT,WAAW,EAAE,4BAA6B,GAC3C;;ACnBD,AAAK,IAAD,CAAC,cAAc,CAAC;EAClB,GAAG,EAAE,IAAc,GACpB;;AAED,MAAM,EAAL,SAAS,EAAE,KAAK;EACf,AAEE,IAFE,CAEF,cAAc,CAAC;IACb,GAAG,ECTO,IAAI,GDUf;;AAIL,AAAA,aAAa,CAAC;EACZ,UAAU,EAAE,UAAW;EACvB,UAAU,EAAE,IAAK,GAClB;;AEjBD,AACE,YADU,CACV,aAAa,CAAC;EACZ,KAAK,EAAE,IAAK;EACZ,UAAU,EAAE,MAAO,GACpB;;AAJH,AAMgB,YANJ,CAMV,aAAa,CAAC,EAAE,EANlB,AAMoB,YANR,CAMQ,mBAAmB,CAAC;EACpC,WAAW,EAAE,IAAK;EAClB,SAAS,EAHO,IAAI;EAIpB,WAAW,EAJK,IAAI,GAKrB;;AAVH,AAYE,YAZU,CAYV,aAAa,CAAC;EACZ,WAAW,EAAE,CAAE,GAChB",
 	"names": []
 }

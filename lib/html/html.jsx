@@ -7,7 +7,7 @@
 import React, {PropTypes as types} from 'react'
 import pkg from '../../package.json'
 
-import {ApHtml, ApHead, ApBody, ApFaIconStyle, ApIonIconStyle} from 'apeman-react-basic'
+import {ApHtml, ApHead, ApBody, ApStyle, ApFaIconStyle, ApIonIconStyle} from 'apeman-react-basic'
 import {ApThemeStyle} from 'apeman-react-theme'
 import {ApBackgroundStyle} from 'apeman-react-background'
 import loc from '../../loc'
