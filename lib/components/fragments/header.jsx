@@ -12,12 +12,23 @@ import {
 import Logo from '../fragments/logo'
 
 const Header = React.createClass({
+  propTypes: {
+    tab: types.string
+  },
+  getDefaultProps () {
+    return {
+      tab: null
+    }
+  },
   mixins: [
     ApLocaleMixin
   ],
   render () {
     const s = this
+    let { props } = s
+    let { tab } = props
     let l = s.getLocale()
+    let _tabItem = ApHeaderTabItem.createItem
     return (
       <ApHeader className="header">
         <ApContainer>
@@ -25,8 +36,8 @@ const Header = React.createClass({
             <Logo />
           </ApHeaderLogo>
           <ApHeaderTab>
-            <ApHeaderTabItem>{ l('pages.DOCS_PAGE') }</ApHeaderTabItem>
-            <ApHeaderTabItem>{ l('pages.DEMO_PAGE') }</ApHeaderTabItem>
+            { _tabItem(l('pages.DOCS_PAGE'), './docs.html', { selected: tab === 'DOCS' }) }
+            { _tabItem(l('pages.CASES_PAGE'), './cases.html', { selected: tab === 'CASES' }) }
           </ApHeaderTab>
         </ApContainer>
       </ApHeader>

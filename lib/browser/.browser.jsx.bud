@@ -1,0 +1,14 @@
+/**
+ * Bud file for browser jsx.
+ */
+
+'use strict'
+
+const apemanBudMock = require('apeman-bud-mock')
+
+module.exports = require('../.pages.json')
+  .map(apemanBudMock.browser)
+
+if (!module.parent) {
+  require('coz').render(__filename);
+}
