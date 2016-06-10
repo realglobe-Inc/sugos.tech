@@ -28,6 +28,9 @@ a:link, a:visited {
 .header .ap-header-tab-item-selected:active {
   color: #d6b810; }
 
+.header .ap-header-tab {
+  border-bottom: 1px solid #F0F0F0; }
+
 .header .ap-header-logo {
   position: relative; }
 
@@ -44,6 +47,10 @@ a:link, a:visited {
   background: rgba(238, 51, 51, 0.8);
   line-height: 9px;
   color: white; }
+
+@media (min-width: 768px) {
+  .header .ap-header-tab {
+    border-bottom: none; } }
 
 .logo-container {
   text-align: center;
@@ -178,6 +185,20 @@ body .ap-view-header-title {
     .snippet .syntaxhighlighter .comments a {
       color: #CCC !important; }
 
+.guide-view .guide-toggle-container {
+  text-align: center; }
+
+.guide-view .ap-toggle {
+  display: inline-flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.guide-view .ap-toggle-item {
+  min-width: 120px;
+  font-size: 14px; }
+
 .guide-view .guide-section {
   margin-top: 16px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
@@ -187,7 +208,7 @@ body .ap-view-header-title {
   .guide-view .guide-section .ap-section-header {
     border-bottom: 1px solid #DDD;
     margin-bottom: 0;
-    padding: 0 4px; }
+    padding: 0 4px 8px; }
   .guide-view .guide-section .ap-section-body {
     padding: 4px;
     display: flex;

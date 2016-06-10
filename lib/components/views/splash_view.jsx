@@ -15,7 +15,9 @@ import {
 } from 'apeman-react-basic'
 import {ApLocaleMixin} from 'apeman-react-mixins'
 import Snippet from '../fragments/snippet'
+import Markdown, {EOL} from '../fragments/markdown'
 import Footer from '../fragments/footer'
+
 
 import {singleton as snippetService} from '../../services/snippet_service'
 
@@ -42,6 +44,9 @@ const SplashView = React.createClass({
             <ApSection id="splash-overview-section">
               <ApSectionHeader></ApSectionHeader>
               <ApSectionBody>
+                <p>
+                  { l('sections.SPLASH_OVERVIEW_TEXT') }
+                </p>
                 <Snippet src={ snippetService.getSnippet('exampleUsage') }/>
               </ApSectionBody>
             </ApSection>
@@ -49,6 +54,7 @@ const SplashView = React.createClass({
               <ApSectionHeader>{ l('sections.SPLASH_MECHANISM_TITLE') }</ApSectionHeader>
               <ApSectionBody>
                 <div>
+                  <Markdown text={ [].concat(l('sections.SPLASH_MECHANISM_TEXT')).join(EOL + EOL) }/>
                   <img src="images/structure.png" height="300"/>
                 </div>
               </ApSectionBody>
