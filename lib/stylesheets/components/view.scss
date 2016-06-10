@@ -1,12 +1,23 @@
 @import "../variables/sizes";
 
-body .ap-view-stack {
-  top: $header-height + 34px;
-}
-
-.ap-view-body {
-  box-sizing: border-box;
-  min-height: 100%;
+body {
+  .ap-view-stack {
+    top: $header-height + 34px;
+  }
+  .ap-view-body {
+    box-sizing: border-box;
+    min-height: 100%;
+  }
+  .ap-view-header {
+    height: $view-header-height;
+    line-height: $view-header-height;
+    background: #FAFAFA;
+    border-top: 1px solid #F5F5F5;
+  }
+  .ap-view-header-title {
+    font-size: initial;
+    color: #AAA;
+  }
 }
 
 @media (min-width: $small-media-width) {

@@ -27,7 +27,7 @@ const SplashView = React.createClass({
       <ApView className="splash-view">
         <ApViewBody>
           <ApJumbotron className="jumbotron"
-                       imgSrc="../images/jumbotron.jpg">
+                       imgSrc="images/jumbotron.jpg">
             <ApJumbotronTitle className="logo-font">SUGOS</ApJumbotronTitle>
             <ApJumbotronText>Super Ultra Gorgeous Outstanding Special</ApJumbotronText>
           </ApJumbotron>
@@ -42,7 +42,7 @@ const SplashView = React.createClass({
             <ApSection id="splash-overview-section">
               <ApSectionHeader></ApSectionHeader>
               <ApSectionBody>
-                <ApImage src="../images/structure.png"
+                <ApImage src="images/structure.png"
                          width="100%"
                          height="300px"
                          scale="fit"

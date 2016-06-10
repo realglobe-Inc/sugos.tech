@@ -10,6 +10,7 @@ import {
   ApHeaderTab, ApHeaderTabItem
 } from 'apeman-react-basic'
 import Logo from '../fragments/logo'
+import {singleton as linkService} from '../../services/link_service'
 
 const Header = React.createClass({
   propTypes: {
@@ -29,20 +30,22 @@ const Header = React.createClass({
     let { tab } = props
     let l = s.getLocale()
     let _tabItem = ApHeaderTabItem.createItem
+    let _link = (...args) => linkService.resolveHtmlLink(...args)
     return (
       <ApHeader className="header">
         <ApContainer>
-          <ApHeaderLogo>
+          <ApHeaderLogo href={ _link('index.html') }>
             <Logo />
           </ApHeaderLogo>
           <ApHeaderTab>
-            { _tabItem(l('pages.DOCS_PAGE'), './docs.html', { selected: tab === 'DOCS' }) }
-            { _tabItem(l('pages.CASES_PAGE'), './cases.html', { selected: tab === 'CASES' }) }
+            { _tabItem(l('pages.DOCS_PAGE'), _link('docs.html'), { selected: tab === 'DOCS' }) }
+            { _tabItem(l('pages.CASES_PAGE'), _link('cases.html'), { selected: tab === 'CASES' }) }
           </ApHeaderTab>
         </ApContainer>
       </ApHeader>
     )
   }
+
 })
 
 export default Header

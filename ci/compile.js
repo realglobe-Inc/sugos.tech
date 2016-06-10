@@ -17,9 +17,15 @@ const filecopy = require('filecopy')
 const apeCompiling = require('ape-compiling')
 const React = require('react')
 const ReactDOM = require('react-dom/server')
+const loc = require('../loc')
+const { LANG } = process.env
+if (LANG && !loc[ LANG ]) {
+  throw new Error(`Unknown lang: ${LANG}`)
+}
 
-const base = null
 const publicDir = 'public'
+const publicHtmlDir = LANG ? `${publicDir}/html/${LANG}` : `${publicDir}/html`
+const base = LANG ? '../..' : '..'
 
 apeTasking.runTasks('compile', [
   () => apeCompiling.compileReactJsx('**/*.jsx', {
@@ -57,7 +63,7 @@ apeTasking.runTasks('compile', [
     })
     yield coz.render(
       filenames.map((filename) => ({
-        path: path.resolve(`${publicDir}/html`, filename.replace(/\.html\.js$/, '.html')),
+        path: path.resolve(publicHtmlDir, filename.replace(/\.html\.js$/, '.html')),
         mkdirp: true,
         force: true,
         tmpl: (data) => {
@@ -66,7 +72,11 @@ apeTasking.runTasks('compile', [
           return ReactDOM.renderToStaticMarkup(element)
         },
         data: {
-          component: require(path.resolve('lib/html', filename))
+          component: require(path.resolve('lib/html', filename)),
+          props: {
+            base,
+            lang: LANG
+          }
         }
       }))
     )

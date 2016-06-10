@@ -33,9 +33,19 @@ body {
 body .ap-view-stack {
   top: 78px; }
 
-.ap-view-body {
+body .ap-view-body {
   box-sizing: border-box;
   min-height: 100%; }
+
+body .ap-view-header {
+  height: 32px;
+  line-height: 32px;
+  background: #FAFAFA;
+  border-top: 1px solid #F5F5F5; }
+
+body .ap-view-header-title {
+  font-size: initial;
+  color: #AAA; }
 
 @media (min-width: 768px) {
   body .ap-view-stack {
@@ -131,18 +141,18 @@ body .ap-view-stack {
     .snippet .syntaxhighlighter .comments a {
       color: #CCC !important; }
 
-.guide-view .guide-section .ap-section-body {
-  padding: 4px;
-  display: flex;
-  flex-wrap: wrap; }
-
-.guide-view .guide-section .guide-text-container {
-  width: 100%;
-  box-sizing: border-box; }
-
-.guide-view .guide-section .guide-image-container {
-  width: 100%;
-  box-sizing: border-box; }
+.guide-view .guide-section {
+  margin-top: 16px; }
+  .guide-view .guide-section .ap-section-body {
+    padding: 4px;
+    display: flex;
+    flex-wrap: wrap; }
+  .guide-view .guide-section .guide-text-container {
+    width: 100%;
+    box-sizing: border-box; }
+  .guide-view .guide-section .guide-image-container {
+    width: 100%;
+    box-sizing: border-box; }
 
 @media (min-width: 768px) {
   .guide-view .guide-section .guide-text-container {

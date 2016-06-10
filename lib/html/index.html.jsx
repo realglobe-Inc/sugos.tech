@@ -13,9 +13,11 @@ import Html from './html'
 const IndexHtml = React.createClass({
   render () {
     const s = this
+    let { props } = s
     return (
-      <Html js={ ['../javascripts/index.js'] }
-            css={ ['../stylesheets/index.css'] }
+      <Html { ...props }
+        js={ ['javascripts/index.js'] }
+            css={ ['stylesheets/index.css'] }
             wrapId="index-wrap"
             component={ IndexComponent }
       />)

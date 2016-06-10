@@ -13,12 +13,14 @@ import Html from './html'
 const CasesHtml = React.createClass({
   render () {
     const s = this
+    let { props } = s
     return (
-      <Html js={ ['../javascripts/cases.js'] }
-            css={ ['../stylesheets/cases.css'] }
-            wrapId="cases-wrap"
-            title="CASES_PAGE_TITLE"
-            component={ CasesComponent }
+      <Html { ...props }
+        js={ ['javascripts/cases.js'] }
+        css={ ['stylesheets/cases.css'] }
+        wrapId="cases-wrap"
+        title="CASES_PAGE_TITLE"
+        component={ CasesComponent }
       />)
   }
 })

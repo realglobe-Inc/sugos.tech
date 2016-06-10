@@ -59,12 +59,12 @@ const ShowcaseView = React.createClass({
                 title: l('sections.CASE_REMOTE_TITLE'),
                 text: l('sections.CASE_REMOTE_TEXT'),
                 video1: {
-                  src: '../videos/mock-mp4.mp4',
+                  src: 'videos/mock-mp4.mp4',
                   translateX: -120,
                   translateY: -30
                 },
                 video2: {
-                  src: '../videos/mock-mp4-2.mp4',
+                  src: 'videos/mock-mp4-2.mp4',
                   translateX: -60,
                   translateY: -40
                 }
@@ -73,12 +73,12 @@ const ShowcaseView = React.createClass({
                 title: l('sections.CASE_SENSE_TITLE'),
                 text: l('sections.CASE_SENSE_TEXT'),
                 video1: {
-                  src: '../videos/mock-mp4.mp4',
+                  src: 'videos/mock-mp4.mp4',
                   translateX: -60,
                   translateY: -60
                 },
                 video2: {
-                  src: '../videos/mock-mp4-2.mp4',
+                  src: 'videos/mock-mp4-2.mp4',
                   translateX: -30,
                   translateY: 0
                 }
@@ -87,12 +87,12 @@ const ShowcaseView = React.createClass({
                 title: l('sections.CASE_TALK_TITLE'),
                 text: l('sections.CASE_TALK_TEXT'),
                 video1: {
-                  src: '../videos/mock-mp4.mp4',
+                  src: 'videos/mock-mp4.mp4',
                   translateX: -10,
                   translateY: -10
                 },
                 video2: {
-                  src: '../videos/mock-mp4-2.mp4',
+                  src: 'videos/mock-mp4-2.mp4',
                   translateX: -140,
                   translateY: -70
                 }

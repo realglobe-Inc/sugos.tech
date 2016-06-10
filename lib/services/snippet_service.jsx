@@ -3,6 +3,7 @@
  */
 'use strict'
 
+/** @lends SnippetService */
 class SnippetService {
   /**
    * Get snippet with name

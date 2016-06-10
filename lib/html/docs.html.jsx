@@ -13,12 +13,14 @@ import Html from './html'
 const DocsHtml = React.createClass({
   render () {
     const s = this
+    let { props } = s
     return (
-      <Html js={ ['../javascripts/docs.js'] }
-            css={ ['../stylesheets/docs.css'] }
-            wrapId="docs-wrap"
-            title="DOCS_PAGE_TITLE"
-            component={ DocsComponent }
+      <Html { ...props }
+        js={ ['javascripts/docs.js'] }
+        css={ ['stylesheets/docs.css'] }
+        wrapId="docs-wrap"
+        title="DOCS_PAGE_TITLE"
+        component={ DocsComponent }
       />)
   }
 })

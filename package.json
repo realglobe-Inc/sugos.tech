@@ -5,6 +5,7 @@
   "main": "lib",
   "scripts": {
     "debug": "./ci/watch.js & npm start",
+    "prepublish":"LANG=ja ./ci/compile.js;LANG=en ./ci/compile.js;",
     "postinstall": "./ci/postinstall.js",
     "start": "http-server public -d false -p 3000",
     "test": "./ci/test.js"
@@ -38,6 +39,7 @@
     "apeman-react-mixins": "^5.1.0",
     "apeman-react-style": "^4.0.0",
     "apeman-react-theme": "^4.2.1",
+    "apemanlocale": "^5.0.3",
     "classnames": "^2.2.5",
     "co": "^4.6.0",
     "execcli": "^4.0.5",
