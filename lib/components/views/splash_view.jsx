@@ -7,6 +7,7 @@
 import React, {PropTypes as types} from 'react'
 import {
   ApView,
+  ApImage,
   ApViewHeader, ApViewBody,
   ApArticle,
   ApJumbotron, ApJumbotronTitle, ApJumbotronText,
@@ -31,7 +32,23 @@ const SplashView = React.createClass({
             <ApJumbotronText>Super Ultra Gorgeous Outstanding Special</ApJumbotronText>
           </ApJumbotron>
           <ApArticle>
-            <Snippet src={ snippetService.getSnippet('exampleCloud') }/>
+
+            <ApSection id="splash-overview-section">
+              <ApSectionHeader></ApSectionHeader>
+              <ApSectionBody>
+                <Snippet src={ snippetService.getSnippet('exampleUsage') }/>
+              </ApSectionBody>
+            </ApSection>
+            <ApSection id="splash-overview-section">
+              <ApSectionHeader></ApSectionHeader>
+              <ApSectionBody>
+                <ApImage src="../images/structure.png"
+                         width="100%"
+                         height="300px"
+                         scale="fit"
+                />
+              </ApSectionBody>
+            </ApSection>
           </ApArticle>
         </ApViewBody>
       </ApView>

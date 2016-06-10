@@ -1,0 +1,36 @@
+@import "../variables/sizes";
+@import "../variables/colors";
+
+.guide-view {
+  .guide-section {
+    .ap-section-body {
+      padding: 4px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .guide-text-container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .guide-image-container {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (min-width: $small-media-width) {
+  .guide-view {
+    .guide-section {
+      .guide-text-container {
+        width: 50%;
+      }
+      .guide-image-container {
+        width: 50%;
+      }
+      .ap-section-body {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}

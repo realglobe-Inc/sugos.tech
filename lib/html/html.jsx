@@ -13,6 +13,7 @@ import {ApBackgroundStyle} from 'apeman-react-background'
 import loc from '../../loc'
 import * as snippets from '../constants/snippet_constants'
 import {DOMINANT} from '../constants/color_constants'
+import {highlightJsx} from 'ape-highlighting'
 
 const FAVICON_URL = '../images/favicon.png'
 const { LANG } = process.env
@@ -48,6 +49,9 @@ const Html = React.createClass({
           <ApFaIconStyle />
           <ApIonIconStyle />
           <ApBackgroundStyle />
+          <ApStyle>
+            { highlightJsx.style() }
+          </ApStyle>
         </ApHead>
         <ApBody style={ {padding: 5} }>
           <div id={ props.wrapId }>

@@ -13,10 +13,12 @@ const path = require('path')
 const co = require('co')
 const coz = require('coz')
 const expandglob = require('expandglob')
+const filecopy = require('filecopy')
 const apeCompiling = require('ape-compiling')
 const React = require('react')
 const ReactDOM = require('react-dom/server')
 
+const base = null
 const publicDir = 'public'
 
 apeTasking.runTasks('compile', [
@@ -68,5 +70,13 @@ apeTasking.runTasks('compile', [
         }
       }))
     )
+  }),
+  () => co(function * () {
+    let src = './node_modules/sugos/doc/images/structure.png'
+    let dest = 'lib/images/structure.png'
+    let results = yield filecopy(src, dest)
+    for (let filename of Object.keys(results)) {
+      console.log(`File generated: ${filename}`)
+    }
   })
 ], true)

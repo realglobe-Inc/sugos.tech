@@ -10,12 +10,12 @@ const Snippet = React.createClass({
     const s = this
     let { props } = s
     return (
-      <pre className="snippet" dangerouslySetInnerHTML={
+      <div className="snippet" dangerouslySetInnerHTML={
         { __html: props.src }
         }>
-      </pre>
+      </div>
     )
   }
 })
 
-export default  Snippet
+export default Snippet

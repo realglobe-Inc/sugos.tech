@@ -7,20 +7,84 @@
 import React, {PropTypes as types} from 'react'
 import {
   ApView,
-  ApViewHeader, ApViewBody
+  ApViewHeader, ApViewBody,
+  ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
+import {
+  ApLocaleMixin,
+  ApLayoutMixin
+} from 'apeman-react-mixins'
+
+import Snippet from '../fragments/snippet'
+import {singleton as snippetService} from '../../services/snippet_service'
 
 const GuideView = React.createClass({
+  mixins: [
+    ApLocaleMixin,
+    ApLayoutMixin
+  ],
   render () {
     const s = this
+    let l = s.getLocale()
+
+    let _section = (name, config) => {
+      let { title, text, snippet } = config
+      return (
+        <ApSection id={ `guide-${name}-section` }
+                   className="guide-section"
+                   key={ name }
+        >
+          <ApSectionHeader>{ title }</ApSectionHeader>
+          <ApSectionBody>
+            <div className="guide-text-container">
+              <div className="guide-description">{
+                [].concat(text).map((text, i) => (<p key={i}>{ text }</p>))
+              }</div>
+            </div>
+            <div className="guide-image-container">
+              <div className="guide-snippet">
+                <Snippet src={ snippet }/>
+              </div>
+            </div>
+          </ApSectionBody>
+        </ApSection>
+      )
+    }
+
     return (
       <ApView className="guide-view">
         <ApViewHeader/>
         <ApViewBody>
-          Coming soon!
+          { [
+            _section('cloud-setup', {
+              title: l('sections.GUIDE_CLOUD_SETUP_TITLE'),
+              text: l('sections.GUIDE_CLOUD_SETUP_TEXT'),
+              snippet: snippetService.getSnippet('exampleCloud')
+            }),
+            _section('spot-run', {
+              title: l('sections.GUIDE_SPOT_RUN_TITLE'),
+              text: l('sections.GUIDE_SPOT_RUN_TEXT'),
+              snippet: snippetService.getSnippet('exampleSpot')
+            }),
+            _section('terminal-use', {
+              title: l('sections.GUIDE_TERMINAL_USE_TITLE'),
+              text: l('sections.GUIDE_TERMINAL_USE_TEXT'),
+              snippet: snippetService.getSnippet('exampleTerminal')
+            })
+          ]
+          }
+
         </ApViewBody>
       </ApView>
     )
+  },
+
+  // -------------
+  // For ApLayoutMixin
+  // -------------
+
+  calcLayouts () {
+    return {}
   }
 })
 

@@ -40,7 +40,19 @@
     ],
     "CASE_TALK_TITLE": "Combine APIs to Build Rich Applications",
     "CASE_TALK_TEXT": [
-      ""
+
+    ],
+    "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
+    "GUIDE_CLOUD_SETUP_TEXT": [
+      "First of all, you need to setup [sugo-cloud](https://github.com/realglobe-Inc/sugo-cloud) on public network so that spot and terminal can access it."
+    ],
+    "GUIDE_SPOT_RUN_TITLE": "Run SUGO-Spot",
+    "GUIDE_SPOT_RUN_TEXT": [
+      "Run [sugo-spot](https://github.com/realglobe-Inc/sugo-spot) on local network where your machine or sensors exists and access to the sugo-cloud."
+    ],
+    "GUIDE_TERMINAL_USE_TITLE": "Setup SUGO-Cloud",
+    "GUIDE_TERMINAL_USE_TEXT": [
+      "Connect to remote spot from [sugo-terminal](https://github.com/realglobe-Inc/sugo-terminal) via cloud."
     ]
   },
   "titles": {

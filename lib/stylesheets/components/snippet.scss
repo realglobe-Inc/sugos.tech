@@ -1,6 +1,7 @@
 @import "../variables/colors";
 
 .snippet {
+  transform: translateZ(0); // Force chrome rendering
   font-size: 14px;
   .syntaxhighlighter {
     padding: 8px;
