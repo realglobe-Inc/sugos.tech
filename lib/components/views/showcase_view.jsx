@@ -15,6 +15,7 @@ import {
 } from 'apeman-react-mixins'
 import Video from '../fragments/video'
 import Joiner from '../fragments/joiner'
+import {DOMINANT} from '../../constants/color_constants'
 
 const ShowcaseView = React.createClass({
   mixins: [
@@ -27,7 +28,8 @@ const ShowcaseView = React.createClass({
     let _section = (name, config) => {
       let {
         title, text,
-        video1, video2
+        video1, video2,
+        reversed
       } = config
       return (
         <ApSection className="showcase-section"
@@ -42,7 +44,7 @@ const ShowcaseView = React.createClass({
             </div>
             <div className="showcase-video-container">
               <Video className="showcase-video" { ...video1 }/>
-              <Joiner className="showcase-joiner"/>
+              <Joiner className="showcase-joiner" color={ reversed ? DOMINANT: "white" }/>
               <Video className="showcase-video" { ...video2 }/>
             </div>
           </ApSectionBody>
@@ -58,6 +60,7 @@ const ShowcaseView = React.createClass({
               _section('remote', {
                 title: l('sections.CASE_REMOTE_TITLE'),
                 text: l('sections.CASE_REMOTE_TEXT'),
+                reversed: false,
                 video1: {
                   src: 'videos/mock-mp4.mp4',
                   translateX: -120,
@@ -72,6 +75,7 @@ const ShowcaseView = React.createClass({
               _section('sense', {
                 title: l('sections.CASE_SENSE_TITLE'),
                 text: l('sections.CASE_SENSE_TEXT'),
+                reversed: true,
                 video1: {
                   src: 'videos/mock-mp4.mp4',
                   translateX: -60,
@@ -86,6 +90,7 @@ const ShowcaseView = React.createClass({
               _section('talk', {
                 title: l('sections.CASE_TALK_TITLE'),
                 text: l('sections.CASE_TALK_TEXT'),
+                reversed: false,
                 video1: {
                   src: 'videos/mock-mp4.mp4',
                   translateX: -10,

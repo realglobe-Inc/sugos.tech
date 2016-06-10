@@ -43,8 +43,9 @@
     "CASE_SENSE_TEXT": [
       "With SUGOS, you can receive sensing data with event interface."
     ],
-    "CASE_TALK_TITLE": "Combine APIs to Build Rich Applications",
+    "CASE_TALK_TITLE": "Mashup APIs to Build Rich Applications",
     "CASE_TALK_TEXT": [
+      "Since SUGOS works on browser, it's quite easy to mashup multiple third-party APIs. "
     ],
     "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
     "GUIDE_CLOUD_SETUP_TEXT": [
