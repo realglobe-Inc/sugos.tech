@@ -68,7 +68,8 @@
     "injectmock": "^2.0.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "sugos": "^1.0.1"
+    "sugos": "^1.0.1",
+    "writeout": "^2.0.4"
   },
   "engines": {
     "node": ">=6",
