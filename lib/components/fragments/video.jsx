@@ -3,11 +3,10 @@
 import React, {PropTypes as types} from 'react'
 import {SgVideo} from 'sg-react-components'
 import classnames from 'classnames'
-import {ApLayoutMixin, ApTouchMixin} from 'apeman-react-mixins'
+import {ApTouchMixin} from 'apeman-react-mixins'
 
 const Video = React.createClass({
   mixins: [
-    ApLayoutMixin,
     ApTouchMixin
   ],
   propTypes: {

@@ -11,8 +11,7 @@ import {
   ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
 import {
-  ApLocaleMixin,
-  ApLayoutMixin
+  ApLocaleMixin
 } from 'apeman-react-mixins'
 
 import Snippet from '../fragments/snippet'
@@ -20,8 +19,7 @@ import {singleton as snippetService} from '../../services/snippet_service'
 
 const GuideView = React.createClass({
   mixins: [
-    ApLocaleMixin,
-    ApLayoutMixin
+    ApLocaleMixin
   ],
   render () {
     const s = this
@@ -77,15 +75,8 @@ const GuideView = React.createClass({
         </ApViewBody>
       </ApView>
     )
-  },
-
-  // -------------
-  // For ApLayoutMixin
-  // -------------
-
-  calcLayouts () {
-    return {}
   }
+
 })
 
 module.exports = GuideView
