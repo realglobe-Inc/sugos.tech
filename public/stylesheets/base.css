@@ -205,9 +205,9 @@ body .ap-view-header-title {
 
 @media (min-width: 768px) {
   .guide-view .guide-section .guide-text-container {
-    width: 50%; }
+    width: 30%; }
   .guide-view .guide-section .guide-image-container {
-    width: 50%; }
+    width: 70%; }
   .guide-view .guide-section .ap-section-body {
     flex-wrap: nowrap; } }
 
