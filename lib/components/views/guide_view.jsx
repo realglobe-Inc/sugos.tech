@@ -8,7 +8,9 @@ import React, {PropTypes as types} from 'react'
 import {
   ApView,
   ApViewHeader, ApViewBody,
-  ApSection, ApSectionHeader, ApSectionBody
+  ApSection, ApSectionHeader, ApSectionBody,
+  ApArticle,
+  ApToggle
 } from 'apeman-react-basic'
 import {
   ApLocaleMixin
@@ -38,7 +40,7 @@ const GuideView = React.createClass({
           <ApSectionBody>
             <div className="guide-text-container">
               <div className="guide-description">
-                <Markdown text={ [].concat(text).join(EOL+EOL) }/>
+                <Markdown text={ [].concat(text).join(EOL + EOL) }/>
               </div>
             </div>
             <div className="guide-image-container">
@@ -55,25 +57,27 @@ const GuideView = React.createClass({
       <ApView className="guide-view">
         <ApViewHeader/>
         <ApViewBody>
-          { [
-            _section('cloud-setup', {
-              title: l('sections.GUIDE_CLOUD_SETUP_TITLE'),
-              text: l('sections.GUIDE_CLOUD_SETUP_TEXT'),
-              snippet: snippetService.getSnippet('exampleCloud')
-            }),
-            _section('spot-run', {
-              title: l('sections.GUIDE_SPOT_RUN_TITLE'),
-              text: l('sections.GUIDE_SPOT_RUN_TEXT'),
-              snippet: snippetService.getSnippet('exampleSpot')
-            }),
-            _section('terminal-use', {
-              title: l('sections.GUIDE_TERMINAL_USE_TITLE'),
-              text: l('sections.GUIDE_TERMINAL_USE_TEXT'),
-              snippet: snippetService.getSnippet('exampleTerminal')
-            })
-          ]
-          }
 
+          <ApArticle>
+            { [
+              _section('cloud-setup', {
+                title: l('sections.GUIDE_CLOUD_SETUP_TITLE'),
+                text: l('sections.GUIDE_CLOUD_SETUP_TEXT'),
+                snippet: snippetService.getSnippet('exampleCloud')
+              }),
+              _section('spot-run', {
+                title: l('sections.GUIDE_SPOT_RUN_TITLE'),
+                text: l('sections.GUIDE_SPOT_RUN_TEXT'),
+                snippet: snippetService.getSnippet('exampleSpot')
+              }),
+              _section('terminal-use', {
+                title: l('sections.GUIDE_TERMINAL_USE_TITLE'),
+                text: l('sections.GUIDE_TERMINAL_USE_TEXT'),
+                snippet: snippetService.getSnippet('exampleTerminal')
+              })
+            ]
+            }
+          </ApArticle>
         </ApViewBody>
       </ApView>
     )

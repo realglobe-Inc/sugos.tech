@@ -6,7 +6,7 @@ before_install:
 - curl -u${NPM_USER}:${NPM_PASSWORD} "https://realglobe.artifactoryonline.com/realglobe/api/npm/auth" >> .npmrc
 - cat .npmrc
 - npm install babel-preset-react babel-preset-es2015
-- npm install istanbul browserify mocha -g
+- npm install istanbul browserify babel-cli mocha -g
 install:
 - npm install
 before_script:
