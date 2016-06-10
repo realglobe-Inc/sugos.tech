@@ -1,11 +1,11 @@
 {
   "name": "sugos.tech",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Homepage of SUGOS",
   "main": "lib",
   "scripts": {
     "debug": "./ci/watch.js & npm start",
-    "prepublish":"LANG=ja ./ci/compile.js;LANG=en ./ci/compile.js;",
+    "prepublish": "LANG=ja ./ci/compile.js;LANG=en ./ci/compile.js;",
     "postinstall": "./ci/postinstall.js",
     "start": "http-server public -d false -p 3000",
     "test": "./ci/test.js"
