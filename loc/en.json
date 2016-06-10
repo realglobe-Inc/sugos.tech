@@ -6,6 +6,10 @@
   "dropdown": {
   },
   "errors": {},
+  "footer": {
+    "LINKS_TITLE": "Links",
+    "COPY_RIGHT": "Copyright © 2016 REALGLOBE. All Rights Reserved"
+  },
   "guides": {},
   "jumbotron": {
     "SPLASH_MESSAGE": "Super Ultra Gorgeous Outstanding Special",
@@ -29,6 +33,7 @@
   },
   "placeholders": {},
   "sections": {
+    "SPLASH_MECHANISM_TITLE": "Mechanism",
     "CASE_REMOTE_TITLE": "Control Robots from Remote Browser",
     "CASE_REMOTE_TEXT": [
       "SUGOS provides JavaScript interface to send commands to remote API via local 'spot' server.",
@@ -40,7 +45,6 @@
     ],
     "CASE_TALK_TITLE": "Combine APIs to Build Rich Applications",
     "CASE_TALK_TEXT": [
-
     ],
     "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
     "GUIDE_CLOUD_SETUP_TEXT": [

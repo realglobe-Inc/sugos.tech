@@ -24,4 +24,24 @@
   .ap-header-tab-item-selected:active {
     color: $dominant-color;
   }
+
+  .ap-header-logo{
+    position: relative;
+  }
+
+  // Notice badge
+  .ap-header-logo-link:after {
+    content: "α version";
+    display: inline-block;
+    padding: 2px 8px;
+    position: absolute;
+    transform: rotate(-12deg);
+    font-size: 9px;
+    z-index: 4;
+    left: -10px;
+    top: 4px;
+    background: rgba(238, 51, 51, 0.8);
+    line-height: 9px;
+    color: white;
+  }
 }

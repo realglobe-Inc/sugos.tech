@@ -1,5 +1,6 @@
 /**
  * Header component
+ * @class Header
  */
 'use strict'
 
@@ -12,6 +13,7 @@ import {
 import Logo from '../fragments/logo'
 import {singleton as linkService} from '../../services/link_service'
 
+/** @lends Header */
 const Header = React.createClass({
   propTypes: {
     tab: types.string

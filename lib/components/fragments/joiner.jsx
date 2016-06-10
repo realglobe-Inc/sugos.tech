@@ -41,6 +41,7 @@ const Joiner = React.createClass({
         <svg width={ width }
              height={ height }
              stroke={ color }
+             strokeLinecap="round"
              strokeWidth={ lineWidth }
         >
           { _line(x1, x2, y1, y2) }

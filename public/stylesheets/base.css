@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
 body {
   padding: 8px; }
@@ -26,6 +27,23 @@ a:link, a:visited {
 .header .ap-header-tab-item-selected:hover,
 .header .ap-header-tab-item-selected:active {
   color: #d6b810; }
+
+.header .ap-header-logo {
+  position: relative; }
+
+.header .ap-header-logo-link:after {
+  content: "α version";
+  display: inline-block;
+  padding: 2px 8px;
+  position: absolute;
+  transform: rotate(-12deg);
+  font-size: 9px;
+  z-index: 4;
+  left: -10px;
+  top: 4px;
+  background: rgba(238, 51, 51, 0.8);
+  line-height: 9px;
+  color: white; }
 
 .logo-container {
   text-align: center;
@@ -179,5 +197,29 @@ body .ap-view-header-title {
     width: 50%; }
   .guide-view .guide-section .ap-section-body {
     flex-wrap: nowrap; } }
+
+.footer {
+  border-top: 1px solid #FAFAFA; }
+  .footer .footer-company {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #AAA;
+    padding-top: 8px; }
+    .footer .footer-company .ap-image {
+      background: transparent; }
+  .footer .footer-title {
+    margin: 0; }
+  .footer .footer-group {
+    margin: 4px 0; }
+  .footer .footer-copyright {
+    font-size: 9px;
+    display: inline-block;
+    padding: 4px 8px; }
+  .footer .ap-links {
+    font-size: smaller;
+    margin: 8px 0; }
+    .footer .ap-links a {
+      color: #AAA; }
 
 /*# sourceMappingURL=base.css.map */

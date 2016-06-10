@@ -18,14 +18,14 @@ const apeCompiling = require('ape-compiling')
 const React = require('react')
 const ReactDOM = require('react-dom/server')
 const loc = require('../loc')
-const { LANG } = process.env
-if (LANG && !loc[ LANG ]) {
-  throw new Error(`Unknown lang: ${LANG}`)
+const lang = process.env.LANG || 'en'
+if (!loc[ lang ]) {
+  throw new Error(`Unknown lang: ${lang}`)
 }
 
 const publicDir = 'public'
-const publicHtmlDir = LANG ? `${publicDir}/html/${LANG}` : `${publicDir}/html`
-const base = LANG ? '../..' : '..'
+const publicHtmlDir = lang ? `${publicDir}/html/${lang}` : `${publicDir}/html`
+const base = lang ? '../..' : '..'
 
 apeTasking.runTasks('compile', [
   () => apeCompiling.compileReactJsx('**/*.jsx', {
@@ -75,7 +75,7 @@ apeTasking.runTasks('compile', [
           component: require(path.resolve('lib/html', filename)),
           props: {
             base,
-            lang: LANG
+            lang
           }
         }
       }))

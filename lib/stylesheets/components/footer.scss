@@ -1,0 +1,36 @@
+.footer {
+  border-top: 1px solid #FAFAFA;
+
+  .footer-company {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #AAA;
+    padding-top: 8px;
+    .ap-image {
+      background: transparent;
+    }
+  }
+
+  .footer-title {
+    margin: 0;
+  }
+
+  .footer-group {
+    margin: 16px 0;
+  }
+
+  .footer-copyright {
+    font-size: 9px;
+    display: inline-block;
+    padding: 4px 8px;
+  }
+
+  .ap-links {
+    font-size: smaller;
+    margin: 8px 0;
+    a {
+      color: #AAA;
+    }
+  }
+}
