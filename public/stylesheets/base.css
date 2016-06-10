@@ -102,7 +102,9 @@ body .ap-view-header-title {
   padding-top: 0; }
 
 .showcase-view .ap-view-body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding-left: 0;
+  padding-right: 0; }
 
 .showcase-view .showcase-section {
   box-shadow: none;
@@ -198,7 +200,7 @@ body .ap-view-header-title {
   text-align: center; }
 
 .guide-view .ap-toggle-item {
-  min-width: 120px;
+  min-width: 112px;
   font-size: 14px; }
 
 .guide-view .guide-section {
