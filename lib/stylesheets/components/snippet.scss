@@ -1,0 +1,22 @@
+@import "../variables/colors";
+
+.snippet {
+  font-size: 14px;
+  .syntaxhighlighter {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #EEE;
+    box-sizing: border-box;
+    .string,
+    .string a {
+      color: $accent-light-color !important;
+    }
+    .keyword {
+      color: $accent-color !important;
+    }
+    .comments,
+    .comments a {
+      color: #CCC !important;
+    }
+  }
+}

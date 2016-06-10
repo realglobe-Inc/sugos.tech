@@ -1,7 +1,6 @@
 'use strict'
 
 import React, {PropTypes as types} from 'react'
-import {highlightJsx} from 'ape-highlighting'
 
 const Snippet = React.createClass({
   propTypes: {
@@ -12,7 +11,7 @@ const Snippet = React.createClass({
     let { props } = s
     return (
       <pre className="snippet" dangerouslySetInnerHTML={
-        { __html: highlightJsx(props.src) }
+        { __html: props.src }
         }>
       </pre>
     )

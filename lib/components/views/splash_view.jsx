@@ -8,10 +8,18 @@ import React, {PropTypes as types} from 'react'
 import {
   ApView,
   ApViewHeader, ApViewBody,
-  ApJumbotron, ApJumbotronTitle, ApJumbotronText
+  ApArticle,
+  ApJumbotron, ApJumbotronTitle, ApJumbotronText,
+  ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
 
+import Snippet from '../fragments/snippet'
+import {singleton as snippetService} from '../../services/snippet_service'
+
 const SplashView = React.createClass({
+  getInitialState () {
+    return {}
+  },
   render () {
     const s = this
     return (
@@ -22,9 +30,15 @@ const SplashView = React.createClass({
             <ApJumbotronTitle className="logo-font">SUGOS</ApJumbotronTitle>
             <ApJumbotronText>Super Ultra Gorgeous Outstanding Special</ApJumbotronText>
           </ApJumbotron>
+          <ApArticle>
+            <Snippet src={ snippetService.getSnippet('exampleCloud') }/>
+          </ApArticle>
         </ApViewBody>
       </ApView>
     )
+  },
+  componentDidMount () {
+
   }
 })
 

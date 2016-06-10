@@ -114,4 +114,20 @@ body .ap-view-stack {
   display: block;
   margin: 0 auto; }
 
+.snippet {
+  font-size: 14px; }
+  .snippet .syntaxhighlighter {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #EEE;
+    box-sizing: border-box; }
+    .snippet .syntaxhighlighter .string,
+    .snippet .syntaxhighlighter .string a {
+      color: #4a7fff !important; }
+    .snippet .syntaxhighlighter .keyword {
+      color: #003cce !important; }
+    .snippet .syntaxhighlighter .comments,
+    .snippet .syntaxhighlighter .comments a {
+      color: #CCC !important; }
+
 /*# sourceMappingURL=base.css.map */

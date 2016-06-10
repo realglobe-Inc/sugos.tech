@@ -11,9 +11,10 @@ import {ApHtml, ApHead, ApBody, ApStyle, ApFaIconStyle, ApIonIconStyle} from 'ap
 import {ApThemeStyle} from 'apeman-react-theme'
 import {ApBackgroundStyle} from 'apeman-react-background'
 import loc from '../../loc'
-import {DOMINANT} from '../constants/color_constants.json'
+import * as snippets from '../constants/snippet_constants'
+import {DOMINANT} from '../constants/color_constants'
 
-const FAVICON_URL = 'https://raw.githubusercontent.com/apeman-asset-labo/apeman-asset-images/master/dist/favicon/mock-favicon.png'
+const FAVICON_URL = '../images/favicon.png'
 const { LANG } = process.env
 const locale = loc[ LANG || 'en' ]
 if (!locale) {
@@ -41,7 +42,7 @@ const Html = React.createClass({
                 css={ s.getCss() }
                 js={ s.getJs() }
                 viewport={ { initialScale: 1 } }
-                globals={ { locale } }
+                globals={ { locale, snippets } }
         >
           <ApThemeStyle dominant={ DOMINANT }/>
           <ApFaIconStyle />
