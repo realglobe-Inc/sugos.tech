@@ -1,3 +1,5 @@
+@import "../variables/colors";
+
 .header {
   .logo {
     font-size: 24px;
@@ -12,5 +14,14 @@
   }
   .logo-text-inner {
     display: none;
+  }
+
+  .ap-header-tab-item {
+    color: inherit;
+  }
+  .ap-header-tab-item-selected,
+  .ap-header-tab-item-selected:hover,
+  .ap-header-tab-item-selected:active {
+    color: $dominant-color;
   }
 }

@@ -2,6 +2,9 @@
 body {
   padding: 8px; }
 
+a:link, a:visited {
+  color: #d6b810; }
+
 .header .logo {
   font-size: 24px;
   padding: 0 4px; }
@@ -15,6 +18,14 @@ body {
 
 .header .logo-text-inner {
   display: none; }
+
+.header .ap-header-tab-item {
+  color: inherit; }
+
+.header .ap-header-tab-item-selected,
+.header .ap-header-tab-item-selected:hover,
+.header .ap-header-tab-item-selected:active {
+  color: #d6b810; }
 
 .logo-container {
   text-align: center;
@@ -143,6 +154,9 @@ body .ap-view-header-title {
 
 .guide-view .guide-section {
   margin-top: 16px; }
+  .guide-view .guide-section .ap-section-header {
+    margin-bottom: 0;
+    padding: 0 4px; }
   .guide-view .guide-section .ap-section-body {
     padding: 4px;
     display: flex;
@@ -153,6 +167,10 @@ body .ap-view-header-title {
   .guide-view .guide-section .guide-image-container {
     width: 100%;
     box-sizing: border-box; }
+  .guide-view .guide-section .guide-description {
+    padding: 0 4px; }
+  .guide-view .guide-section .guide-snippet {
+    padding: 0 4px; }
 
 @media (min-width: 768px) {
   .guide-view .guide-section .guide-text-container {

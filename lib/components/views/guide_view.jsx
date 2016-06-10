@@ -15,7 +15,9 @@ import {
 } from 'apeman-react-mixins'
 
 import Snippet from '../fragments/snippet'
+import Markdown from '../fragments/markdown'
 import {singleton as snippetService} from '../../services/snippet_service'
+import {EOL} from 'os'
 
 const GuideView = React.createClass({
   mixins: [
@@ -35,9 +37,9 @@ const GuideView = React.createClass({
           <ApSectionHeader>{ title }</ApSectionHeader>
           <ApSectionBody>
             <div className="guide-text-container">
-              <div className="guide-description">{
-                [].concat(text).map((text, i) => (<p key={i}>{ text }</p>))
-              }</div>
+              <div className="guide-description">
+                <Markdown text={ [].concat(text).join(EOL+EOL) }/>
+              </div>
             </div>
             <div className="guide-image-container">
               <div className="guide-snippet">

@@ -4,6 +4,11 @@
 .guide-view {
   .guide-section {
     margin-top: 16px;
+    $side-padding: 4px;
+    .ap-section-header {
+      margin-bottom: 0;
+      padding: 0 $side-padding;
+    }
     .ap-section-body {
       padding: 4px;
       display: flex;
@@ -16,6 +21,13 @@
     .guide-image-container {
       width: 100%;
       box-sizing: border-box;
+    }
+
+    .guide-description {
+      padding: 0 $side-padding;
+    }
+    .guide-snippet {
+      padding: 0 $side-padding;
     }
   }
 }
