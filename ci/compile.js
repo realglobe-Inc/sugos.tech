@@ -73,7 +73,7 @@ apeTasking.runTasks('compile', [
   }),
   () => co(function * () {
     let src = './node_modules/sugos/doc/images/structure.png'
-    let dest = 'lib/images/structure.png'
+    let dest = 'public/images/structure.png'
     let results = yield filecopy(src, dest)
     for (let filename of Object.keys(results)) {
       console.log(`File generated: ${filename}`)
