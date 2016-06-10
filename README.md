@@ -58,7 +58,7 @@ See Online
 
 [Online version][hosted_url] is hosted on GitHub Pages.
 
-[hosted_url]: http://.github.io/apeman-demo-mock/index.html
+[hosted_url]: http://realglobe-Inc.github.io/sugos.tech/index.html
 
 
 
