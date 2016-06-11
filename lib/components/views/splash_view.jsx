@@ -54,7 +54,7 @@ const SplashView = React.createClass({
               <ApSectionHeader>{ l('sections.SPLASH_MECHANISM_TITLE') }</ApSectionHeader>
               <ApSectionBody>
                 <div>
-                  <Markdown text={ [].concat(l('sections.SPLASH_MECHANISM_TEXT')).join(EOL + EOL) }/>
+                  <Markdown src={ [].concat(l('sections.SPLASH_MECHANISM_TEXT')).join(EOL + EOL) }/>
                   <img src="images/structure.png" height="300"/>
                 </div>
               </ApSectionBody>

@@ -24,8 +24,8 @@ if (!loc[ lang ]) {
 }
 
 const publicDir = 'public'
-const publicHtmlDir = lang ? `${publicDir}/html/${lang}` : `${publicDir}/html`
-const base = lang ? '../..' : '..'
+const publicHtmlDir = `${publicDir}/html/${lang}`
+const base = '../..'
 
 apeTasking.runTasks('compile', [
   () => apeCompiling.compileReactJsx('**/*.jsx', {

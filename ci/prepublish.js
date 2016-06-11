@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Compile files.
+ * Prepublish script.
  */
 
 'use strict'
@@ -13,11 +13,19 @@ const apeTasking = require('ape-tasking')
 const apeCompiling = require('ape-compiling')
 const co = require('co')
 const fs = require('fs')
+const loc = require('../loc')
 
+let { execcli } = apeTasking
 let dest = 'public/javascripts/external.js'
 let destCC = 'public/javascripts/external.cc.js'
 
-apeTasking.runTasks('postinstall', [
+apeTasking.runTasks('prepublish', [
+  () => co(function * () {
+    let { env } = process
+    for (let lang of Object.keys(loc)) {
+      yield execcli('ci/compile.js', [], { env: Object.assign({ LANG: lang }, env) })
+    }
+  }),
   () => co(function * () {
     try {
       yield apeCompiling.browserifyJs('', dest, {

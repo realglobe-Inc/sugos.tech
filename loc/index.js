@@ -13,7 +13,8 @@ const apemanlocale = require('apemanlocale')
 
 let locales = apemanlocale(__dirname, {
   default: 'en',
-  buildin: true // Use buildin messages as fallback
+  buildin: true, // Use buildin messages as fallback
+  fallback: true
 })
 
 // Check consistency.

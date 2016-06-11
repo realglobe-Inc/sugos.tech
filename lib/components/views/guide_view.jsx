@@ -120,7 +120,7 @@ const GuideView = React.createClass({
         <ApSectionBody>
           <div className="guide-text-container">
             <div className="guide-description">
-              <Markdown text={ [].concat(text).join(EOL + EOL) }/>
+              <Markdown src={ [].concat(text).join(EOL + EOL) }/>
             </div>
           </div>
           <div className="guide-image-container">
