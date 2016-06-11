@@ -18,7 +18,7 @@ const apeCompiling = require('ape-compiling')
 const React = require('react')
 const ReactDOM = require('react-dom/server')
 const loc = require('../loc')
-const lang = process.env.LANG || 'en'
+const lang = String(process.env.LANG || 'en').split(/[_\.]/g).shift()
 if (!loc[ lang ]) {
   throw new Error(`Unknown lang: ${lang}`)
 }
