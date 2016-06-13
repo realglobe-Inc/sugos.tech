@@ -60,14 +60,14 @@ const ShowcaseView = React.createClass({
                 text: l('sections.CASE_REMOTE_TEXT'),
                 video1: {
                   src: 'videos/SUGOS_remote_PLEN.mp4',
-                  translateX: 0,
-                  translateY: -20,
+                  translateX: -155,
+                  translateY: -10,
                   width: 310
                 },
                 video2: {
                   src: 'videos/SUGOS_remote_PLEN.mp4',
-                  translateX: -155,
-                  translateY: -10,
+                  translateX: 0,
+                  translateY: -20,
                   width: 310
                 }
               }),
@@ -76,14 +76,14 @@ const ShowcaseView = React.createClass({
                 text: l('sections.CASE_SENSE_TEXT'),
                 video1: {
                   src: 'videos/SUGOS_remote_sensor.mp4',
-                  translateX: 0,
-                  translateY: -20,
+                  translateX: -155,
+                  translateY: -5,
                   width: 310
                 },
                 video2: {
                   src: 'videos/SUGOS_remote_sensor.mp4',
-                  translateX: -155,
-                  translateY: -5,
+                  translateX: 0,
+                  translateY: -20,
                   width: 310
                 }
               }),
@@ -91,14 +91,16 @@ const ShowcaseView = React.createClass({
                 title: l('sections.CASE_TALK_TITLE'),
                 text: l('sections.CASE_TALK_TEXT'),
                 video1: {
-                  src: 'videos/mock-mp4.mp4',
-                  translateX: -10,
-                  translateY: -10
+                  src: 'videos/pepper_speech_recognition.mp4',
+                  translateX: 0,
+                  translateY: 0,
+                  width: 470
                 },
                 video2: {
-                  src: 'videos/mock-mp4-2.mp4',
-                  translateX: -140,
-                  translateY: -70
+                  src: 'videos/pepper_speech_recognition.mp4',
+                  translateX: -200,
+                  translateY: -30,
+                  width: 350
                 }
               })
             ]}
