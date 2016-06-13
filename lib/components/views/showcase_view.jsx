@@ -59,14 +59,16 @@ const ShowcaseView = React.createClass({
                 title: l('sections.CASE_REMOTE_TITLE'),
                 text: l('sections.CASE_REMOTE_TEXT'),
                 video1: {
-                  src: 'videos/mock-mp4.mp4',
-                  translateX: -120,
-                  translateY: -30
+                  src: 'videos/SUGOS_remote_PLEN.mp4',
+                  translateX: 0,
+                  translateY: -20,
+                  width: 310
                 },
                 video2: {
-                  src: 'videos/mock-mp4-2.mp4',
-                  translateX: -60,
-                  translateY: -40
+                  src: 'videos/SUGOS_remote_PLEN.mp4',
+                  translateX: -155,
+                  translateY: -10,
+                  width: 310
                 }
               }),
               _section('sense', {
@@ -107,4 +109,3 @@ const ShowcaseView = React.createClass({
 })
 
 module.exports = ShowcaseView
-
