@@ -33,6 +33,7 @@ const Video = React.createClass({
                    height={ props.height }
                    loop
                    autoPlay={ (player) => s.player = player }
+                   muted
           />
         </div>
         <div className="video-overlay"></div>

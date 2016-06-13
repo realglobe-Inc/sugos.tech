@@ -75,14 +75,16 @@ const ShowcaseView = React.createClass({
                 title: l('sections.CASE_SENSE_TITLE'),
                 text: l('sections.CASE_SENSE_TEXT'),
                 video1: {
-                  src: 'videos/mock-mp4.mp4',
-                  translateX: -60,
-                  translateY: -60
+                  src: 'videos/SUGOS_remote_sensor.mp4',
+                  translateX: 0,
+                  translateY: -20,
+                  width: 310
                 },
                 video2: {
-                  src: 'videos/mock-mp4-2.mp4',
-                  translateX: -30,
-                  translateY: 0
+                  src: 'videos/SUGOS_remote_sensor.mp4',
+                  translateX: -155,
+                  translateY: -5,
+                  width: 310
                 }
               }),
               _section('talk', {
