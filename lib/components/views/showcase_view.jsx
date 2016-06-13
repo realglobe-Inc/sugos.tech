@@ -88,8 +88,24 @@ const ShowcaseView = React.createClass({
                 }
               }),
               _section('talk', {
-                title: l('sections.CASE_TALK_TITLE'),
-                text: l('sections.CASE_TALK_TEXT'),
+                title: l('sections.CASE_SPEECH_RECOGNITION_TITLE'),
+                text: l('sections.CASE_SPEECH_RECOGNITION_TEXT'),
+                video1: {
+                  src: 'videos/pepper_speech_recognition.mp4',
+                  translateX: 0,
+                  translateY: 0,
+                  width: 470
+                },
+                video2: {
+                  src: 'videos/pepper_speech_recognition.mp4',
+                  translateX: -200,
+                  translateY: -30,
+                  width: 350
+                }
+              }),
+              _section('text-input', {
+                title: l('sections.CASE_TEXT_INPUT_TITLE'),
+                text: l('sections.CASE_TEXT_INPUT_TEXT'),
                 video1: {
                   src: 'videos/pepper_speech_recognition.mp4',
                   translateX: 0,

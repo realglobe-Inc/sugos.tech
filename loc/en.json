@@ -38,8 +38,12 @@
     "CASE_SENSE_TEXT": [
       "With SUGOS, you can receive sensing data with event interface."
     ],
-    "CASE_TALK_TITLE": "Combine APIs to Build Rich Applications",
-    "CASE_TALK_TEXT": [
+    "CASE_SPEECH_RECOGNITION_TITLE": "Combine APIs to Build Rich Applications",
+    "CASE_SPEECH_RECOGNITION_TEXT": [
+
+    ],
+    "CASE_TEXT_INPUT_TITLE": "Combine APIs to Build Rich Applications",
+    "CASE_TEXT_INPUT_TEXT": [
 
     ],
     "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
