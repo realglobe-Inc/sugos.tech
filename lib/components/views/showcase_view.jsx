@@ -118,6 +118,22 @@ const ShowcaseView = React.createClass({
                   translateY: -30,
                   width: 510
                 }
+              }),
+              _section('edison-roomba', {
+                title: l('sections.CASE_EDISON_ROOMBA_TITLE'),
+                text: l('sections.CASE_EDISON_ROOMBA_TEXT'),
+                video1: {
+                  src: 'videos/edison_roomba.mp4',
+                  translateX: -15,
+                  translateY: -30,
+                  width: 380
+                },
+                video2: {
+                  src: 'videos/edison_roomba.mp4',
+                  translateX: -162,
+                  translateY: -20,
+                  width: 320
+                }
               })
             ]}
           </article>
