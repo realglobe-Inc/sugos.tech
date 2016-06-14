@@ -131,13 +131,30 @@ const ShowcaseView = React.createClass({
                 reversed: true,
                 video1: {
                   src: 'videos/yabee-stream.mp4',
-                  translateX: 0,
+                  translateX: -163,
                   translateY: -20,
-                  width: 310
+                  width: 320
                 },
                 video2: {
                   src: 'videos/yabee-stream.mp4',
-                  translateX: -163,
+                  translateX: 0,
+                  translateY: -20,
+                  width: 310
+                }
+              }),
+              _section('curl-rapiro', {
+                title: l('sections.CASE_CURL_RAPIRO_TITLE'),
+                text: l('sections.CASE_CURL_RAPIRO_TEXT'),
+                reversed: false,
+                video1: {
+                  src: 'videos/curl_rapiro.mp4',
+                  translateX: -172,
+                  translateY: -36,
+                  width: 326
+                },
+                video2: {
+                  src: 'videos/curl_rapiro.mp4',
+                  translateX: -5,
                   translateY: -20,
                   width: 320
                 }
