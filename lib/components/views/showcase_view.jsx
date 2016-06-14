@@ -24,35 +24,12 @@ const ShowcaseView = React.createClass({
   render () {
     const s = this
     let l = s.getLocale()
+    let _section = s._renderSection
 
-    let _section = (name, config) => {
-      let {
-        title, text,
-        video1, video2,
-        reversed
-      } = config
-      return (
-        <ApSection className="showcase-section"
-                   id={ `showcase-${name}-section` }
-                   key={ name }>
-          <ApSectionHeader>{ title }</ApSectionHeader>
-          <ApSectionBody>
-            <div className="showcase-text-container">
-              <div className="showcase-description">{
-                [].concat(text).map((text, i) => (<p key={i}>{ text }</p>))
-              }</div>
-            </div>
-            <div className="showcase-video-container">
-              <Video className="showcase-video" { ...video1 }/>
-              <Joiner className="showcase-joiner" color={ reversed ? DOMINANT: "white" }/>
-              <Video className="showcase-video" { ...video2 }/>
-            </div>
-          </ApSectionBody>
-        </ApSection>
-      )
-    }
     return (
-      <ApView className="showcase-view">
+      <ApView className="showcase-view"
+              spinning={ !s.mounted }
+      >
         <ApViewHeader titleText={ l('titles.SHOWCASE_TITLE') }/>
         <ApViewBody>
           <article>
@@ -147,8 +124,53 @@ const ShowcaseView = React.createClass({
         </ApViewBody>
       </ApView>
     )
-  }
+  },
 
+  // -----------------
+  // LifeCycle
+  // -----------------
+
+  componentDidMount () {
+    const s = this
+    s.mounted = true
+  },
+
+  // -----------------
+  // Custom
+  // -----------------
+
+  mounted: false,
+
+  // -----------------
+  // Private
+  // -----------------
+
+  _renderSection (name, config) {
+    let {
+      title, text,
+      video1, video2,
+      reversed
+    } = config
+    return (
+      <ApSection className="showcase-section"
+                 id={ `showcase-${name}-section` }
+                 key={ name }>
+        <ApSectionHeader>{ title }</ApSectionHeader>
+        <ApSectionBody>
+          <div className="showcase-text-container">
+            <div className="showcase-description">{
+              [].concat(text).map((text, i) => (<p key={i}>{ text }</p>))
+            }</div>
+          </div>
+          <div className="showcase-video-container">
+            <Video className="showcase-video" { ...video1 }/>
+            <Joiner className="showcase-joiner" color={ reversed ? DOMINANT: "white" }/>
+            <Video className="showcase-video" { ...video2 }/>
+          </div>
+        </ApSectionBody>
+      </ApSection>
+    )
+  }
 })
 
 module.exports = ShowcaseView
