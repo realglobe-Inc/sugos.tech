@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="2;URL=./html/index.html">
+    <style>
+        body {
+            padding: 50px;
+            font-size: 14px;
+            color: #CCC;
+            background: white;
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+    <script>
+        window.onload = function onload () {
+            var lang = String(navigator && navigator.language).split(/\-/g).shift()
+            console.log(`Detected lang: ${lang}`)
+            location.href = './html/en/index.html'
+        }
+    </script>
+</head>
+<body>
+Redirecting to top page ....
+</body>
+</html>
