@@ -57,6 +57,10 @@
     "CASE_EDISON_ROOMBA_TEXT": [
 
     ],
+    "CASE_EDISON_STREAM_TITLE": "Edison Stream",
+    "CASE_EDISON_STREAM_TEXT": [
+
+    ],
     "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
     "GUIDE_CLOUD_SETUP_TEXT": [
       "First of all, you need to setup [sugo-cloud](https://github.com/realglobe-Inc/sugo-cloud) on public network so that spot and terminal can access it."

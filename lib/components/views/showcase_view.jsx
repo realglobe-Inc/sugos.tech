@@ -124,6 +124,23 @@ const ShowcaseView = React.createClass({
                   translateY: -20,
                   width: 320
                 }
+              }),
+              _section('edison-stream', {
+                title: l('sections.CASE_EDISON_STREAM_TITLE'),
+                text: l('sections.CASE_EDISON_STREAM_TEXT'),
+                reversed: true,
+                video1: {
+                  src: 'videos/yabee-stream.mp4',
+                  translateX: 0,
+                  translateY: -20,
+                  width: 310
+                },
+                video2: {
+                  src: 'videos/yabee-stream.mp4',
+                  translateX: -163,
+                  translateY: -20,
+                  width: 320
+                }
               })
             ]}
           </article>
