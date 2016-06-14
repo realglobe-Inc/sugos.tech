@@ -16,10 +16,16 @@ import {
 import Video from '../fragments/video'
 import Joiner from '../fragments/joiner'
 
+const VIDEO_CONTAINER_PREFIX = '_videoSection:'
+const PLAER_PREFIX = '_playerSection:'
+
 const ShowcaseView = React.createClass({
   mixins: [
     ApLocaleMixin
   ],
+  getInitialState () {
+    return {videos: {}}
+  },
   render () {
     const s = this
     let l = s.getLocale()
@@ -30,27 +36,27 @@ const ShowcaseView = React.createClass({
         video1, video2
       } = config
       return (
-        <ApSection className="showcase-section"
+        <ApSection className='showcase-section'
                    id={ `showcase-${name}-section` }
                    key={ name }>
           <ApSectionHeader>{ title }</ApSectionHeader>
           <ApSectionBody>
-            <div className="showcase-text-container">
-              <div className="showcase-description">{
+            <div className='showcase-text-container'>
+              <div className='showcase-description'>{
                 [].concat(text).map((text, i) => (<p key={i}>{ text }</p>))
               }</div>
             </div>
-            <div className="showcase-video-container">
-              <Video className="showcase-video" { ...video1 }/>
-              <Joiner className="showcase-joiner"/>
-              <Video className="showcase-video" { ...video2 }/>
+            <div className='showcase-video-container' ref={v => s[`${VIDEO_CONTAINER_PREFIX}${name}`] = v}>
+              <Video className='showcase-video' { ...video1 } ref={v => s[`${PLAER_PREFIX}${name}:video1`] = v}/>
+              <Joiner className='showcase-joiner'/>
+              <Video className='showcase-video' { ...video2 } ref={v => s[`${PLAER_PREFIX}${name}:video2`] = v}/>
             </div>
           </ApSectionBody>
         </ApSection>
       )
     }
     return (
-      <ApView className="showcase-view">
+      <ApView className='showcase-view' onScroll={s.handleScroll}>
         <ApViewHeader titleText={ l('titles.SHOWCASE_TITLE') }/>
         <ApViewBody>
           <article>
@@ -140,6 +146,58 @@ const ShowcaseView = React.createClass({
         </ApViewBody>
       </ApView>
     )
+  },
+
+  componentDidMount () {
+    const s = this
+    let videos = Object.keys(s).reduce((elements, key) => {
+      if (key.startsWith(VIDEO_CONTAINER_PREFIX)) {
+        let name = key.split(':')[1]
+        let players = Object.keys(s).reduce((players, key) =>
+          players.concat(
+            key.startsWith(`${PLAER_PREFIX}${name}`) ? s[key]._player : []
+          ), [])
+        let video = {
+          element: s[key],
+          name: name,
+          inScreen: true,
+          players: players
+        }
+        return elements.concat(video)
+      } else {
+        return elements
+      }
+    }, [])
+    s.setState({videos})
+  },
+
+  updateInScreen (videos, clientHeight) {
+    const s = this
+    let updated = videos.concat()
+    updated.forEach((video, i) => {
+      let rect = video.element.getBoundingClientRect()
+      updated[i].inScreen = clientHeight - rect.top > 0 && rect.top > 0
+    })
+    s.playJustInScreen(updated)
+    s.setState({videos: updated})
+  },
+
+  playJustInScreen (videos) {
+    videos.forEach(video => {
+      video.players.forEach(player => {
+        if (video.inScreen) {
+          player.play()
+        } else {
+          player.pause()
+        }
+      })
+    })
+  },
+
+  handleScroll (event) {
+    let {clientHeight} = event.target
+    let {videos} = this.state
+    this.updateInScreen(videos, clientHeight)
   }
 
 })

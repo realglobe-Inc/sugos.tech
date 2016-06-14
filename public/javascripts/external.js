@@ -39483,6 +39483,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -39531,12 +39533,14 @@ var ApView = _react2.default.createClass({
     var s = this;
     var props = s.props;
 
+    var className = (0, _classnames2.default)('ap-view', {
+      'ap-view-wide': !!props.wide
+    }, props.className);
     return _react2.default.createElement(
       'div',
-      { className: (0, _classnames2.default)('ap-view', {
-          'ap-view-wide': !!props.wide
-        }, props.className),
-        style: Object.assign({}, props.style) },
+      _extends({}, props, {
+        className: className,
+        style: Object.assign({}, props.style) }),
       _react2.default.createElement(
         'div',
         { className: 'ap-view-inner' },
