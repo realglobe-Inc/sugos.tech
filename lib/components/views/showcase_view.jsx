@@ -94,6 +94,7 @@ const ShowcaseView = React.createClass({
               _section('talk', {
                 title: l('sections.CASE_SPEECH_RECOGNITION_TITLE'),
                 text: l('sections.CASE_SPEECH_RECOGNITION_TEXT'),
+                reversed: false,
                 video1: {
                   src: 'videos/pepper_speech_recognition.mp4',
                   translateX: 0,
@@ -110,6 +111,7 @@ const ShowcaseView = React.createClass({
               _section('text-input', {
                 title: l('sections.CASE_TEXT_INPUT_TITLE'),
                 text: l('sections.CASE_TEXT_INPUT_TEXT'),
+                reversed: true,
                 video1: {
                   src: 'videos/pepper_text_input.mp4',
                   translateX: -165,
@@ -126,6 +128,7 @@ const ShowcaseView = React.createClass({
               _section('edison-roomba', {
                 title: l('sections.CASE_EDISON_ROOMBA_TITLE'),
                 text: l('sections.CASE_EDISON_ROOMBA_TEXT'),
+                reversed: false,
                 video1: {
                   src: 'videos/edison_roomba.mp4',
                   translateX: -15,
