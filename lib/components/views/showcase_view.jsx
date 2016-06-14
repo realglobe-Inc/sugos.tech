@@ -62,14 +62,16 @@ const ShowcaseView = React.createClass({
                 text: l('sections.CASE_REMOTE_TEXT'),
                 reversed: false,
                 video1: {
-                  src: 'videos/mock-mp4.mp4',
-                  translateX: -120,
-                  translateY: -30
+                  src: 'videos/SUGOS_remote_PLEN.mp4',
+                  translateX: -155,
+                  translateY: -10,
+                  width: 310
                 },
                 video2: {
-                  src: 'videos/mock-mp4-2.mp4',
-                  translateX: -60,
-                  translateY: -40
+                  src: 'videos/SUGOS_remote_PLEN.mp4',
+                  translateX: 0,
+                  translateY: -20,
+                  width: 310
                 }
               }),
               _section('sense', {
@@ -77,29 +79,64 @@ const ShowcaseView = React.createClass({
                 text: l('sections.CASE_SENSE_TEXT'),
                 reversed: true,
                 video1: {
-                  src: 'videos/mock-mp4.mp4',
-                  translateX: -60,
-                  translateY: -60
+                  src: 'videos/SUGOS_remote_sensor.mp4',
+                  translateX: -155,
+                  translateY: -5,
+                  width: 310
                 },
                 video2: {
-                  src: 'videos/mock-mp4-2.mp4',
-                  translateX: -30,
-                  translateY: 0
+                  src: 'videos/SUGOS_remote_sensor.mp4',
+                  translateX: 0,
+                  translateY: -20,
+                  width: 310
                 }
               }),
               _section('talk', {
-                title: l('sections.CASE_TALK_TITLE'),
-                text: l('sections.CASE_TALK_TEXT'),
-                reversed: false,
+                title: l('sections.CASE_SPEECH_RECOGNITION_TITLE'),
+                text: l('sections.CASE_SPEECH_RECOGNITION_TEXT'),
                 video1: {
-                  src: 'videos/mock-mp4.mp4',
-                  translateX: -10,
-                  translateY: -10
+                  src: 'videos/pepper_speech_recognition.mp4',
+                  translateX: 0,
+                  translateY: 0,
+                  width: 470
                 },
                 video2: {
-                  src: 'videos/mock-mp4-2.mp4',
-                  translateX: -140,
-                  translateY: -70
+                  src: 'videos/pepper_speech_recognition.mp4',
+                  translateX: -200,
+                  translateY: -30,
+                  width: 350
+                }
+              }),
+              _section('text-input', {
+                title: l('sections.CASE_TEXT_INPUT_TITLE'),
+                text: l('sections.CASE_TEXT_INPUT_TEXT'),
+                video1: {
+                  src: 'videos/pepper_text_input.mp4',
+                  translateX: -165,
+                  translateY: -20,
+                  width: 320
+                },
+                video2: {
+                  src: 'videos/pepper_text_input.mp4',
+                  translateX: -52,
+                  translateY: -30,
+                  width: 510
+                }
+              }),
+              _section('edison-roomba', {
+                title: l('sections.CASE_EDISON_ROOMBA_TITLE'),
+                text: l('sections.CASE_EDISON_ROOMBA_TEXT'),
+                video1: {
+                  src: 'videos/edison_roomba.mp4',
+                  translateX: -15,
+                  translateY: -30,
+                  width: 380
+                },
+                video2: {
+                  src: 'videos/edison_roomba.mp4',
+                  translateX: -162,
+                  translateY: -20,
+                  width: 320
                 }
               })
             ]}

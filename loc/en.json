@@ -45,9 +45,17 @@
     "CASE_SENSE_TEXT": [
       "With SUGOS, you can receive sensing data with event interface."
     ],
-    "CASE_TALK_TITLE": "Mashup APIs to Build Rich Applications",
-    "CASE_TALK_TEXT": [
-      "Since SUGOS works on browser, it's quite easy to mashup multiple third-party APIs. "
+    "CASE_SPEECH_RECOGNITION_TITLE": "Combine APIs to Build Rich Applications",
+    "CASE_SPEECH_RECOGNITION_TEXT": [
+
+    ],
+    "CASE_TEXT_INPUT_TITLE": "Combine APIs to Build Rich Applications",
+    "CASE_TEXT_INPUT_TEXT": [
+
+    ],
+    "CASE_EDISON_ROOMBA_TITLE": "Edison on Roomba",
+    "CASE_EDISON_ROOMBA_TEXT": [
+
     ],
     "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
     "GUIDE_CLOUD_SETUP_TEXT": [
