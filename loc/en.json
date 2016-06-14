@@ -6,6 +6,10 @@
   "dropdown": {
   },
   "errors": {},
+  "footer": {
+    "LINKS_TITLE": "Links",
+    "COPY_RIGHT": "Copyright © 2016 REALGLOBE. All Rights Reserved"
+  },
   "guides": {},
   "jumbotron": {
     "SPLASH_MESSAGE": "Super Ultra Gorgeous Outstanding Special",
@@ -15,7 +19,7 @@
   },
   "links": {},
   "logo": {
-    "UI_LOGO": "SUGOS"
+    "LOGO": "SUGOS"
   },
   "menu": {},
   "messages": {
@@ -29,6 +33,9 @@
   },
   "placeholders": {},
   "sections": {
+    "SPLASH_OVERVIEW_TEXT": "SUGOS enable you to control machines from remote network with Javascript.",
+    "SPLASH_MECHANISM_TITLE": "Mechanism",
+    "SPLASH_MECHANISM_TEXT": "**Sugo-Cloud** server works as hub and interchange events between **Sugo-Spots** and **Sugo-Terminals**",
     "CASE_REMOTE_TITLE": "Control Robots from Remote Browser",
     "CASE_REMOTE_TEXT": [
       "SUGOS provides JavaScript interface to send commands to remote API via local 'spot' server.",
@@ -67,7 +74,13 @@
     "UI_TITLE": "SUGOS",
     "CASES_PAGE_TITLE": "Cases",
     "DOCS_PAGE_TITLE": "Docs",
-    "SHOWCASE_TITLE": "Use Cases of SUGOS"
+    "SHOWCASE_TITLE": "Use Cases of SUGOS",
+    "GUIDES_TITLE": "Guidance Documents of SUGOS"
   },
-  "toasts": {}
+  "toasts": {},
+  "toggles": {
+    "QUICK_START": "Quick Start",
+    "REFERENCES": "References",
+    "TIPS": "Tips"
+  }
 }

@@ -4,6 +4,13 @@ body {
   padding: 8px;
 }
 
+a {
+  &:link,
+  &:visited {
+    color: #d6b810;
+  }
+}
+
 @import "./components/header";
 @import "./components/logo";
 @import "./components/view";
@@ -12,3 +19,4 @@ body {
 @import "./components/joiner";
 @import "./components/snippet";
 @import "./components/guide";
+@import "./components/footer";

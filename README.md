@@ -108,6 +108,6 @@ This software is released under the [MIT License](https://github.com/realglobe-I
 Links
 ------
 
-+ [apeman](https://github.com/apeman-labo/apeman)
++ [SUGOS at Github](https://github.com/realglobe-Inc/sugos)
 
 <!-- Links End -->

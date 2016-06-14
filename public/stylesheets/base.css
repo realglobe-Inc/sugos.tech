@@ -1,6 +1,10 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
 body {
   padding: 8px; }
+
+a:link, a:visited {
+  color: #d6b810; }
 
 .header .logo {
   font-size: 24px;
@@ -15,6 +19,40 @@ body {
 
 .header .logo-text-inner {
   display: none; }
+
+.header .ap-header-tab-item {
+  color: inherit; }
+
+.header .ap-header-tab-item-selected,
+.header .ap-header-tab-item-selected:hover,
+.header .ap-header-tab-item-selected:active {
+  color: #d6b810; }
+
+.header .ap-header-tab {
+  border-bottom: 1px solid #F0F0F0; }
+
+.header .ap-header-logo {
+  position: relative; }
+
+.header .ap-header-logo-link:after {
+  content: "α version";
+  display: inline-block;
+  padding: 2px 8px;
+  position: absolute;
+  transform: rotate(-12deg);
+  font-size: 9px;
+  z-index: 4;
+  left: -10px;
+  top: 4px;
+  background: rgba(238, 51, 51, 0.8);
+  line-height: 9px;
+  color: white; }
+
+@media (min-width: 768px) {
+  .header .ap-header-tab {
+    border-bottom: none; }
+  .header .ap-header-back {
+    border-bottom: 1px solid #F0F0F0; } }
 
 .logo-container {
   text-align: center;
@@ -63,24 +101,34 @@ body .ap-view-header-title {
 .splash-view .ap-view-body {
   padding-top: 0; }
 
+.showcase-view .ap-view-body {
+  overflow-x: hidden;
+  padding-left: 0;
+  padding-right: 0; }
+
 .showcase-view .showcase-section {
-  margin-top: 16px;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  border-radius: 4px;
-  border: 1px solid #F0F0F0; }
+  box-shadow: none;
+  background: #d6b810;
+  padding: 16px 16px;
+  margin: 0 0 -1px;
+  border-radius: 0;
+  border: 1px solid #988100; }
   .showcase-view .showcase-section .ap-section-header {
-    border-bottom: 1px solid #F0F0F0; }
+    color: #988100; }
   .showcase-view .showcase-section .ap-section-body {
     padding: 4px;
     display: flex;
     flex-wrap: wrap; }
+  .showcase-view .showcase-section:nth-child(even) {
+    background: white; }
+    .showcase-view .showcase-section:nth-child(even) .showcase-video {
+      border-color: #d6b810; }
 
 .showcase-view .showcase-video {
   display: block;
   width: 148px;
   height: 148px;
-  border: 4px solid #d6b810;
+  border: 4px solid white;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.33) inset;
   background: #FAFAFA;
   overflow: hidden;
@@ -141,8 +189,30 @@ body .ap-view-header-title {
     .snippet .syntaxhighlighter .comments a {
       color: #CCC !important; }
 
+.guide-view .guide-toggle-container {
+  text-align: center; }
+
+.guide-view .ap-toggle {
+  display: inline-flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
+.guide-view .ap-toggle-item {
+  min-width: 112px;
+  font-size: 14px; }
+
 .guide-view .guide-section {
-  margin-top: 16px; }
+  margin-top: 16px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #F0F0F0; }
+  .guide-view .guide-section .ap-section-header {
+    border-bottom: 1px solid #DDD;
+    margin-bottom: 0;
+    padding: 0 4px 8px; }
   .guide-view .guide-section .ap-section-body {
     padding: 4px;
     display: flex;
@@ -153,13 +223,41 @@ body .ap-view-header-title {
   .guide-view .guide-section .guide-image-container {
     width: 100%;
     box-sizing: border-box; }
+  .guide-view .guide-section .guide-description {
+    padding: 0 4px; }
+  .guide-view .guide-section .guide-snippet {
+    padding: 0 4px; }
 
 @media (min-width: 768px) {
   .guide-view .guide-section .guide-text-container {
-    width: 50%; }
+    width: 30%; }
   .guide-view .guide-section .guide-image-container {
-    width: 50%; }
+    width: 70%; }
   .guide-view .guide-section .ap-section-body {
     flex-wrap: nowrap; } }
+
+.footer {
+  border-top: 1px solid #FAFAFA; }
+  .footer .footer-company {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #AAA;
+    padding-top: 8px; }
+    .footer .footer-company .ap-image {
+      background: transparent; }
+  .footer .footer-title {
+    margin: 0; }
+  .footer .footer-group {
+    margin: 16px 0; }
+  .footer .footer-copyright {
+    font-size: 9px;
+    display: inline-block;
+    padding: 4px 8px; }
+  .footer .ap-links {
+    font-size: smaller;
+    margin: 8px 0; }
+    .footer .ap-links a {
+      color: #AAA; }
 
 /*# sourceMappingURL=base.css.map */

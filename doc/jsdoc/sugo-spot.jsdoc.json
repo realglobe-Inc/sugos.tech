@@ -1,0 +1,116 @@
+{
+  "classes": [
+    {
+      "name": "SpotInterface",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "SpotInterface",
+        "description": "Interface of edge components connected to spot",
+        "parameters": [],
+        "examples": []
+      },
+      "functions": [
+        {
+          "name": "invoke",
+          "access": "",
+          "virtual": false,
+          "description": "Invoke the interface script",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "description": "Name of action",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "params",
+              "type": "Object",
+              "description": "Parameters",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "pipe",
+              "type": "",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": []
+        },
+        {
+          "name": "describe",
+          "access": "",
+          "virtual": false,
+          "description": "Describe interface with JSON compatible format.",
+          "parameters": [],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "name": "SpotInterfacePipe",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "SpotInterfacePipe",
+        "description": "Pipe for spot interface",
+        "parameters": [],
+        "examples": []
+      },
+      "functions": [
+        {
+          "name": "open",
+          "access": "",
+          "virtual": false,
+          "description": "Open the pipe.",
+          "parameters": [],
+          "examples": []
+        },
+        {
+          "name": "close",
+          "access": "",
+          "virtual": false,
+          "description": "Close the pipe.",
+          "parameters": [],
+          "examples": []
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "name": "compose",
+      "access": "",
+      "virtual": false,
+      "description": "Compose multiple interfaces.",
+      "parameters": [
+        {
+          "name": "interfaces",
+          "type": "Object",
+          "description": "Interface configurations",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "Object",
+        "description": "- Composed interfaces"
+      }
+    }
+  ]
+}
