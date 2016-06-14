@@ -31,9 +31,10 @@ const Video = React.createClass({
                    style={ style }
                    width={ props.width }
                    height={ props.height }
-                   loop
-                   autoPlay={ (player) => s.player = player }
+                   playerRef={ (player) => s._player = player }
+                   autoPlay={true}
                    muted
+                   loop
           />
         </div>
         <div className="video-overlay"></div>

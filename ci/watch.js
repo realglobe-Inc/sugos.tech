@@ -13,10 +13,13 @@ const childProcess = require('child_process')
 
 let timer = null
 apeWatching.watchFiles([
-  'src/**/*.jsx'
+  'lib/**/*.jsx'
 ], (ev, filename) => {
   clearTimeout(timer)
   timer = setTimeout(() => {
-    childProcess.fork('ci/compile.js')
+    childProcess.fork('ci/compile.js', {
+      stdio: 'inherit',
+      env: Object.assign({}, process.env, {'LANG': 'en'})
+    })
   }, 300)
 })
