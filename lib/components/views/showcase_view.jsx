@@ -17,6 +17,8 @@ import Video from '../fragments/video'
 import Joiner from '../fragments/joiner'
 import {DOMINANT} from '../../constants/color_constants'
 
+const debug = require('debug')('sg:component:showcase')
+
 const VIDEO_CONTAINER_PREFIX = '_videoSection:'
 const PLAER_PREFIX = '_playerSection:'
 
@@ -28,7 +30,6 @@ const ShowcaseView = React.createClass({
     return {videos: {}}
   },
   render () {
-    console.log('render')
     const s = this
     let l = s.getLocale()
     let _section = s._renderSection
