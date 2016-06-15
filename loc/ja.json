@@ -6,6 +6,10 @@
   "dropdown": {
   },
   "errors": {},
+  "footer": {
+    "LINKS_TITLE": "Links",
+    "COPY_RIGHT": "Copyright © 2016 REALGLOBE. All Rights Reserved"
+  },
   "guides": {},
   "jumbotron": {
     "SPLASH_MESSAGE": "__your_shiny_splash__",
@@ -15,6 +19,7 @@
   },
   "links": {},
   "logo": {
+    "LOGO": "SUGOS"
   },
   "menu": {},
   "messages": {
@@ -27,8 +32,67 @@
   },
   "placeholders": {},
   "sections": {
+    "SPLASH_OVERVIEW_TEXT": "SUGOS は、 Javascript の簡単な記述で、ロボットの遠隔操作を可能にします。 ",
+    "SPLASH_MECHANISM_TITLE": "仕組み",
+    "SPLASH_MECHANISM_TEXT": "**Sugo-Cloud** サーバーがハブの役割をして、 **Sugo-Spots** と **Sugo-Terminals** のイベントを中継します。",
+    "CASE_REMOTE_TITLE": "Web ブラウザからロボットを遠隔操作",
+    "CASE_REMOTE_TEXT": [
+      "SUGOS を使えば、クラウド経由でロボットを遠隔操作できます。",
+      "ブラウザから入力された命令がクラウドを経由して「スポット」と呼ばれるローカルサーバに届き、スポットがロボットに命令を送ります。",
+      "その一連の操作をシンプルに実装できるように Javascript のインターフェースを提供しています。"
+    ],
+    "CASE_SENSE_TITLE": "センサー情報をクラウドに送って分析",
+    "CASE_SENSE_TEXT": [
+      "SUGOS を使えば、遠隔のセンサー情報をリアルタイムでサーバーに送り、分析できます。"
+    ],
+    "CASE_SPEECH_RECOGNITION_TITLE": "API を自由に組み合わせる",
+    "CASE_SPEECH_RECOGNITION_TEXT": [
+      "SUGOS を使えば、APIを自由に組み合わせたアプリケーションが開発できます。",
+      "例えば、ブラウザから音声認識によって得られたテキストデータを使って、ペッパーをリアルタイムで喋らせることができます。"
+    ],
+    "CASE_TEXT_INPUT_TITLE": "Web ブラウザベースの UI",
+    "CASE_TEXT_INPUT_TEXT": [
+      "もちろん、テキスト入力から喋らせることもできます。",
+      "このように、入力側の UI と出力側のロボットの組み合わせを簡単に変えられます。"
+    ],
+    "CASE_EDISON_ROOMBA_TITLE": "Edison を載せて Roomba をラジコンにする",
+    "CASE_EDISON_ROOMBA_TEXT": [
+      "Edison を使えばロボットの遠隔操作がより容易になります。",
+      "この例では、 Edison が「スポット」になってロボットへの命令を中継しています。"
+    ],
+    "CASE_EDISON_STREAM_TITLE": "Edison から映像配信",
+    "CASE_EDISON_STREAM_TEXT": [
+      "Edison から映像配信することもできます。",
+      "ノートパソコンを持ち歩かなくても、小さな Edison と Web カメラで映像配信できます。"
+    ],
+    "CASE_CURL_RAPIRO_TITLE": "curl コマンドで Rapiro を動かす",
+    "CASE_CURL_RAPIRO_TEXT": [
+      "HTTP 通信でロボットに命令を送るわけですから、コマンドラインでリクエストを送れば、ロボットが動きます。"
+    ],
+    "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
+    "GUIDE_CLOUD_SETUP_TEXT": [
+      "First of all, you need to setup [sugo-cloud](https://github.com/realglobe-Inc/sugo-cloud) on public network so that spot and terminal can access it."
+    ],
+    "GUIDE_SPOT_RUN_TITLE": "Run SUGO-Spot",
+    "GUIDE_SPOT_RUN_TEXT": [
+      "Run [sugo-spot](https://github.com/realglobe-Inc/sugo-spot) on local network where your machine or sensors exists and access to the sugo-cloud."
+    ],
+    "GUIDE_TERMINAL_USE_TITLE": "Setup SUGO-Cloud",
+    "GUIDE_TERMINAL_USE_TEXT": [
+      "Connect to remote spot from [sugo-terminal](https://github.com/realglobe-Inc/sugo-terminal) via cloud."
+    ]
   },
   "titles": {
+    "UI_TITLE": "SUGOS",
+    "CASES_PAGE_TITLE": "Cases",
+    "DOCS_PAGE_TITLE": "Docs",
+    "SHOWCASE_TITLE": "Use Cases of SUGOS",
+    "GUIDES_TITLE": "Guidance Documents of SUGOS"
   },
-  "toasts": {}
+  "toasts": {},
+  "toggles": {
+    "QUICK_START": "Quick Start",
+    "REFERENCES": "References",
+    "TIPS": "Tips"
+  }
 }

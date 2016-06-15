@@ -28,6 +28,7 @@ const ShowcaseView = React.createClass({
     return {videos: {}}
   },
   render () {
+    console.log('render')
     const s = this
     let l = s.getLocale()
     let _section = s._renderSection
@@ -124,6 +125,40 @@ const ShowcaseView = React.createClass({
                   translateY: -20,
                   width: 320
                 }
+              }),
+              _section('edison-stream', {
+                title: l('sections.CASE_EDISON_STREAM_TITLE'),
+                text: l('sections.CASE_EDISON_STREAM_TEXT'),
+                reversed: true,
+                video1: {
+                  src: 'videos/yabee-stream.mp4',
+                  translateX: -163,
+                  translateY: -20,
+                  width: 320
+                },
+                video2: {
+                  src: 'videos/yabee-stream.mp4',
+                  translateX: 0,
+                  translateY: -20,
+                  width: 310
+                }
+              }),
+              _section('curl-rapiro', {
+                title: l('sections.CASE_CURL_RAPIRO_TITLE'),
+                text: l('sections.CASE_CURL_RAPIRO_TEXT'),
+                reversed: false,
+                video1: {
+                  src: 'videos/curl_rapiro.mp4',
+                  translateX: -172,
+                  translateY: -36,
+                  width: 326
+                },
+                video2: {
+                  src: 'videos/curl_rapiro.mp4',
+                  translateX: -5,
+                  translateY: -20,
+                  width: 320
+                }
               })
             ]}
           </article>
@@ -202,12 +237,20 @@ const ShowcaseView = React.createClass({
   _updateInScreen (videos, clientHeight) {
     const s = this
     let updated = videos.concat()
+    let shouldSetState = false
     updated.forEach((video, i) => {
       let rect = video.element.getBoundingClientRect()
-      updated[i].inScreen = clientHeight - rect.top > 0 && rect.top > 0
+      let nextInScreen = clientHeight - rect.top > 0 && rect.top > 0
+      let prevInScreen = updated[i].inScreen
+      if (nextInScreen !== prevInScreen) {
+        shouldSetState = true
+        updated[i].inScreen = nextInScreen
+      }
     })
-    s._playJustInScreen(updated)
-    s.setState({videos: updated})
+    if (shouldSetState) {
+      s._playJustInScreen(updated)
+      s.setState({videos: updated})
+    }
   },
 
   _playJustInScreen (videos) {
