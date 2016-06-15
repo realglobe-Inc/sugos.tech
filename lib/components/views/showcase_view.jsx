@@ -28,6 +28,7 @@ const ShowcaseView = React.createClass({
     return {videos: {}}
   },
   render () {
+    console.log('render')
     const s = this
     let l = s.getLocale()
     let _section = s._renderSection
@@ -236,12 +237,20 @@ const ShowcaseView = React.createClass({
   _updateInScreen (videos, clientHeight) {
     const s = this
     let updated = videos.concat()
+    let shouldSetState = false
     updated.forEach((video, i) => {
       let rect = video.element.getBoundingClientRect()
-      updated[i].inScreen = clientHeight - rect.top > 0 && rect.top > 0
+      let nextInScreen = clientHeight - rect.top > 0 && rect.top > 0
+      let prevInScreen = updated[i].inScreen
+      if (nextInScreen !== prevInScreen) {
+        shouldSetState = true
+        updated[i].inScreen = nextInScreen
+      }
     })
-    s._playJustInScreen(updated)
-    s.setState({videos: updated})
+    if (shouldSetState) {
+      s._playJustInScreen(updated)
+      s.setState({videos: updated})
+    }
   },
 
   _playJustInScreen (videos) {
