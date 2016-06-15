@@ -33,6 +33,12 @@ const ShowcaseView = React.createClass({
     const s = this
     let l = s.getLocale()
     let _section = s._renderSection
+    // 開発中の section の挿入・入れ替えを容易にするため
+    let first = true
+    let reversed = () => {
+      first = !first
+      return first
+    }
     return (
       <ApView className='showcase-view'
               spinning={ !s.mounted }
@@ -45,7 +51,7 @@ const ShowcaseView = React.createClass({
               _section('remote', {
                 title: l('sections.CASE_REMOTE_TITLE'),
                 text: l('sections.CASE_REMOTE_TEXT'),
-                reversed: false,
+                reversed: reversed(),
                 video1: {
                   src: 'videos/SUGOS_remote_PLEN.mp4',
                   translateX: -155,
@@ -59,10 +65,27 @@ const ShowcaseView = React.createClass({
                   width: 310
                 }
               }),
+              _section('preset-drone', {
+                title: l('sections.CASE_DRONE_TITLE'),
+                text: l('sections.CASE_DRONE_TEXT'),
+                reversed: reversed(),
+                video1: {
+                  src: 'videos/ardrone.mp4',
+                  translateX: 0,
+                  translateY: -5,
+                  width: 310
+                },
+                video2: {
+                  src: 'videos/ardrone.mp4',
+                  translateX: -155,
+                  translateY: -10,
+                  width: 310
+                }
+              }),
               _section('sense', {
                 title: l('sections.CASE_SENSE_TITLE'),
                 text: l('sections.CASE_SENSE_TEXT'),
-                reversed: true,
+                reversed: reversed(),
                 video1: {
                   src: 'videos/SUGOS_remote_sensor.mp4',
                   translateX: -155,
@@ -79,7 +102,7 @@ const ShowcaseView = React.createClass({
               _section('talk', {
                 title: l('sections.CASE_SPEECH_RECOGNITION_TITLE'),
                 text: l('sections.CASE_SPEECH_RECOGNITION_TEXT'),
-                reversed: false,
+                reversed: reversed(),
                 video1: {
                   src: 'videos/pepper_speech_recognition.mp4',
                   translateX: 0,
@@ -96,7 +119,7 @@ const ShowcaseView = React.createClass({
               _section('text-input', {
                 title: l('sections.CASE_TEXT_INPUT_TITLE'),
                 text: l('sections.CASE_TEXT_INPUT_TEXT'),
-                reversed: true,
+                reversed: reversed(),
                 video1: {
                   src: 'videos/pepper_text_input.mp4',
                   translateX: -165,
@@ -113,7 +136,7 @@ const ShowcaseView = React.createClass({
               _section('edison-roomba', {
                 title: l('sections.CASE_EDISON_ROOMBA_TITLE'),
                 text: l('sections.CASE_EDISON_ROOMBA_TEXT'),
-                reversed: false,
+                reversed: reversed(),
                 video1: {
                   src: 'videos/edison_roomba.mp4',
                   translateX: -15,
@@ -130,7 +153,7 @@ const ShowcaseView = React.createClass({
               _section('edison-stream', {
                 title: l('sections.CASE_EDISON_STREAM_TITLE'),
                 text: l('sections.CASE_EDISON_STREAM_TEXT'),
-                reversed: true,
+                reversed: reversed(),
                 video1: {
                   src: 'videos/yabee-stream.mp4',
                   translateX: -163,
@@ -147,7 +170,7 @@ const ShowcaseView = React.createClass({
               _section('curl-rapiro', {
                 title: l('sections.CASE_CURL_RAPIRO_TITLE'),
                 text: l('sections.CASE_CURL_RAPIRO_TEXT'),
-                reversed: false,
+                reversed: reversed(),
                 video1: {
                   src: 'videos/curl_rapiro.mp4',
                   translateX: -172,
