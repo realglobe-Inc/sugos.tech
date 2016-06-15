@@ -30,6 +30,7 @@ const ShowcaseView = React.createClass({
     return {videos: {}}
   },
   render () {
+    debug('render called.')
     const s = this
     let l = s.getLocale()
     let _section = s._renderSection
@@ -218,6 +219,15 @@ const ShowcaseView = React.createClass({
       }
     }, [])
     s.setState({videos})
+    s.forceUpdate()
+  },
+
+  shouldComponentUpdate (nextProps, nextState) {
+    // videos は render と関係ないので
+    if (nextState.videos !== this.state.videos) {
+      return false
+    }
+    return true
   },
 
   // -----------------
