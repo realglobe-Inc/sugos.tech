@@ -32,9 +32,9 @@
   },
   "placeholders": {},
   "sections": {
-    "SPLASH_OVERVIEW_TEXT": "SUGOS enable you to control machines from remote network with Javascript.",
-    "SPLASH_MECHANISM_TITLE": "Mechanism",
-    "SPLASH_MECHANISM_TEXT": "**Sugo-Cloud** server works as hub and interchange events between **Sugo-Spots** and **Sugo-Terminals**",
+    "SPLASH_OVERVIEW_TEXT": "SUGOS は、 Javascript の簡単な記述で、ロボットの遠隔操作を可能にします。 ",
+    "SPLASH_MECHANISM_TITLE": "仕組み",
+    "SPLASH_MECHANISM_TEXT": "**Sugo-Cloud** サーバーがハブの役割をして、 **Sugo-Spots** と **Sugo-Terminals** のイベントを中継します。",
     "CASE_REMOTE_TITLE": "Web ブラウザからロボットを遠隔操作",
     "CASE_REMOTE_TEXT": [
       "SUGOS を使えば、クラウド経由でロボットを遠隔操作できます。",
@@ -50,9 +50,10 @@
       "SUGOS を使えば、APIを自由に組み合わせたアプリケーションが開発できます。",
       "例えば、ブラウザから音声認識によって得られたテキストデータを使って、ペッパーをリアルタイムで喋らせることができます。"
     ],
-    "CASE_TEXT_INPUT_TITLE": "API",
+    "CASE_TEXT_INPUT_TITLE": "Web ブラウザベースの UI",
     "CASE_TEXT_INPUT_TEXT": [
-      ""
+      "もちろん、テキスト入力から喋らせることもできます。",
+      "このように、入力側の UI と出力側のロボットの組み合わせを簡単に変えられます。"
     ],
     "CASE_EDISON_ROOMBA_TITLE": "Edison を載せて Roomba をラジコンにする",
     "CASE_EDISON_ROOMBA_TEXT": [
