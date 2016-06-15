@@ -184,6 +184,23 @@ const ShowcaseView = React.createClass({
                   translateY: -20,
                   width: 320
                 }
+              }),
+              _section('hitoe-map', {
+                title: l('sections.CASE_HITOE_TITLE'),
+                text: l('sections.CASE_HITOE_TEXT'),
+                reversed: reversed(),
+                video1: {
+                  src: 'videos/hitoe-map.mp4',
+                  translateX: -43,
+                  translateY: -60,
+                  width: 463
+                },
+                video2: {
+                  src: 'videos/hitoe-map.mp4',
+                  translateX: -162,
+                  translateY: -10,
+                  width: 310
+                }
               })
             ]}
           </article>

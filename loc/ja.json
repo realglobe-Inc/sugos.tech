@@ -73,6 +73,10 @@
     "CASE_CURL_RAPIRO_TEXT": [
       "HTTP 通信でロボットに命令を送るわけですから、コマンドラインでリクエストを送れば、ロボットが動きます。"
     ],
+    "CASE_HITOE_TITLE": "ウェアラブルデバイスのセンサー情報を地図上に表示",
+    "CASE_HITOE_TEXT": [
+      "生体情報を計測するウェアラブルデバイス hitoe から得た心拍数を、地図上に表示して遠隔から確認できます。"
+    ],
     "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
     "GUIDE_CLOUD_SETUP_TEXT": [
       "First of all, you need to setup [sugo-cloud](https://github.com/realglobe-Inc/sugo-cloud) on public network so that spot and terminal can access it."
