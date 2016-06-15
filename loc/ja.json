@@ -41,6 +41,10 @@
       "ブラウザから入力された命令がクラウドを経由して「スポット」と呼ばれるローカルサーバに届き、スポットがロボットに命令を送ります。",
       "その一連の操作をシンプルに実装できるように Javascript のインターフェースを提供しています。"
     ],
+    "CASE_DRONE_TITLE": "ドローンの遠隔操作も可能",
+    "CASE_DRONE_TEXT": [
+      "リアルタイムで操作するだけでなく、プリセットを設定すれば決められた動作をすることも可能です。"
+    ],
     "CASE_SENSE_TITLE": "センサー情報をクラウドに送って分析",
     "CASE_SENSE_TEXT": [
       "SUGOS を使えば、遠隔のセンサー情報をリアルタイムでサーバーに送り、分析できます。"
@@ -68,6 +72,10 @@
     "CASE_CURL_RAPIRO_TITLE": "curl コマンドで Rapiro を動かす",
     "CASE_CURL_RAPIRO_TEXT": [
       "HTTP 通信でロボットに命令を送るわけですから、コマンドラインでリクエストを送れば、ロボットが動きます。"
+    ],
+    "CASE_HITOE_TITLE": "ウェアラブルデバイスのセンサー情報を地図上に表示",
+    "CASE_HITOE_TEXT": [
+      "生体情報を計測するウェアラブルデバイス hitoe から得た心拍数を、地図上に表示して遠隔から確認できます。"
     ],
     "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
     "GUIDE_CLOUD_SETUP_TEXT": [

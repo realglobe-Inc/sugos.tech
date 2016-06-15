@@ -41,6 +41,7 @@
     "apemanlocale": "^5.0.6",
     "classnames": "^2.2.5",
     "co": "^4.6.0",
+    "debug": "^2.2.0",
     "execcli": "^4.0.5",
     "http-server": "^0.9.0",
     "sg-react-components": "^1.2.5",
