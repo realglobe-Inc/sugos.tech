@@ -80,6 +80,10 @@
       "生体情報を計測するウェアラブルデバイス hitoe から得た心拍数を、地図上に表示して遠隔地から確認できます。",
       "このように、ウェアラブルデバイスと組み合わせたアプリケーションも開発できます。"
     ],
+    "CASE_GYRO_TITLE": "スマホのジャイロセンサーを使って Pepper と遊ぶ",
+    "CASE_GYRO_TEXT": [
+      "スマートフォンに搭載されているジャイロセンサーを使って、Pepper とあっちむいてホイで遊べます。"
+    ],
     "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
     "GUIDE_CLOUD_SETUP_TEXT": [
       "First of all, you need to setup [sugo-cloud](https://github.com/realglobe-Inc/sugo-cloud) on public network so that spot and terminal can access it."
