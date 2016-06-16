@@ -201,6 +201,23 @@ const ShowcaseView = React.createClass({
                   translateY: -10,
                   width: 310
                 }
+              }),
+              _section('gyro-pepper', {
+                title: l('sections.CASE_GYRO_TITLE'),
+                text: l('sections.CASE_GYRO_TEXT'),
+                reversed: reversed(),
+                video1: {
+                  src: 'videos/gyro-pepper.mp4',
+                  translateX: 0,
+                  translateY: 0,
+                  width: 310
+                },
+                video2: {
+                  src: 'videos/gyro-pepper.mp4',
+                  translateX: -162,
+                  translateY: -2,
+                  width: 310
+                }
               })
             ]}
           </article>

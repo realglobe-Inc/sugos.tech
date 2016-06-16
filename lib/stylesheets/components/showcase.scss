@@ -59,6 +59,8 @@
   .showcase-text-container {
     width: 100%;
     box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
   }
   .showcase-video-container {
     display: flex;
@@ -87,7 +89,7 @@
       }
       &:nth-child(even) {
         .ap-section-body {
-          text-align: right;
+          // text-align: right;
           flex-direction: row-reverse;
         }
       }
