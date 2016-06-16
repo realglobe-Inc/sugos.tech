@@ -20,7 +20,7 @@ import {DOMINANT} from '../../constants/color_constants'
 const debug = require('debug')('sg:component:showcase')
 
 const VIDEO_CONTAINER_PREFIX = '_videoSection:'
-const PLAER_PREFIX = '_playerSection:'
+const PLAYER_PREFIX = '_playerSection:'
 
 const ShowcaseView = React.createClass({
   mixins: [
@@ -222,7 +222,7 @@ const ShowcaseView = React.createClass({
         let name = key.split(':')[1]
         let players = Object.keys(s).reduce((players, key) =>
           players.concat(
-            key.startsWith(`${PLAER_PREFIX}${name}`) ? s[key]._player : []
+            key.startsWith(`${PLAYER_PREFIX}${name}`) ? s[key]._player : []
           ), [])
         let video = {
           element: s[key],
@@ -272,13 +272,13 @@ const ShowcaseView = React.createClass({
         <ApSectionBody>
           <div className='showcase-text-container'>
             <div className='showcase-description'>{
-              [].concat(text).map((text, i) => (<p key={i}>{ text }</p>))
+              [].concat(text).map((text, i) => (<p key={ i }>{ text }</p>))
             }</div>
           </div>
-          <div className='showcase-video-container' ref={v => s[`${VIDEO_CONTAINER_PREFIX}${name}`] = v}>
-            <Video className='showcase-video' { ...video1 } ref={v => s[`${PLAER_PREFIX}${name}:video1`] = v}/>
+          <div className='showcase-video-container' ref={ (v) => s[`${VIDEO_CONTAINER_PREFIX}${name}`] = v }>
+            <Video className='showcase-video' { ...video1 } ref={ (v) => s[`${PLAYER_PREFIX}${name}:video1`] = v }/>
             <Joiner className='showcase-joiner' color={ reversed ? DOMINANT : 'white' }/>
-            <Video className='showcase-video' { ...video2 } ref={v => s[`${PLAER_PREFIX}${name}:video2`] = v}/>
+            <Video className='showcase-video' { ...video2 } ref={ (v) => s[`${PLAYER_PREFIX}${name}:video2`] = v }/>
           </div>
         </ApSectionBody>
       </ApSection>
@@ -305,8 +305,8 @@ const ShowcaseView = React.createClass({
   },
 
   _playJustInScreen (videos) {
-    videos.forEach(video => {
-      video.players.forEach(player => {
+    videos.forEach((video) => {
+      video.players.forEach((player) => {
         if (video.inScreen) {
           player.play()
         } else {

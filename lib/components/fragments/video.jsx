@@ -32,7 +32,7 @@ const Video = React.createClass({
                    width={ props.width }
                    height={ props.height }
                    playerRef={ (player) => s._player = player }
-                   autoPlay={true}
+                   autoPlay={ true }
                    muted
                    loop
           />
