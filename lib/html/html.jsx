@@ -50,8 +50,6 @@ const Html = React.createClass({
                 base={ base }
         >
           <ApThemeStyle dominant={ DOMINANT }/>
-          <ApFaIconStyle />
-          <ApIonIconStyle />
           <ApBackgroundStyle />
           <ApStyle>
             { highlightJsx.style() }
