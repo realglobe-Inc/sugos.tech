@@ -43,25 +43,27 @@
     ],
     "CASE_DRONE_TITLE": "ドローンの遠隔操作も可能",
     "CASE_DRONE_TEXT": [
-      "リアルタイムで操作するだけでなく、プリセットを設定すれば決められた動作をすることも可能です。"
+      "リアルタイムで操作するだけでなく、プリセットを設定すれば決められた動作をすることも可能です。",
+      "たとえば、ドローンが決められた運行経路を飛ぶように設定できます。"
     ],
     "CASE_SENSE_TITLE": "センサー情報をクラウドに送って分析",
     "CASE_SENSE_TEXT": [
-      "SUGOS を使えば、遠隔のセンサー情報をリアルタイムでサーバーに送り、分析できます。"
+      "遠隔のセンサー情報をリアルタイムでサーバーに送り、分析できます。",
+      "Kinect が検知した人体の動きを分類・分析できます。"
     ],
     "CASE_SPEECH_RECOGNITION_TITLE": "API を自由に組み合わせる",
     "CASE_SPEECH_RECOGNITION_TEXT": [
-      "SUGOS を使えば、APIを自由に組み合わせたアプリケーションが開発できます。",
-      "例えば、ブラウザから音声認識によって得られたテキストデータを使って、ペッパーをリアルタイムで喋らせることができます。"
+      "APIを自由に組み合わせたアプリケーションが開発できます。",
+      "ブラウザから音声認識によって得られたテキストデータを使って、ペッパーをリアルタイムで喋らせることができます。"
     ],
     "CASE_TEXT_INPUT_TITLE": "Web ブラウザベースの UI",
     "CASE_TEXT_INPUT_TEXT": [
       "もちろん、テキスト入力から喋らせることもできます。",
-      "このように、入力側の UI と出力側のロボットの組み合わせを簡単に変えられます。"
+      "このように、入力側の UI と出力側のロボットの組み合わせを容易に変えられます。"
     ],
     "CASE_EDISON_ROOMBA_TITLE": "Edison を載せて Roomba をラジコンにする",
     "CASE_EDISON_ROOMBA_TEXT": [
-      "Edison を使えばロボットの遠隔操作がより容易になります。",
+      "SUGOS と Edison を組み合わせれば、ロボットの遠隔操作がより容易になります。",
       "この例では、 Edison が「スポット」になってロボットへの命令を中継しています。"
     ],
     "CASE_EDISON_STREAM_TITLE": "Edison から映像配信",
@@ -75,7 +77,8 @@
     ],
     "CASE_HITOE_TITLE": "ウェアラブルデバイスのセンサー情報を地図上に表示",
     "CASE_HITOE_TEXT": [
-      "生体情報を計測するウェアラブルデバイス hitoe から得た心拍数を、地図上に表示して遠隔から確認できます。"
+      "生体情報を計測するウェアラブルデバイス hitoe から得た心拍数を、地図上に表示して遠隔地から確認できます。",
+      "このように、ウェアラブルデバイスと組み合わせたアプリケーションも開発できます。"
     ],
     "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
     "GUIDE_CLOUD_SETUP_TEXT": [
@@ -92,10 +95,10 @@
   },
   "titles": {
     "UI_TITLE": "SUGOS",
-    "CASES_PAGE_TITLE": "Cases",
-    "DOCS_PAGE_TITLE": "Docs",
-    "SHOWCASE_TITLE": "Use Cases of SUGOS",
-    "GUIDES_TITLE": "Guidance Documents of SUGOS"
+    "CASES_PAGE_TITLE": "事例",
+    "DOCS_PAGE_TITLE": "ドキュメント",
+    "SHOWCASE_TITLE": "SUGOS のユースケース",
+    "GUIDES_TITLE": "SUGOS のドキュメントガイド"
   },
   "toasts": {},
   "toggles": {
