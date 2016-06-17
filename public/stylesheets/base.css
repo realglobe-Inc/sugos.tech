@@ -133,7 +133,7 @@ body .ap-view-header-title {
   background: #FAFAFA;
   overflow: hidden;
   position: relative; }
-  .showcase-view .showcase-video .video-overlay {
+  .showcase-view .showcase-video .video-canvas-overlay {
     position: absolute;
     display: block;
     left: 0;

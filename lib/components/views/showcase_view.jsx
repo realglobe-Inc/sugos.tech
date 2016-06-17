@@ -14,13 +14,13 @@ import {
   ApLocaleMixin
 } from 'apeman-react-mixins'
 import Video from '../fragments/video'
+import VideoCanvas from '../fragments/video_canvas'
 import Joiner from '../fragments/joiner'
 import {DOMINANT} from '../../constants/color_constants'
 
 const debug = require('debug')('sg:component:showcase')
 
-const VIDEO_CONTAINER_PREFIX = '_videoSection:'
-const PLAER_PREFIX = '_playerSection:'
+const articles = require('../data/articles.json')
 
 const ShowcaseView = React.createClass({
   mixins: [
@@ -48,178 +48,11 @@ const ShowcaseView = React.createClass({
         <ApViewHeader titleText={ l('titles.SHOWCASE_TITLE') }/>
         <ApViewBody>
           <article>
-            { [
-              _section('remote', {
-                title: l('sections.CASE_REMOTE_TITLE'),
-                text: l('sections.CASE_REMOTE_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/SUGOS_remote_PLEN.mp4',
-                  translateX: -155,
-                  translateY: -10,
-                  width: 310
-                },
-                video2: {
-                  src: 'videos/SUGOS_remote_PLEN.mp4',
-                  translateX: 0,
-                  translateY: -20,
-                  width: 310
-                }
-              }),
-              _section('preset-drone', {
-                title: l('sections.CASE_DRONE_TITLE'),
-                text: l('sections.CASE_DRONE_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/ardrone.mp4',
-                  translateX: 0,
-                  translateY: -5,
-                  width: 310
-                },
-                video2: {
-                  src: 'videos/ardrone.mp4',
-                  translateX: -155,
-                  translateY: -10,
-                  width: 310
-                }
-              }),
-              _section('sense', {
-                title: l('sections.CASE_SENSE_TITLE'),
-                text: l('sections.CASE_SENSE_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/SUGOS_remote_sensor.mp4',
-                  translateX: -155,
-                  translateY: -5,
-                  width: 310
-                },
-                video2: {
-                  src: 'videos/SUGOS_remote_sensor.mp4',
-                  translateX: 0,
-                  translateY: -20,
-                  width: 310
-                }
-              }),
-              _section('talk', {
-                title: l('sections.CASE_SPEECH_RECOGNITION_TITLE'),
-                text: l('sections.CASE_SPEECH_RECOGNITION_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/pepper_speech_recognition.mp4',
-                  translateX: 0,
-                  translateY: 0,
-                  width: 470
-                },
-                video2: {
-                  src: 'videos/pepper_speech_recognition.mp4',
-                  translateX: -200,
-                  translateY: -30,
-                  width: 350
-                }
-              }),
-              _section('text-input', {
-                title: l('sections.CASE_TEXT_INPUT_TITLE'),
-                text: l('sections.CASE_TEXT_INPUT_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/pepper_text_input.mp4',
-                  translateX: -165,
-                  translateY: -20,
-                  width: 320
-                },
-                video2: {
-                  src: 'videos/pepper_text_input.mp4',
-                  translateX: -52,
-                  translateY: -30,
-                  width: 510
-                }
-              }),
-              _section('edison-roomba', {
-                title: l('sections.CASE_EDISON_ROOMBA_TITLE'),
-                text: l('sections.CASE_EDISON_ROOMBA_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/edison_roomba.mp4',
-                  translateX: -15,
-                  translateY: -30,
-                  width: 380
-                },
-                video2: {
-                  src: 'videos/edison_roomba.mp4',
-                  translateX: -162,
-                  translateY: -20,
-                  width: 320
-                }
-              }),
-              _section('edison-stream', {
-                title: l('sections.CASE_EDISON_STREAM_TITLE'),
-                text: l('sections.CASE_EDISON_STREAM_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/yabee-stream.mp4',
-                  translateX: -163,
-                  translateY: -20,
-                  width: 320
-                },
-                video2: {
-                  src: 'videos/yabee-stream.mp4',
-                  translateX: 0,
-                  translateY: -20,
-                  width: 310
-                }
-              }),
-              _section('curl-rapiro', {
-                title: l('sections.CASE_CURL_RAPIRO_TITLE'),
-                text: l('sections.CASE_CURL_RAPIRO_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/curl_rapiro.mp4',
-                  translateX: -172,
-                  translateY: -36,
-                  width: 326
-                },
-                video2: {
-                  src: 'videos/curl_rapiro.mp4',
-                  translateX: -5,
-                  translateY: -20,
-                  width: 320
-                }
-              }),
-              _section('hitoe-map', {
-                title: l('sections.CASE_HITOE_TITLE'),
-                text: l('sections.CASE_HITOE_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/hitoe-map.mp4',
-                  translateX: -43,
-                  translateY: -60,
-                  width: 463
-                },
-                video2: {
-                  src: 'videos/hitoe-map.mp4',
-                  translateX: -162,
-                  translateY: -10,
-                  width: 310
-                }
-              }),
-              _section('gyro-pepper', {
-                title: l('sections.CASE_GYRO_TITLE'),
-                text: l('sections.CASE_GYRO_TEXT'),
-                reversed: reversed(),
-                video1: {
-                  src: 'videos/gyro-pepper.mp4',
-                  translateX: 0,
-                  translateY: 0,
-                  width: 310
-                },
-                video2: {
-                  src: 'videos/gyro-pepper.mp4',
-                  translateX: -162,
-                  translateY: -2,
-                  width: 310
-                }
-              })
-            ]}
+            {
+              articles.map(article =>
+                _section(article.name, article.body, reversed)
+              )
+            }
           </article>
         </ApViewBody>
       </ApView>
@@ -232,62 +65,120 @@ const ShowcaseView = React.createClass({
 
   componentDidMount () {
     const s = this
+    // defines mounted value
     s.mounted = true
 
-    let videos = Object.keys(s).reduce((elements, key) => {
-      if (key.startsWith(VIDEO_CONTAINER_PREFIX)) {
-        let name = key.split(':')[1]
-        let players = Object.keys(s).reduce((players, key) =>
-          players.concat(
-            key.startsWith(`${PLAER_PREFIX}${name}`) ? s[key]._player : []
-          ), [])
-        let video = {
-          element: s[key],
-          name: name,
-          inScreen: true,
-          players: players
-        }
-        return elements.concat(video)
-      } else {
-        return elements
+    // defines requeatAnimation functions
+    window.requestAnimationFrame = (() => {
+      return window.requestAnimationFrame ||
+             window.mozRequestAnimationFrame ||
+             window.webkitRequestAnimationFrame ||
+             window.msRequestAnimationFrame ||
+             ((f) => window.setTimeout(f, 1000 / 60))
+    })()
+
+    window.cancelAnimationFrame = (() => {
+      return window.cancelAnimationFrame ||
+             window.cancelRequestAnimationFrame ||
+             window.webkitCancelAnimationFrame ||
+             window.webkitCancelRequestAnimationFrame ||
+             window.mozCancelAnimationFrame ||
+             window.mozCancelRequestAnimationFrame ||
+             window.msCancelAnimationFrame ||
+             window.msCancelRequestAnimationFrame ||
+             window.oCancelAnimationFrame ||
+             window.oCancelRequestAnimationFrame ||
+             ((id) => window.clearTimeout(id))
+    })()
+
+    // defines this.videos
+    let videos = articles.map(article => {
+      let {name} = article
+      return {
+        name: name,
+        inScreen: true,
+        container: s._videoContainers[name],
+        player: s._players[name]._player, // htmls 要素
+        canvas1: s._canvases[name].canvas1,
+        canvas2: s._canvases[name].canvas2
       }
-    }, [])
+    })
     s.videos = videos
   },
 
+  componentWillUnmount () {
+    this.videos.forEach(video => {
+      window.cancelAnimationFrame(video.animationId1)
+      window.cancelAnimationFrame(video.animationId2)
+    })
+  },
   // -----------------
   // Custom
   // -----------------
 
   mounted: false,
   videos: [],
+  _videoContainers: {},
+  _players: {},
+  _canvases: {},
 
   // -----------------
   // Private
   // -----------------
 
-  _renderSection (name, config) {
+  _renderSection (name, config, reversed) {
     const s = this
+    let l = s.getLocale()
     let {
       title, text,
-      video1, video2,
-      reversed
+      video,
+      canvas1, canvas2
     } = config
+    s._canvases[name] = {} // Error 回避
+    let refs = {
+      container (c) {
+        s._videoContainers[name] = c
+      },
+      video (c) {
+        s._players[name] = c
+      },
+      canvas1 (c) {
+        s._canvases[name].canvas1 = {
+          element: c,
+          dx: canvas1.dx,
+          dy: canvas1.dy,
+          animationId: 0,
+          ctime: 0,
+          lastTime: 0
+        }
+      },
+      canvas2 (c) {
+        s._canvases[name].canvas2 = {
+          element: c,
+          dx: canvas2.dx,
+          dy: canvas2.dy,
+          animationId: 0,
+          ctime: 0,
+          lastTime: 0
+        }
+      }
+    }
     return (
       <ApSection className='showcase-section'
                  id={ `showcase-${name}-section` }
                  key={ name }>
-        <ApSectionHeader>{ title }</ApSectionHeader>
+        <ApSectionHeader>{ l(`sections.${title}`) }</ApSectionHeader>
         <ApSectionBody>
           <div className='showcase-text-container'>
             <div className='showcase-description'>{
-              [].concat(text).map((text, i) => (<p key={i}>{ text }</p>))
+              [].concat(l(`sections.${text}`)).map((text, i) => (<p key={i}>{ text }</p>))
             }</div>
           </div>
-          <div className='showcase-video-container' ref={v => s[`${VIDEO_CONTAINER_PREFIX}${name}`] = v}>
-            <Video className='showcase-video' { ...video1 } ref={v => s[`${PLAER_PREFIX}${name}:video1`] = v}/>
+          <div className='showcase-video-container' ref={ (c) => s._videoContainers[name] = c }>
+            <Video src={ video } ref={ refs.video }/>
+            <VideoCanvas className='showcase-video' ref={ refs.canvas1 }/>
             <Joiner className='showcase-joiner' color={ reversed ? DOMINANT : 'white' }/>
-            <Video className='showcase-video' { ...video2 } ref={v => s[`${PLAER_PREFIX}${name}:video2`] = v}/>
+            <VideoCanvas className='showcase-video' ref={ refs.canvas2 }/>
           </div>
         </ApSectionBody>
       </ApSection>
@@ -299,7 +190,7 @@ const ShowcaseView = React.createClass({
     let videos = s.videos
     let shouldUpdatePlay = false
     videos.forEach((video, i) => {
-      let rect = video.element.getBoundingClientRect()
+      let rect = video.container.getBoundingClientRect()
       let nextInScreen = clientHeight - rect.top > 0 && rect.top > 0
       let prevInScreen = video.inScreen
       if (nextInScreen !== prevInScreen) {
@@ -316,14 +207,54 @@ const ShowcaseView = React.createClass({
     const s = this
     let videos = s.videos
     videos.forEach(video => {
-      video.players.forEach(player => {
-        if (video.inScreen) {
-          player.play()
-        } else {
-          player.pause()
-        }
-      })
+      if (video.inScreen) {
+        s._play(video)
+      } else {
+        s._pause(video)
+      }
     })
+  },
+
+  _play (video) {
+    video.player.play()
+    debug(`play ${video.name}`)
+
+    function play (canvas) {
+      let ua = navigator.userAgent
+      let ctx = canvas.element._canvas.getContext('2d')
+      let loop
+      if (/(iPhone|iPod)/.test(ua)) {
+        canvas.lastTime = Date.now()
+        loop = (timestamp) => {
+          let diff = Date.now() - canvas.lastTime
+          canvas.lastTime = Date.now()
+          canvas.ctime += diff / 1000
+          video.player.currentTime = canvas.ctime
+          ctx.drawImage(video.player, canvas.dx, canvas.dy)
+          if (video.duration <= video.currentTime) {
+            canvas.ctime = 0
+          }
+          canvas.animationId = window.requestAnimationFrame(loop)
+        }
+      } else {
+        loop = () => {
+          ctx.drawImage(video.player, canvas.dx, canvas.dy)
+          canvas.animationId = window.requestAnimationFrame(loop)
+        }
+      }
+      canvas.animationId = window.requestAnimationFrame(loop)
+    }
+
+    let {canvas1, canvas2} = video
+    play(canvas1)
+    play(canvas2)
+  },
+
+  _pause (video) {
+    debug(`pause ${video.name}`)
+    video.player.pause()
+    window.cancelAnimationFrame(video.animationId1)
+    window.cancelAnimationFrame(video.animationId2)
   },
 
   _handleScroll (event) {

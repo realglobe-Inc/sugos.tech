@@ -23,7 +23,11 @@ const Video = React.createClass({
     const s = this
     let { props } = s
     let { translateX, translateY } = props
-    let style = { transform: `translate(${translateX}px, ${translateY}px)` }
+    let style = {
+      transform: `translate(${translateX}px, ${translateY}px)`,
+      position: 'absolute', // 消せ
+      top: '400px'
+    }
     return (
       <div className={ classnames('video', props.className) }>
         <div className="video-inner">
@@ -33,6 +37,7 @@ const Video = React.createClass({
                    height={ props.height }
                    playerRef={ (player) => s._player = player }
                    autoPlay={true}
+                   hidden
                    muted
                    loop
           />
