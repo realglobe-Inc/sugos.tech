@@ -252,16 +252,7 @@ const ShowcaseView = React.createClass({
         return elements
       }
     }, [])
-    s.setState({videos})
-    s.forceUpdate()
-  },
-
-  shouldComponentUpdate (nextProps, nextState) {
-    // videos は render と関係ないので
-    if (nextState.videos !== this.state.videos) {
-      return false
-    }
-    return true
+    s.videos = videos
   },
 
   // -----------------
@@ -269,6 +260,7 @@ const ShowcaseView = React.createClass({
   // -----------------
 
   mounted: false,
+  videos: [],
 
   // -----------------
   // Private
@@ -302,26 +294,27 @@ const ShowcaseView = React.createClass({
     )
   },
 
-  _updateInScreen (videos, clientHeight) {
+  _updateInScreen (clientHeight) {
     const s = this
-    let updated = videos.concat()
-    let shouldSetState = false
-    updated.forEach((video, i) => {
+    let videos = s.videos
+    let shouldUpdatePlay = false
+    videos.forEach((video, i) => {
       let rect = video.element.getBoundingClientRect()
       let nextInScreen = clientHeight - rect.top > 0 && rect.top > 0
-      let prevInScreen = updated[i].inScreen
+      let prevInScreen = video.inScreen
       if (nextInScreen !== prevInScreen) {
-        shouldSetState = true
-        updated[i].inScreen = nextInScreen
+        video.inScreen = nextInScreen
+        shouldUpdatePlay = true
       }
     })
-    if (shouldSetState) {
-      s._playJustInScreen(updated)
-      s.setState({videos: updated})
+    if (shouldUpdatePlay) {
+      s._playJustInScreen()
     }
   },
 
-  _playJustInScreen (videos) {
+  _playJustInScreen () {
+    const s = this
+    let videos = s.videos
     videos.forEach(video => {
       video.players.forEach(player => {
         if (video.inScreen) {
@@ -335,8 +328,7 @@ const ShowcaseView = React.createClass({
 
   _handleScroll (event) {
     let {clientHeight} = event.target
-    let {videos} = this.state
-    this._updateInScreen(videos, clientHeight)
+    this._updateInScreen(clientHeight)
   }
 })
 
