@@ -50,7 +50,7 @@ const ShowcaseView = React.createClass({
           <article>
             {
               articles.map(article =>
-                _section(article.name, article.body, reversed)
+                _section(article.name, article.body, reversed())
               )
             }
           </article>
@@ -114,6 +114,10 @@ const ShowcaseView = React.createClass({
     videos.forEach(video => {
       video.player.element.addEventListener('canplaythrough', video.player.onCanPlay, false)
     })
+    // 先頭の２つだけは自動再生
+    s._play(videos[0], true)
+    s._play(videos[1], true)
+
     s.videos = videos
   },
 
@@ -218,10 +222,10 @@ const ShowcaseView = React.createClass({
     })
   },
 
-  _play (video) {
+  _play (video, force) {
     const s = this
     let playerElement = video.player.element
-    if (!video.player.canPlay) {
+    if (!video.player.canPlay && !force) {
       return
     }
     playerElement.play()
