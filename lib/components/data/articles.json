@@ -1,0 +1,182 @@
+[
+  {
+    "name": "remote-plen",
+    "body": {
+      "title": "CASE_REMOTE_TITLE",
+      "text": "CASE_REMOTE_TEXT",
+      "video": "videos/SUGOS_remote_PLEN.mp4",
+      "canvas1": {
+        "dx": 160,
+        "dy": 5.6,
+        "width": 152.9
+      },
+      "canvas2": {
+        "dx": 0,
+        "dy": 11.6,
+        "width": 152.9
+      }
+    }
+  },
+  {
+    "name": "preset-drone",
+    "body": {
+      "title": "CASE_DRONE_TITLE",
+      "text": "CASE_DRONE_TEXT",
+      "video": "videos/ardrone.mp4",
+      "canvas1": {
+        "dx": 0,
+        "dy": 3,
+        "width": 152.9
+      },
+      "canvas2": {
+        "dx": 160,
+        "dy": 5.6,
+        "width": 152.9
+      }
+    }
+  },
+  {
+    "name": "kinect-analysis",
+    "body": {
+      "title": "CASE_SENSE_TITLE",
+      "text": "CASE_SENSE_TEXT",
+      "video": "videos/SUGOS_remote_sensor.mp4",
+      "canvas1": {
+        "dx": 160,
+        "dy": 3,
+        "width": 152.9
+      },
+      "canvas2": {
+        "dx": 0,
+        "dy": 11.6,
+        "width": 152.9
+      }
+    }
+  },
+  {
+    "name": "speech-pepper",
+    "body": {
+      "title": "CASE_SPEECH_RECOGNITION_TITLE",
+      "text": "CASE_SPEECH_RECOGNITION_TEXT",
+      "video": "videos/pepper_speech_recognition.mp4",
+      "canvas1": {
+        "dx": 0,
+        "dy": 0,
+        "width": 100.8
+      },
+      "canvas2": {
+        "dx": 182.9,
+        "dy": 15.4,
+        "width": 135.3
+      }
+    }
+  },
+  {
+    "name": "text-input",
+    "body": {
+      "title": "CASE_TEXT_INPUT_TITLE",
+      "text": "CASE_TEXT_INPUT_TEXT",
+      "video": "videos/pepper_text_input.mp4",
+      "canvas1": {
+        "dx": 164.9,
+        "dy": 11.2,
+        "width": 148
+      },
+      "canvas2": {
+        "dx": 32.6,
+        "dy": 10.5,
+        "width": 92.9
+      }
+    }
+  },
+  {
+    "name": "edison_roomba",
+    "body": {
+      "title": "CASE_EDISON_ROOMBA_TITLE",
+      "text": "CASE_EDISON_ROOMBA_TEXT",
+      "video": "videos/edison_roomba.mp4",
+      "canvas1": {
+        "dx": 12.7,
+        "dy": 14.2,
+        "width": 124.8
+      },
+      "canvas2": {
+        "dx": 161.9,
+        "dy": 11.2,
+        "width": 148
+      }
+    }
+  },
+  {
+    "name": "edison-stream",
+    "body": {
+      "title": "CASE_EDISON_STREAM_TITLE",
+      "text": "CASE_EDISON_STREAM_TEXT",
+      "video": "videos/yabee-stream.mp4",
+      "canvas1": {
+        "dx": 163,
+        "dy": 11.2,
+        "width": 148
+      },
+      "canvas2": {
+        "dx": 0,
+        "dy": 21.6,
+        "width": 152.9
+      }
+    }
+  },
+  {
+    "name": "curl-rapiro",
+    "body": {
+      "title": "CASE_CURL_RAPIRO_TITLE",
+      "text": "CASE_CURL_RAPIRO_TEXT",
+      "video": "videos/curl_rapiro.mp4",
+      "canvas1": {
+        "dx": 169,
+        "dy": 19.9,
+        "width": 145.4
+      },
+      "canvas2": {
+        "dx": 4.9,
+        "dy": 11.2,
+        "width": 148
+      }
+    }
+  },
+  {
+    "name": "hitoe-map",
+    "body": {
+      "title": "CASE_HITOE_TITLE",
+      "text": "CASE_HITOE_TEXT",
+      "video": "videos/hitoe-map.mp4",
+      "canvas1": {
+        "dx": 29.6,
+        "dy": 23.2,
+        "width": 102.3
+      },
+      "canvas2": {
+        "dx": 167.1,
+        "dy": 5.6,
+        "width": 152.9
+      }
+    }
+  },
+  {
+    "name": "gyro-pepper",
+    "body": {
+      "title": "CASE_GYRO_TITLE",
+      "text": "CASE_GYRO_TEXT",
+      "video": "videos/gyro-pepper.mp4",
+      "canvas1": {
+        "dx": 0,
+        "dy": 0,
+        "width": 152.9
+      },
+      "canvas2": {
+        "dx": 167.1,
+        "dy": 1.1,
+        "width": 152.9
+      }
+    }
+  }
+]
