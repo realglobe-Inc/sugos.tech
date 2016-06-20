@@ -6,14 +6,14 @@
       "text": "CASE_REMOTE_TEXT",
       "video": "videos/SUGOS_remote_PLEN.mp4",
       "canvas1": {
-        "dx": 427,
-        "dy": 15,
-        "width": 408
+        "dx": 160,
+        "dy": 5.6,
+        "width": 152.9
       },
       "canvas2": {
         "dx": 0,
-        "dy": 31,
-        "width": 408
+        "dy": 11.6,
+        "width": 152.9
       }
     }
   },
@@ -25,13 +25,13 @@
       "video": "videos/ardrone.mp4",
       "canvas1": {
         "dx": 0,
-        "dy": 8,
-        "width": 408
+        "dy": 3,
+        "width": 152.9
       },
       "canvas2": {
-        "dx": 427,
-        "dy": 15,
-        "width": 408
+        "dx": 160,
+        "dy": 5.6,
+        "width": 152.9
       }
     }
   },
@@ -42,14 +42,14 @@
       "text": "CASE_SENSE_TEXT",
       "video": "videos/SUGOS_remote_sensor.mp4",
       "canvas1": {
-        "dx": 427,
-        "dy": 8,
-        "width": 408
+        "dx": 160,
+        "dy": 3,
+        "width": 152.9
       },
       "canvas2": {
         "dx": 0,
-        "dy": 31,
-        "width": 408
+        "dy": 11.6,
+        "width": 152.9
       }
     }
   },
@@ -62,12 +62,12 @@
       "canvas1": {
         "dx": 0,
         "dy": 0,
-        "width": 269
+        "width": 100.8
       },
       "canvas2": {
-        "dx": 488,
-        "dy": 41,
-        "width": 361
+        "dx": 182.9,
+        "dy": 15.4,
+        "width": 135.3
       }
     }
   },
@@ -78,14 +78,14 @@
       "text": "CASE_TEXT_INPUT_TEXT",
       "video": "videos/pepper_text_input.mp4",
       "canvas1": {
-        "dx": 440,
-        "dy": 30,
-        "width": 395
+        "dx": 164.9,
+        "dy": 11.2,
+        "width": 148
       },
       "canvas2": {
-        "dx": 87,
-        "dy": 28,
-        "width": 248
+        "dx": 32.6,
+        "dy": 10.5,
+        "width": 92.9
       }
     }
   },
@@ -96,14 +96,14 @@
       "text": "CASE_EDISON_ROOMBA_TEXT",
       "video": "videos/edison_roomba.mp4",
       "canvas1": {
-        "dx": 34,
-        "dy": 38,
-        "width": 333
+        "dx": 12.7,
+        "dy": 14.2,
+        "width": 124.8
       },
       "canvas2": {
-        "dx": 432,
-        "dy": 30,
-        "width": 395
+        "dx": 161.9,
+        "dy": 11.2,
+        "width": 148
       }
     }
   },
@@ -114,14 +114,14 @@
       "text": "CASE_EDISON_STREAM_TEXT",
       "video": "videos/yabee-stream.mp4",
       "canvas1": {
-        "dx": 435,
-        "dy": 30,
-        "width": 395
+        "dx": 163,
+        "dy": 11.2,
+        "width": 148
       },
       "canvas2": {
         "dx": 0,
-        "dy": 31,
-        "width": 408
+        "dy": 21.6,
+        "width": 152.9
       }
     }
   },
@@ -132,14 +132,14 @@
       "text": "CASE_CURL_RAPIRO_TEXT",
       "video": "videos/curl_rapiro.mp4",
       "canvas1": {
-        "dx": 451,
-        "dy": 53,
-        "width": 388
+        "dx": 169,
+        "dy": 19.9,
+        "width": 145.4
       },
       "canvas2": {
-        "dx": 13,
-        "dy": 30,
-        "width": 395
+        "dx": 4.9,
+        "dy": 11.2,
+        "width": 148
       }
     }
   },
@@ -150,14 +150,14 @@
       "text": "CASE_HITOE_TEXT",
       "video": "videos/hitoe-map.mp4",
       "canvas1": {
-        "dx": 79,
-        "dy": 62,
-        "width": 273
+        "dx": 29.6,
+        "dy": 23.2,
+        "width": 102.3
       },
       "canvas2": {
-        "dx": 446,
-        "dy": 15,
-        "width": 408
+        "dx": 167.1,
+        "dy": 5.6,
+        "width": 152.9
       }
     }
   },
@@ -170,12 +170,12 @@
       "canvas1": {
         "dx": 0,
         "dy": 0,
-        "width": 408
+        "width": 152.9
       },
       "canvas2": {
-        "dx": 446,
-        "dy": 3,
-        "width": 408
+        "dx": 167.1,
+        "dy": 1.1,
+        "width": 152.9
       }
     }
   }

@@ -22,17 +22,12 @@ const Video = React.createClass({
   render () {
     const s = this
     let { props } = s
-    let { translateX, translateY } = props
-    let style = {
-      transform: `translate(${translateX}px, ${translateY}px)`
-    }
     return (
       <div className={ classnames('video', props.className) }>
         <div className="video-inner">
           <SgVideo src={ props.src }
-                   style={ style }
                    playerRef={ (player) => s._player = player }
-                   autoPlay={true}
+                   autoPlay
                    hidden
                    muted
                    loop
