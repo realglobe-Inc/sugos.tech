@@ -10,11 +10,15 @@ import apReact from 'apeman-brws-react'
 import CasesComponent from '../components/cases.component.js'
 
 const CONTAINER_ID = 'cases-wrap'
-window.onload = function () {
+
+function onload () {
   let { locale } = window
   apReact.render(CONTAINER_ID, CasesComponent, {
     locale
   }, function done () {
     // The component is ready.
   })
+  window.removeEventListener('DOMContentLoaded', onload)
 }
+
+window.addEventListener('DOMContentLoaded', onload)

@@ -10,11 +10,15 @@ import apReact from 'apeman-brws-react'
 import DocsComponent from '../components/docs.component.js'
 
 const CONTAINER_ID = 'docs-wrap'
-window.onload = function () {
+
+function onload () {
   let { locale } = window
   apReact.render(CONTAINER_ID, DocsComponent, {
     locale
   }, function done () {
     // The component is ready.
   })
+  window.removeEventListener('DOMContentLoaded', onload)
 }
+
+window.addEventListener('DOMContentLoaded', onload)
