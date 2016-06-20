@@ -94,14 +94,25 @@ const ShowcaseView = React.createClass({
     // defines this.videos
     let videos = articles.map(article => {
       let {name} = article
-      return {
+      let video = {
         name: name,
         inScreen: true,
         container: s._videoContainers[name],
-        player: s._players[name]._player, // htmls 要素
+        player: {
+          element: s._players[name]._player,
+          canPlay: false,
+          onCanPlay: () => {
+            video.player.canPlay = true
+            debug(`canPlay ${name}`)
+          }
+        },
         canvas1: s._canvases[name].canvas1,
         canvas2: s._canvases[name].canvas2
       }
+      return video
+    })
+    videos.forEach(video => {
+      video.player.element.addEventListener('canplaythrough', video.player.onCanPlay, false)
     })
     s.videos = videos
   },
@@ -110,6 +121,8 @@ const ShowcaseView = React.createClass({
     this.videos.forEach(video => {
       window.cancelAnimationFrame(video.animationId1)
       window.cancelAnimationFrame(video.animationId2)
+      let {player} = video
+      player.element.removeEventListner('canplaythrough', player.onCanPlay, false)
     })
   },
   // -----------------
@@ -188,35 +201,27 @@ const ShowcaseView = React.createClass({
   _updateInScreen (clientHeight) {
     const s = this
     let videos = s.videos
-    let shouldUpdatePlay = false
     videos.forEach((video, i) => {
       let rect = video.container.getBoundingClientRect()
       let nextInScreen = clientHeight - rect.top > 0 && rect.top > 0
       let prevInScreen = video.inScreen
       if (nextInScreen !== prevInScreen) {
         video.inScreen = nextInScreen
-        shouldUpdatePlay = true
-      }
-    })
-    if (shouldUpdatePlay) {
-      s._playJustInScreen()
-    }
-  },
-
-  _playJustInScreen () {
-    const s = this
-    let videos = s.videos
-    videos.forEach(video => {
-      if (video.inScreen) {
-        s._play(video)
-      } else {
-        s._pause(video)
+        if (video.inScreen) {
+          s._play(video)
+        } else {
+          s._pause(video)
+        }
       }
     })
   },
 
   _play (video) {
-    video.player.play()
+    let playerElement = video.player.element
+    if (!video.player.canPlay) {
+      return
+    }
+    playerElement.play()
     debug(`play ${video.name}`)
 
     function play (canvas) {
@@ -229,16 +234,16 @@ const ShowcaseView = React.createClass({
           let diff = Date.now() - canvas.lastTime
           canvas.lastTime = Date.now()
           canvas.ctime += diff / 1000
-          video.player.currentTime = canvas.ctime
-          ctx.drawImage(video.player, canvas.dx, canvas.dy)
-          if (video.duration <= video.currentTime) {
+          playerElement.currentTime = canvas.ctime
+          ctx.drawImage(playerElement, canvas.dx, canvas.dy)
+          if (playerElement.duration <= playerElement.currentTime) {
             canvas.ctime = 0
           }
           canvas.animationId = window.requestAnimationFrame(loop)
         }
       } else {
         loop = () => {
-          ctx.drawImage(video.player, canvas.dx, canvas.dy)
+          ctx.drawImage(playerElement, canvas.dx, canvas.dy)
           canvas.animationId = window.requestAnimationFrame(loop)
         }
       }
@@ -251,8 +256,11 @@ const ShowcaseView = React.createClass({
   },
 
   _pause (video) {
+    if (!video.player.canPlay) {
+      return
+    }
     debug(`pause ${video.name}`)
-    video.player.pause()
+    video.player.element.pause()
     window.cancelAnimationFrame(video.animationId1)
     window.cancelAnimationFrame(video.animationId2)
   },
