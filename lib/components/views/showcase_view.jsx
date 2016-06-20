@@ -160,6 +160,7 @@ const ShowcaseView = React.createClass({
           element: c,
           dx: canvas1.dx,
           dy: canvas1.dy,
+          width: canvas1.width,
           animationId: 0,
           ctime: 0,
           lastTime: 0
@@ -170,6 +171,7 @@ const ShowcaseView = React.createClass({
           element: c,
           dx: canvas2.dx,
           dy: canvas2.dy,
+          width: canvas2.width,
           animationId: 0,
           ctime: 0,
           lastTime: 0
@@ -217,6 +219,7 @@ const ShowcaseView = React.createClass({
   },
 
   _play (video) {
+    const s = this
     let playerElement = video.player.element
     if (!video.player.canPlay) {
       return
@@ -235,7 +238,7 @@ const ShowcaseView = React.createClass({
           canvas.lastTime = Date.now()
           canvas.ctime += diff / 1000
           playerElement.currentTime = canvas.ctime
-          ctx.drawImage(playerElement, canvas.dx, canvas.dy)
+          s._draw(ctx, playerElement, canvas)
           if (playerElement.duration <= playerElement.currentTime) {
             canvas.ctime = 0
           }
@@ -243,7 +246,7 @@ const ShowcaseView = React.createClass({
         }
       } else {
         loop = () => {
-          ctx.drawImage(playerElement, canvas.dx, canvas.dy)
+          s._draw(ctx, playerElement, canvas)
           canvas.animationId = window.requestAnimationFrame(loop)
         }
       }
@@ -253,6 +256,10 @@ const ShowcaseView = React.createClass({
     let {canvas1, canvas2} = video
     play(canvas1)
     play(canvas2)
+  },
+
+  _draw (ctx, playerElement, canvas) {
+    ctx.drawImage(playerElement, canvas.dx, canvas.dy, canvas.width, canvas.width, 0, 0, 148, 148)
   },
 
   _pause (video) {

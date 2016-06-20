@@ -24,17 +24,13 @@ const Video = React.createClass({
     let { props } = s
     let { translateX, translateY } = props
     let style = {
-      transform: `translate(${translateX}px, ${translateY}px)`,
-      position: 'absolute', // 消せ
-      top: '400px'
+      transform: `translate(${translateX}px, ${translateY}px)`
     }
     return (
       <div className={ classnames('video', props.className) }>
         <div className="video-inner">
           <SgVideo src={ props.src }
                    style={ style }
-                   width={ props.width }
-                   height={ props.height }
                    playerRef={ (player) => s._player = player }
                    autoPlay={true}
                    hidden

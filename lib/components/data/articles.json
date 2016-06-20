@@ -6,12 +6,14 @@
       "text": "CASE_REMOTE_TEXT",
       "video": "videos/SUGOS_remote_PLEN.mp4",
       "canvas1": {
-        "dx": 0,
-        "dy": 0
+        "dx": 427,
+        "dy": 15,
+        "width": 408
       },
       "canvas2": {
         "dx": 0,
-        "dy": 0
+        "dy": 31,
+        "width": 408
       }
     }
   },
@@ -23,11 +25,13 @@
       "video": "videos/ardrone.mp4",
       "canvas1": {
         "dx": 0,
-        "dy": 0
+        "dy": 8,
+        "width": 408
       },
       "canvas2": {
-        "dx": 0,
-        "dy": 0
+        "dx": 427,
+        "dy": 15,
+        "width": 408
       }
     }
   },
@@ -38,12 +42,14 @@
       "text": "CASE_SENSE_TEXT",
       "video": "videos/SUGOS_remote_sensor.mp4",
       "canvas1": {
-        "dx": 0,
-        "dy": 0
+        "dx": 427,
+        "dy": 8,
+        "width": 408
       },
       "canvas2": {
         "dx": 0,
-        "dy": 0
+        "dy": 31,
+        "width": 408
       }
     }
   },
@@ -55,11 +61,13 @@
       "video": "videos/pepper_speech_recognition.mp4",
       "canvas1": {
         "dx": 0,
-        "dy": 0
+        "dy": 0,
+        "width": 269
       },
       "canvas2": {
-        "dx": 0,
-        "dy": 0
+        "dx": 488,
+        "dy": 41,
+        "width": 361
       }
     }
   },
@@ -70,12 +78,14 @@
       "text": "CASE_TEXT_INPUT_TEXT",
       "video": "videos/pepper_text_input.mp4",
       "canvas1": {
-        "dx": 0,
-        "dy": 0
+        "dx": 440,
+        "dy": 30,
+        "width": 395
       },
       "canvas2": {
-        "dx": 0,
-        "dy": 0
+        "dx": 87,
+        "dy": 28,
+        "width": 248
       }
     }
   },
@@ -86,12 +96,14 @@
       "text": "CASE_EDISON_ROOMBA_TEXT",
       "video": "videos/edison_roomba.mp4",
       "canvas1": {
-        "dx": 0,
-        "dy": 0
+        "dx": 34,
+        "dy": 38,
+        "width": 333
       },
       "canvas2": {
-        "dx": 0,
-        "dy": 0
+        "dx": 432,
+        "dy": 30,
+        "width": 395
       }
     }
   },
@@ -102,12 +114,14 @@
       "text": "CASE_EDISON_STREAM_TEXT",
       "video": "videos/yabee-stream.mp4",
       "canvas1": {
-        "dx": 0,
-        "dy": 0
+        "dx": 435,
+        "dy": 30,
+        "width": 395
       },
       "canvas2": {
         "dx": 0,
-        "dy": 0
+        "dy": 31,
+        "width": 408
       }
     }
   },
@@ -118,12 +132,14 @@
       "text": "CASE_CURL_RAPIRO_TEXT",
       "video": "videos/curl_rapiro.mp4",
       "canvas1": {
-        "dx": 0,
-        "dy": 0
+        "dx": 451,
+        "dy": 53,
+        "width": 388
       },
       "canvas2": {
-        "dx": 0,
-        "dy": 0
+        "dx": 13,
+        "dy": 30,
+        "width": 395
       }
     }
   },
@@ -134,12 +150,14 @@
       "text": "CASE_HITOE_TEXT",
       "video": "videos/hitoe-map.mp4",
       "canvas1": {
-        "dx": 0,
-        "dy": 0
+        "dx": 79,
+        "dy": 62,
+        "width": 273
       },
       "canvas2": {
-        "dx": 0,
-        "dy": 0
+        "dx": 446,
+        "dy": 15,
+        "width": 408
       }
     }
   },
@@ -151,11 +169,13 @@
       "video": "videos/gyro-pepper.mp4",
       "canvas1": {
         "dx": 0,
-        "dy": 0
+        "dy": 0,
+        "width": 408
       },
       "canvas2": {
-        "dx": 0,
-        "dy": 0
+        "dx": 446,
+        "dy": 3,
+        "width": 408
       }
     }
   }
