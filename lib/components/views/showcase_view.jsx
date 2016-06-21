@@ -68,29 +68,6 @@ const ShowcaseView = React.createClass({
     // defines mounted value
     s.mounted = true
 
-    // defines requeatAnimation functions
-    window.requestAnimationFrame = (() => {
-      return window.requestAnimationFrame ||
-             window.mozRequestAnimationFrame ||
-             window.webkitRequestAnimationFrame ||
-             window.msRequestAnimationFrame ||
-             ((f) => window.setTimeout(f, 1000 / 60))
-    })()
-
-    window.cancelAnimationFrame = (() => {
-      return window.cancelAnimationFrame ||
-             window.cancelRequestAnimationFrame ||
-             window.webkitCancelAnimationFrame ||
-             window.webkitCancelRequestAnimationFrame ||
-             window.mozCancelAnimationFrame ||
-             window.mozCancelRequestAnimationFrame ||
-             window.msCancelAnimationFrame ||
-             window.msCancelRequestAnimationFrame ||
-             window.oCancelAnimationFrame ||
-             window.oCancelRequestAnimationFrame ||
-             ((id) => window.clearTimeout(id))
-    })()
-
     // defines this.videos
     let videos = articles.map((article, i) => {
       let {name} = article
