@@ -78,14 +78,16 @@ const ShowcaseView = React.createClass({
         player: {
           element: s._players[name]._player,
           canPlay: false,
-          onCanPlay: () => {
+          // 先頭の動画2つだけ自動再生
+          onCanPlay: i <= 1 ? () => {
             video.player.canPlay = true
             debug(`canPlay ${name}`)
-            // 先頭の動画2つだけ自動再生
-            if (i <= 1) {
-              s._play(video, true)
-            }
-          }
+            s._play(video)
+          } : () => {
+            video.player.canPlay = true
+            debug(`canPlay ${name}`)
+          },
+          playing: false
         },
         canvas1: s._canvases[name].canvas1,
         canvas2: s._canvases[name].canvas2
@@ -199,11 +201,13 @@ const ShowcaseView = React.createClass({
 
   _play (video, force) {
     const s = this
-    if (!video.player.canPlay && !force) {
+    let {player} = video
+    if (!force && (!player.canPlay || player.playing)) {
       return
     }
     debug(`play ${video.name}`)
 
+    player.playing = true
     let play = s.isIPhone ? s._playOnIPhone : s._playOnPc
     let playerElement = video.player.element
     let {canvas1, canvas2} = video
@@ -254,10 +258,8 @@ const ShowcaseView = React.createClass({
   _pause (video) {
     const s = this
     let {player, canvas1, canvas2} = video
-    if (!player.canPlay) {
-      return
-    }
     debug(`pause ${video.name} id ${canvas1.animationId} ${canvas2.animationId}`)
+    player.playing = false
     if (!s.isIPhone) {
       player.element.pause()
     }
