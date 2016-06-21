@@ -11,6 +11,28 @@ import CasesComponent from '../components/cases.component.js'
 
 const CONTAINER_ID = 'cases-wrap'
 
+// Pollyfill of requeatAnimationFrame
+window.requestAnimationFrame = (() => {
+  return window.requestAnimationFrame ||
+         window.mozRequestAnimationFrame ||
+         window.webkitRequestAnimationFrame ||
+         window.msRequestAnimationFrame ||
+         ((f) => window.setTimeout(f, 1000 / 60))
+})()
+window.cancelAnimationFrame = (() => {
+  return window.cancelAnimationFrame ||
+         window.cancelRequestAnimationFrame ||
+         window.webkitCancelAnimationFrame ||
+         window.webkitCancelRequestAnimationFrame ||
+         window.mozCancelAnimationFrame ||
+         window.mozCancelRequestAnimationFrame ||
+         window.msCancelAnimationFrame ||
+         window.msCancelRequestAnimationFrame ||
+         window.oCancelAnimationFrame ||
+         window.oCancelRequestAnimationFrame ||
+         ((id) => window.clearTimeout(id))
+})()
+
 function onload () {
   let { locale } = window
   apReact.render(CONTAINER_ID, CasesComponent, {
