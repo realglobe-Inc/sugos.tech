@@ -27,7 +27,6 @@ const Video = React.createClass({
         <div className="video-inner">
           <SgVideo src={ props.src }
                    playerRef={ (player) => s._player = player }
-                   autoPlay
                    hidden
                    muted
                    loop

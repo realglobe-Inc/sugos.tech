@@ -92,7 +92,7 @@ const ShowcaseView = React.createClass({
     })()
 
     // defines this.videos
-    let videos = articles.map(article => {
+    let videos = articles.map((article, i) => {
       let {name} = article
       let video = {
         name: name,
@@ -104,6 +104,10 @@ const ShowcaseView = React.createClass({
           onCanPlay: () => {
             video.player.canPlay = true
             debug(`canPlay ${name}`)
+            // 先頭の動画2つだけ自動再生
+            if (i <= 1) {
+              s._play(video, true)
+            }
           }
         },
         canvas1: s._canvases[name].canvas1,
@@ -111,20 +115,20 @@ const ShowcaseView = React.createClass({
       }
       return video
     })
+
     videos.forEach(video => {
-      video.player.element.addEventListener('canplaythrough', video.player.onCanPlay, false)
+      let playerElement = video.player.element
+      playerElement.load()
+      playerElement.addEventListener('canplaythrough', video.player.onCanPlay, false)
     })
-    // 先頭の２つだけは自動再生
-    s._play(videos[0], true)
-    s._play(videos[1], true)
 
     s.videos = videos
   },
 
   componentWillUnmount () {
-    this.videos.forEach(video => {
-      window.cancelAnimationFrame(video.animationId1)
-      window.cancelAnimationFrame(video.animationId2)
+    const s = this
+    s.videos.forEach(video => {
+      s._pause(video)
       let {player} = video
       player.element.removeEventListner('canplaythrough', player.onCanPlay, false)
     })
@@ -228,7 +232,6 @@ const ShowcaseView = React.createClass({
     if (!video.player.canPlay && !force) {
       return
     }
-    playerElement.play()
     debug(`play ${video.name}`)
 
     function play (canvas) {
@@ -249,6 +252,8 @@ const ShowcaseView = React.createClass({
           canvas.animationId = window.requestAnimationFrame(loop)
         }
       } else {
+        playerElement.play()
+
         loop = () => {
           s._draw(ctx, playerElement, canvas)
           canvas.animationId = window.requestAnimationFrame(loop)
@@ -270,10 +275,13 @@ const ShowcaseView = React.createClass({
     if (!video.player.canPlay) {
       return
     }
-    debug(`pause ${video.name}`)
-    video.player.element.pause()
-    window.cancelAnimationFrame(video.animationId1)
-    window.cancelAnimationFrame(video.animationId2)
+    debug(`pause ${video.name} id ${video.canvas1.animationId} ${video.canvas2.animationId}`)
+    let ua = navigator.userAgent
+    if (!/(iPhone|iPod)/.test(ua)) {
+      video.player.element.pause()
+    }
+    window.cancelAnimationFrame(video.canvas1.animationId)
+    window.cancelAnimationFrame(video.canvas2.animationId)
   },
 
   _handleScroll (event) {
