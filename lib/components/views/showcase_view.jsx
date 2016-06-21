@@ -20,15 +20,12 @@ import {DOMINANT} from '../../constants/color_constants'
 
 const debug = require('debug')('sg:component:showcase')
 
-const articles = require('../data/articles.json')
+const ARTICLES = require('../data/articles.json')
 
 const ShowcaseView = React.createClass({
   mixins: [
     ApLocaleMixin
   ],
-  getInitialState () {
-    return {videos: {}}
-  },
   render () {
     debug('render called.')
     const s = this
@@ -49,7 +46,7 @@ const ShowcaseView = React.createClass({
         <ApViewBody>
           <article>
             {
-              articles.map(article =>
+              ARTICLES.map(article =>
                 _section(article.name, article.body, reversed())
               )
             }
@@ -68,8 +65,11 @@ const ShowcaseView = React.createClass({
     // defines mounted value
     s.mounted = true
 
+    let ua = navigator.userAgent
+    s.isIPhone = /(iPhone|iPod)/.test(ua)
+
     // defines this.videos
-    let videos = articles.map((article, i) => {
+    let videos = ARTICLES.map((article, i) => {
       let {name} = article
       let video = {
         name: name,
@@ -94,9 +94,9 @@ const ShowcaseView = React.createClass({
     })
 
     videos.forEach(video => {
-      let playerElement = video.player.element
-      playerElement.load()
-      playerElement.addEventListener('canplaythrough', video.player.onCanPlay, false)
+      let {player} = video
+      player.element.load()
+      player.element.addEventListener('canplaythrough', player.onCanPlay, false)
     })
 
     s.videos = videos
@@ -115,6 +115,7 @@ const ShowcaseView = React.createClass({
   // -----------------
 
   mounted: false,
+  isIPhone: false,
   videos: [],
   _videoContainers: {},
   _players: {},
@@ -140,26 +141,19 @@ const ShowcaseView = React.createClass({
       video (c) {
         s._players[name] = c
       },
-      canvas1 (c) {
-        s._canvases[name].canvas1 = {
-          element: c,
-          dx: canvas1.dx,
-          dy: canvas1.dy,
-          width: canvas1.width,
-          animationId: 0,
-          ctime: 0,
-          lastTime: 0
-        }
-      },
-      canvas2 (c) {
-        s._canvases[name].canvas2 = {
-          element: c,
-          dx: canvas2.dx,
-          dy: canvas2.dy,
-          width: canvas2.width,
-          animationId: 0,
-          ctime: 0,
-          lastTime: 0
+      canvas (nth) {
+        let canvasName = `canvas${nth}`
+        let canvasConf = nth === 1 ? canvas1 : canvas2
+        return (c) => {
+          s._canvases[name][canvasName] = {
+            element: c,
+            dx: canvasConf.dx,
+            dy: canvasConf.dy,
+            width: canvasConf.width,
+            animationId: 0,
+            ctime: 0,
+            lastTime: 0
+          }
         }
       }
     }
@@ -174,11 +168,11 @@ const ShowcaseView = React.createClass({
               [].concat(l(`sections.${text}`)).map((text, i) => (<p key={i}>{ text }</p>))
             }</div>
           </div>
-          <div className='showcase-video-container' ref={ (c) => s._videoContainers[name] = c }>
+          <div className='showcase-video-container' ref={ refs.container }>
             <Video src={ video } ref={ refs.video }/>
-            <VideoCanvas className='showcase-video' ref={ refs.canvas1 }/>
+            <VideoCanvas className='showcase-video' ref={ refs.canvas(1) }/>
             <Joiner className='showcase-joiner' color={ reversed ? DOMINANT : 'white' }/>
-            <VideoCanvas className='showcase-video' ref={ refs.canvas2 }/>
+            <VideoCanvas className='showcase-video' ref={ refs.canvas(2) }/>
           </div>
         </ApSectionBody>
       </ApSection>
@@ -187,78 +181,88 @@ const ShowcaseView = React.createClass({
 
   _updateInScreen (clientHeight) {
     const s = this
-    let videos = s.videos
-    videos.forEach((video, i) => {
-      let rect = video.container.getBoundingClientRect()
-      let nextInScreen = clientHeight - rect.top > 0 && rect.top > 0
+    s.videos.forEach((video, i) => {
+      let top = video.container.getBoundingClientRect().top
+      let nextInScreen = clientHeight - top > 0 && top > 0
       let prevInScreen = video.inScreen
-      if (nextInScreen !== prevInScreen) {
-        video.inScreen = nextInScreen
-        if (video.inScreen) {
-          s._play(video)
-        } else {
-          s._pause(video)
-        }
+      if (nextInScreen === prevInScreen) {
+        return
+      }
+      video.inScreen = nextInScreen
+      if (video.inScreen) {
+        s._play(video)
+      } else {
+        s._pause(video)
       }
     })
   },
 
   _play (video, force) {
     const s = this
-    let playerElement = video.player.element
     if (!video.player.canPlay && !force) {
       return
     }
     debug(`play ${video.name}`)
 
-    function play (canvas) {
-      let ua = navigator.userAgent
-      let ctx = canvas.element._canvas.getContext('2d')
-      let loop
-      if (/(iPhone|iPod)/.test(ua)) {
-        canvas.lastTime = Date.now()
-        loop = (timestamp) => {
-          let diff = Date.now() - canvas.lastTime
-          canvas.lastTime = Date.now()
-          canvas.ctime += diff / 1000
-          playerElement.currentTime = canvas.ctime
-          s._draw(ctx, playerElement, canvas)
-          if (playerElement.duration <= playerElement.currentTime) {
-            canvas.ctime = 0
-          }
-          canvas.animationId = window.requestAnimationFrame(loop)
-        }
-      } else {
-        playerElement.play()
+    let play = s.isIPhone ? s._playOnIPhone : s._playOnPc
+    let playerElement = video.player.element
+    let {canvas1, canvas2} = video
 
-        loop = () => {
-          s._draw(ctx, playerElement, canvas)
-          canvas.animationId = window.requestAnimationFrame(loop)
-        }
+    play(canvas1, playerElement)
+    play(canvas2, playerElement)
+  },
+
+  _playOnPc (canvas, playerElement) {
+    const s = this
+    let ctx = canvas.element._canvas.getContext('2d')
+    let loop = () => {
+      s._draw(playerElement, canvas, ctx)
+      canvas.animationId = window.requestAnimationFrame(loop)
+    }
+
+    playerElement.play()
+    s._startAnimationFrame(canvas, loop)
+  },
+
+  _playOnIPhone (canvas, playerElement) {
+    const s = this
+    let ctx = canvas.element._canvas.getContext('2d')
+    canvas.lastTime = Date.now()
+    let loop = (timestamp) => {
+      let diff = Date.now() - canvas.lastTime
+      canvas.lastTime = Date.now()
+      canvas.ctime += diff / 1000
+      playerElement.currentTime = canvas.ctime
+      s._draw(playerElement, canvas, ctx)
+      if (playerElement.duration <= playerElement.currentTime) {
+        canvas.ctime = 0
       }
       canvas.animationId = window.requestAnimationFrame(loop)
     }
 
-    let {canvas1, canvas2} = video
-    play(canvas1)
-    play(canvas2)
+    s._startAnimationFrame(canvas, loop)
   },
 
-  _draw (ctx, playerElement, canvas) {
+  _startAnimationFrame (canvas, loop) {
+    canvas.animationId = window.requestAnimationFrame(loop)
+  },
+
+  _draw (playerElement, canvas, ctx) {
     ctx.drawImage(playerElement, canvas.dx, canvas.dy, canvas.width, canvas.width, 0, 0, 148, 148)
   },
 
   _pause (video) {
-    if (!video.player.canPlay) {
+    const s = this
+    let {player, canvas1, canvas2} = video
+    if (!player.canPlay) {
       return
     }
-    debug(`pause ${video.name} id ${video.canvas1.animationId} ${video.canvas2.animationId}`)
-    let ua = navigator.userAgent
-    if (!/(iPhone|iPod)/.test(ua)) {
-      video.player.element.pause()
+    debug(`pause ${video.name} id ${canvas1.animationId} ${canvas2.animationId}`)
+    if (!s.isIPhone) {
+      player.element.pause()
     }
-    window.cancelAnimationFrame(video.canvas1.animationId)
-    window.cancelAnimationFrame(video.canvas2.animationId)
+    window.cancelAnimationFrame(canvas1.animationId)
+    window.cancelAnimationFrame(canvas2.animationId)
   },
 
   _handleScroll (event) {
