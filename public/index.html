@@ -24,11 +24,12 @@
           var sugosHost = 'www.sugos.tech'
           var herokuHost = 'sugos-tech-ghpage-proxy.herokuapp.com'
           var ghpagesHost = 'realglobe-inc.github.io'
-          if (hostname === sugosHost ||
-              hostname === herokuHost) {
+          var ua = navigator.userAgent
+          var isIPhone = /(iPhone|iPod)/.test(ua)
+          if (isIPhone &&
+             (hostname === sugosHost ||
+              hostname === herokuHost)) {
             location.href = 'http://realglobe-inc.github.io/sugos.tech/9ebb3fa7-66d9-4554-8b86-fb2308040afe/html/ja/index.html'
-          } else {
-            location.href = 'http://www.sugos.tech'
           }
         }
     </script>
