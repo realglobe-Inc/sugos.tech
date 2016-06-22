@@ -8,17 +8,19 @@
 
 import apReact from 'apeman-brws-react'
 import DocsComponent from '../components/docs.component.js'
+import RedirectService from '../services/redirect_service'
 
 const CONTAINER_ID = 'docs-wrap'
 
 function onload () {
+  window.removeEventListener('DOMContentLoaded', onload)
+  RedirectService.redirectIfNotAuth()
   let { locale } = window
   apReact.render(CONTAINER_ID, DocsComponent, {
     locale
   }, function done () {
     // The component is ready.
   })
-  window.removeEventListener('DOMContentLoaded', onload)
 }
 
 window.addEventListener('DOMContentLoaded', onload)

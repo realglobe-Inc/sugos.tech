@@ -8,6 +8,7 @@
 
 import apReact from 'apeman-brws-react'
 import CasesComponent from '../components/cases.component.js'
+import RedirectService from '../services/redirect_service'
 
 const CONTAINER_ID = 'cases-wrap'
 
@@ -34,13 +35,14 @@ window.cancelAnimationFrame = (() => {
 })()
 
 function onload () {
+  window.removeEventListener('DOMContentLoaded', onload)
+  RedirectService.redirectIfNotAuth()
   let { locale } = window
   apReact.render(CONTAINER_ID, CasesComponent, {
     locale
   }, function done () {
     // The component is ready.
   })
-  window.removeEventListener('DOMContentLoaded', onload)
 }
 
 window.addEventListener('DOMContentLoaded', onload)
