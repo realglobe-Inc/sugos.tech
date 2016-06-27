@@ -185,7 +185,7 @@ const ShowcaseView = React.createClass({
     const s = this
     s.videos.forEach((video, i) => {
       let top = video.container.getBoundingClientRect().top
-      let nextInScreen = clientHeight - top > 0 && top > 0
+      let nextInScreen = clientHeight - top > 100 && top > 50
       let prevInScreen = video.inScreen
       if (nextInScreen === prevInScreen) {
         return
