@@ -27,7 +27,6 @@ const ShowcaseView = React.createClass({
     ApLocaleMixin
   ],
   render () {
-    debug('render called.')
     const s = this
     let l = s.getLocale()
     let _section = s._renderSection
