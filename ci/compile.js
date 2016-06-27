@@ -14,6 +14,7 @@ const co = require('co')
 const coz = require('coz')
 const expandglob = require('expandglob')
 const filecopy = require('filecopy')
+const filelink = require('filelink')
 const apeCompiling = require('ape-compiling')
 const React = require('react')
 const ReactDOM = require('react-dom/server')
@@ -28,6 +29,18 @@ const publicHtmlDir = `${publicDir}/html/${lang}`
 const base = '../..'
 
 apeTasking.runTasks('compile', [
+  () => co(function * () {
+    const links = {
+      'assets/videos': 'public/videos',
+      'assets/fonts': 'public/fonts',
+      'assets/images': 'public/images',
+      'assets/index.html': 'public/index.html'
+    }
+    for (let src of Object.keys(links)) {
+      let dest = links[ src ]
+      yield filelink(src, dest, { force: true })
+    }
+  }),
   () => apeCompiling.compileReactJsx('**/*.jsx', {
     cwd: 'lib',
     out: 'lib'
@@ -83,7 +96,7 @@ apeTasking.runTasks('compile', [
   }),
   () => co(function * () {
     let src = './node_modules/sugos/doc/images/structure.png'
-    let dest = 'public/images/structure.png'
+    let dest = 'assets/images/structure.png'
     let results = yield filecopy(src, dest)
     for (let filename of Object.keys(results)) {
       console.log(`File generated: ${filename}`)
