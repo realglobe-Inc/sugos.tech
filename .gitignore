@@ -31,3 +31,5 @@ node_modules
 .npmrc
 tmp
 lib/**/*.js
+
+public/*

@@ -24,6 +24,6 @@ apeTasking.runTasks('deploy', [
   () => execcli('cp', [ '-r', publicDir, `${ghPagesDir}/${OBFUSCATOR}` ]),
   () => execcli('git', [ 'add', '-A', ghPagesDir ]),
   // コミットするものがない場合に exit code 1 で落ちるので
-  () => execcli('git', [ 'commit', '-m', 'Update Github Pages', ghPagesDir ]).catch(e => { console.error(e) }),
+  () => execcli('git', [ 'commit', '-m', 'Update Github Pages', ghPagesDir ]).catch((e) => { console.error(e) }),
   () => apeDeploying.deployGhPages(ghPagesDir)
 ], true)
