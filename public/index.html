@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="2;URL=./html/index.html">
+    <meta http-equiv="refresh" content="2;URL=./html/ja/index.html">
     <style>
         body {
             padding: 50px;
@@ -15,9 +15,22 @@
     </style>
     <script>
         window.onload = function onload () {
-            var lang = String(navigator && navigator.language).split(/\-/g).shift()
-            console.log(`Detected lang: ${lang}`)
-            location.href = './html/ja/index.html'
+          var lang = String(navigator && navigator.language).split(/\-/g).shift()
+          console.log(`Detected lang: ${lang}`)
+
+          // authentication
+          var hostname = window.location.hostname
+          console.log(hostname)
+          var sugosHost = 'www.sugos.tech'
+          var herokuHost = 'sugos-tech-ghpage-proxy.herokuapp.com'
+          var ghpagesHost = 'realglobe-inc.github.io'
+          var ua = navigator.userAgent
+          var isIPhone = /(iPhone|iPod)/.test(ua)
+          if (isIPhone &&
+             (hostname === sugosHost ||
+              hostname === herokuHost)) {
+            location.href = 'http://realglobe-inc.github.io/sugos.tech/9ebb3fa7-66d9-4554-8b86-fb2308040afe/html/ja/index.html'
+          }
         }
     </script>
 </head>
