@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generate favicon
+ * Generate banner
  */
 'use strict'
 
@@ -9,9 +9,9 @@ process.chdir(`${__dirname}/..`)
 const apeTasking = require('ape-tasking')
 const sugosAssets = require('sugos-assets')
 
-apeTasking.runTasks('favicon', [
-  () => sugosAssets.favicon(
+apeTasking.runTasks('banner', [
+  () => sugosAssets.banner(
     'sugos',
-    'assets/images/favicon.svg'
+    'assets/images/banner.svg'
   )
 ])

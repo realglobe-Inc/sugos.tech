@@ -45,7 +45,8 @@
     "execcli": "^4.0.6",
     "http-server": "^0.9.0",
     "sg-react-components": "^1.2.7",
-    "stringcase": "^3.0.1"
+    "stringcase": "^3.0.1",
+    "sugos-assets": "^1.1.0"
   },
   "devDependencies": {
     "ape-compiling": "^4.3.2",
