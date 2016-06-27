@@ -1,6 +1,6 @@
 {
   "name": "sugos.tech",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Homepage of SUGOS",
   "main": "lib",
   "scripts": {
@@ -60,7 +60,6 @@
     "ape-watching": "^2.1.1",
     "apeman-bud-mock": "^3.0.2",
     "arrayreduce": "^2.1.0",
-    "closurecompiler": "^1.5.3",
     "coz": "^6.0.3",
     "expandglob": "^3.0.2",
     "filecopy": "^2.0.0",

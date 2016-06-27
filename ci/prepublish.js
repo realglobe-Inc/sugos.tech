@@ -8,11 +8,9 @@
 
 process.chdir(`${__dirname}/..`)
 
-const ClosureCompiler = require('closurecompiler')
 const apeTasking = require('ape-tasking')
 const apeCompiling = require('ape-compiling')
 const co = require('co')
-const fs = require('fs')
 const loc = require('../loc')
 
 let { execcli } = apeTasking
@@ -39,19 +37,7 @@ apeTasking.runTasks('prepublish', [
     }
   }),
   () => co(function * () {
-    let cc = yield new Promise((resolve, reject) =>
-      ClosureCompiler.compile([
-        dest
-      ], {
-        language_in: 'ECMASCRIPT6',
-        language_out: 'ECMASCRIPT5',
-        compilation_level: 'SIMPLE_OPTIMIZATIONS',
-        warning_level: 'QUIET'
-      }, (err, result) => err ? reject(err) : resolve(result))
-    )
-    yield new Promise((resolve, reject) =>
-      fs.writeFile(destCC, cc, (err) => err ? reject(err) : resolve())
-    )
+    yield apeCompiling.compileCC(dest, destCC)
     console.log(`File generated: ${destCC}`)
   })
 ], true)

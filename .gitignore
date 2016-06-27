@@ -33,3 +33,4 @@ tmp
 lib/**/*.js
 
 public/*
+doc/ghpages
