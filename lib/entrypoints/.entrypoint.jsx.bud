@@ -7,7 +7,7 @@
 const apemanBudMock = require('apeman-bud-mock')
 
 module.exports = require('../.pages.json')
-  .map(apemanBudMock.browser)
+  .map(apemanBudMock.entrypoint)
 
 if (!module.parent) {
   require('coz').render(__filename);

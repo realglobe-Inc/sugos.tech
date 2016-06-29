@@ -5,7 +5,7 @@
 'use strict'
 
 import React, {PropTypes as types} from 'react'
-import CasesComponent from '../components/cases.component'
+import CasesComponent from '../components/cases_component'
 import {DOMINANT} from '../constants/color_constants.json'
 
 import Html from './html'

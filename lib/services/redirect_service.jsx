@@ -6,10 +6,13 @@
 const url = require('url')
 const debug = require('debug')('sg:services:redirect')
 
-const RedirectService = {
+class RedirectService {
   redirectIfNotAuth () {
     let referrer = url.parse(document.referrer).hostname
-    let {hostname} = window.location
+    let { hostname } = window.location
+    if (!hostname) {
+      return
+    }
     let hosts = [
       hostname,
       'www.sugos.tech',
@@ -21,6 +24,16 @@ const RedirectService = {
       window.location.href = 'http://www.sugos.tech'
     }
   }
+}
+
+const singleton = new RedirectService()
+
+Object.assign(RedirectService, {
+  singleton
+})
+
+export {
+  singleton
 }
 
 export default RedirectService

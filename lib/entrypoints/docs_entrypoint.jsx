@@ -7,14 +7,14 @@
 'use strict'
 
 import apReact from 'apeman-brws-react'
-import DocsComponent from '../components/docs.component.js'
-import RedirectService from '../services/redirect_service'
+import DocsComponent from '../components/docs_component'
+import { singleton as redirectService } from '../services/redirect_service'
 
 const CONTAINER_ID = 'docs-wrap'
 
 function onload () {
   window.removeEventListener('DOMContentLoaded', onload)
-  RedirectService.redirectIfNotAuth()
+  redirectService.redirectIfNotAuth()
   let { locale } = window
   apReact.render(CONTAINER_ID, DocsComponent, {
     locale

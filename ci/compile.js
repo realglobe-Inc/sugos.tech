@@ -46,13 +46,14 @@ apeTasking.runTasks('compile', [
     out: 'lib'
   }),
   () => co(function * () {
-    let filenames = yield expandglob('*.browser.js', {
-      cwd: 'lib/browser'
+    const entrypointDir = 'lib/entrypoints'
+    let filenames = yield expandglob('*_entrypoint.js', {
+      cwd: entrypointDir
     })
     for (let filename of filenames) {
       yield apeCompiling.browserifyJs(
-        path.join('lib/browser', filename),
-        path.join(`${publicDir}/javascripts`, filename.replace(/\.browser\.js$/, '.js')),
+        path.join(entrypointDir, filename),
+        path.join(`${publicDir}/javascripts`, filename.replace(/_entrypoint\.js$/, '.js')),
         {
           external: require('./config/external.config.json'),
           debug: true
@@ -71,12 +72,13 @@ apeTasking.runTasks('compile', [
     }
   }),
   () => co(function * () {
-    let filenames = yield expandglob('*.html.js', {
-      cwd: 'lib/html'
+    let htmlDir = 'lib/html'
+    let filenames = yield expandglob('*_html.js', {
+      cwd: htmlDir
     })
     yield coz.render(
       filenames.map((filename) => ({
-        path: path.resolve(publicHtmlDir, filename.replace(/\.html\.js$/, '.html')),
+        path: path.resolve(publicHtmlDir, filename.replace(/\_html\.js$/, '.html')),
         mkdirp: true,
         force: true,
         tmpl: (data) => {
@@ -85,7 +87,7 @@ apeTasking.runTasks('compile', [
           return ReactDOM.renderToStaticMarkup(element)
         },
         data: {
-          component: require(path.resolve('lib/html', filename)),
+          component: require(path.resolve(htmlDir, filename)),
           props: {
             base,
             lang

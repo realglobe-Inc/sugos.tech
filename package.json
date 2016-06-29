@@ -44,9 +44,10 @@
     "debug": "^2.2.0",
     "execcli": "^4.0.6",
     "http-server": "^0.9.0",
+    "sg-react": "^1.0.3",
     "sg-react-components": "^1.2.7",
     "stringcase": "^3.0.1",
-    "sugos-assets": "^1.1.0"
+    "sugos-assets": "^1.1.5"
   },
   "devDependencies": {
     "ape-compiling": "^4.3.2",
@@ -56,10 +57,10 @@
     "ape-reporting": "^3.0.1",
     "ape-tasking": "^4.0.2",
     "ape-testing": "^4.0.0",
-    "ape-tmpl": "^5.0.6",
+    "ape-tmpl": "^5.0.10",
     "ape-updating": "^4.0.1",
     "ape-watching": "^2.1.1",
-    "apeman-bud-mock": "^3.0.2",
+    "apeman-bud-mock": "^4.0.2",
     "arrayreduce": "^2.1.0",
     "coz": "^6.0.3",
     "expandglob": "^3.0.2",
