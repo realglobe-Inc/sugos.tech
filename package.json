@@ -45,6 +45,7 @@
     "sg-react": "^1.0.6",
     "sg-react-components": "^1.3.4",
     "stringcase": "^3.0.1",
+    "sugos": "^2.0.0",
     "sugos-assets": "^2.0.1"
   },
   "devDependencies": {
@@ -70,7 +71,6 @@
     "injectmock": "^2.0.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "sugos": "^2.0.0",
     "writeout": "^2.0.6"
   },
   "engines": {

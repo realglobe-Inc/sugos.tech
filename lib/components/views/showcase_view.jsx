@@ -69,13 +69,13 @@ const ShowcaseView = React.createClass({
 
     // defines this.videos
     let videos = ARTICLES.map((article, i) => {
-      let {name} = article
+      let { name } = article
       let video = {
         name: name,
         inScreen: true,
-        container: s._videoContainers[name],
+        container: s._videoContainers[ name ],
         player: {
-          element: s._players[name]._player,
+          element: s._players[ name ]._player,
           canPlay: false,
           // 先頭の動画2つだけ自動再生
           onCanPlay: i <= 1 ? () => {
@@ -88,14 +88,14 @@ const ShowcaseView = React.createClass({
           },
           playing: false
         },
-        canvas1: s._canvases[name].canvas1,
-        canvas2: s._canvases[name].canvas2
+        canvas1: s._canvases[ name ].canvas1,
+        canvas2: s._canvases[ name ].canvas2
       }
       return video
     })
 
     videos.forEach(video => {
-      let {player} = video
+      let { player } = video
       player.element.load()
       player.element.addEventListener('canplaythrough', player.onCanPlay, false)
     })
@@ -105,9 +105,9 @@ const ShowcaseView = React.createClass({
 
   componentWillUnmount () {
     const s = this
-    s.videos.forEach(video => {
+    s.videos.forEach((video) => {
       s._pause(video)
-      let {player} = video
+      let { player } = video
       player.element.removeEventListner('canplaythrough', player.onCanPlay, false)
     })
   },
@@ -134,19 +134,19 @@ const ShowcaseView = React.createClass({
       video,
       canvas1, canvas2
     } = config
-    s._canvases[name] = {} // Error 回避
+    s._canvases[ name ] = {} // Error 回避
     let refs = {
       container (c) {
-        s._videoContainers[name] = c
+        s._videoContainers[ name ] = c
       },
       video (c) {
-        s._players[name] = c
+        s._players[ name ] = c
       },
       canvas (nth) {
         let canvasName = `canvas${nth}`
         let canvasConf = nth === 1 ? canvas1 : canvas2
         return (c) => {
-          s._canvases[name][canvasName] = {
+          s._canvases[ name ][ canvasName ] = {
             element: c,
             dx: canvasConf.dx,
             dy: canvasConf.dy,
@@ -200,7 +200,7 @@ const ShowcaseView = React.createClass({
 
   _play (video, force) {
     const s = this
-    let {player} = video
+    let { player } = video
     if (!force && (!player.canPlay || player.playing)) {
       return
     }
@@ -209,7 +209,7 @@ const ShowcaseView = React.createClass({
     player.playing = true
     let play = s.isIPhone ? s._playOnIPhone : s._playOnPc
     let playerElement = video.player.element
-    let {canvas1, canvas2} = video
+    let { canvas1, canvas2 } = video
 
     play(canvas1, playerElement)
     play(canvas2, playerElement)
@@ -256,7 +256,7 @@ const ShowcaseView = React.createClass({
 
   _pause (video) {
     const s = this
-    let {player, canvas1, canvas2} = video
+    let { player, canvas1, canvas2 } = video
     debug(`pause ${video.name} id ${canvas1.animationId} ${canvas2.animationId}`)
     player.playing = false
     if (!s.isIPhone) {
@@ -267,7 +267,7 @@ const ShowcaseView = React.createClass({
   },
 
   _handleScroll (event) {
-    let {clientHeight} = event.target
+    let { clientHeight } = event.target
     this._updateInScreen(clientHeight)
   }
 })

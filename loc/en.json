@@ -12,8 +12,6 @@
   },
   "guides": {},
   "jumbotron": {
-    "SPLASH_MESSAGE": "Super Ultra Gorgeous Outstanding Special",
-    "SPLASH_TITLE": "#{titles.UI_TITLE}"
   },
   "labels": {
   },
@@ -33,50 +31,6 @@
   },
   "placeholders": {},
   "sections": {
-    "SPLASH_OVERVIEW_TEXT": "SUGOS enable you to control machines from remote network with Javascript.",
-    "SPLASH_MECHANISM_TITLE": "Mechanism",
-    "SPLASH_MECHANISM_TEXT": "**Sugo-Cloud** server works as hub and interchange events between **Sugo-Spots** and **Sugo-Terminals**",
-    "CASE_REMOTE_TITLE": "Control Robots from Remote Browser",
-    "CASE_REMOTE_TEXT": [
-      "SUGOS provides JavaScript interface to send commands to remote API via local 'spot' server.",
-      "So you can easily create web page UI to control robots."
-    ],
-    "CASE_SENSE_TITLE": "Gather Data from Remote Sensors",
-    "CASE_SENSE_TEXT": [
-      "With SUGOS, you can receive sensing data with event interface."
-    ],
-    "CASE_SPEECH_RECOGNITION_TITLE": "Combine APIs to Build Rich Applications",
-    "CASE_SPEECH_RECOGNITION_TEXT": [
-
-    ],
-    "CASE_TEXT_INPUT_TITLE": "Combine APIs to Build Rich Applications",
-    "CASE_TEXT_INPUT_TEXT": [
-
-    ],
-    "CASE_EDISON_ROOMBA_TITLE": "Edison on Roomba",
-    "CASE_EDISON_ROOMBA_TEXT": [
-
-    ],
-    "CASE_EDISON_STREAM_TITLE": "Edison Stream",
-    "CASE_EDISON_STREAM_TEXT": [
-
-    ],
-    "CASE_CURL_RAPIRO_TITLE": "Curl Rapiro",
-    "CASE_CURL_RAPIRO_TEXT": [
-
-    ],
-    "GUIDE_CLOUD_SETUP_TITLE": "Setup SUGO-Cloud",
-    "GUIDE_CLOUD_SETUP_TEXT": [
-      "First of all, you need to setup [sugo-cloud](https://github.com/realglobe-Inc/sugo-cloud) on public network so that spot and terminal can access it."
-    ],
-    "GUIDE_SPOT_RUN_TITLE": "Run SUGO-Spot",
-    "GUIDE_SPOT_RUN_TEXT": [
-      "Run [sugo-spot](https://github.com/realglobe-Inc/sugo-spot) on local network where your machine or sensors exists and access to the sugo-cloud."
-    ],
-    "GUIDE_TERMINAL_USE_TITLE": "Setup SUGO-Cloud",
-    "GUIDE_TERMINAL_USE_TEXT": [
-      "Connect to remote spot from [sugo-terminal](https://github.com/realglobe-Inc/sugo-terminal) via cloud."
-    ]
   },
   "titles": {
     "UI_TITLE": "SUGOS",

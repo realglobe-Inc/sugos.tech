@@ -72,7 +72,7 @@ const Html = React.createClass({
   getJs () {
     const s = this
     let { props } = s
-    return [  ]
+    return []
       .concat(props.js || [])
   },
 

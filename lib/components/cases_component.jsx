@@ -41,7 +41,7 @@ const CasesComponent = React.createClass({
     let l = s.getLocale()
     return (
       <ApPage>
-        <Header tab="CASES"/>
+        <Header tab='CASES'/>
         <ApMain>
           <ApViewStack stacker={ props.stacker }/>
         </ApMain>

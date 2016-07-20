@@ -17,7 +17,7 @@ apeWatching.watchFiles([
 ], (ev, filename) => {
   clearTimeout(timer)
   timer = setTimeout(() => {
-    childProcess.fork('ci/compile.js', {
+    childProcess.fork('ci/build.js', {
       stdio: 'inherit',
       env: Object.assign({}, process.env, {'LANG': 'ja'})
     })

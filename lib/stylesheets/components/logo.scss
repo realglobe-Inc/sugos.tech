@@ -1,6 +1,8 @@
 @import "../variables/colors";
 @import url(https://fonts.googleapis.com/css?family=Cherry+Cream+Soda);
-
+@font-face {
+  sg-logo: url('../fonts/Dosis-Book.ttf')
+}
 $large-font-size: 4em;
 $small-font-size: 1.5em;
 
@@ -14,10 +16,12 @@ $small-font-size: 1.5em;
   padding: 0;
   display: inline-flex;
   flex-wrap: wrap;
-  font-family: 'Cherry Cream Soda', cursive;
+  font-weight: 100 !important;
+  font-family: sg-logo, sans-serif;
 }
 
 .logo-font {
-  font-family: 'Cherry Cream Soda', cursive;
+  font-weight: 100 !important;
+  font-family: sg-logo, sans-serif;
 }
 

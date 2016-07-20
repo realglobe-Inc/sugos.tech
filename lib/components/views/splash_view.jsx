@@ -14,10 +14,10 @@ import {
   ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
 import {ApLocaleMixin} from 'apeman-react-mixins'
+import {description} from 'sugos/package.json'
 import Snippet from '../fragments/snippet'
 import Markdown, {EOL} from '../fragments/markdown'
 import Footer from '../fragments/footer'
-
 
 import {singleton as snippetService} from '../../services/snippet_service'
 
@@ -37,25 +37,15 @@ const SplashView = React.createClass({
           <ApJumbotron className='jumbotron'
                        imgSrc='images/jumbotron.jpg'>
             <ApJumbotronTitle className='logo-font'>SUGOS</ApJumbotronTitle>
-            <ApJumbotronText>Super Ultra Gorgeous Outstanding Special</ApJumbotronText>
+            <ApJumbotronText>{ description }</ApJumbotronText>
           </ApJumbotron>
           <ApArticle>
 
             <ApSection id='splash-overview-section'>
               <ApSectionHeader></ApSectionHeader>
               <ApSectionBody>
-                <p>
-                  { l('sections.SPLASH_OVERVIEW_TEXT') }
-                </p>
-                <Snippet src={ snippetService.getSnippet('exampleUsage') }/>
-              </ApSectionBody>
-            </ApSection>
-            <ApSection id='splash-mechanism-section'>
-              <ApSectionHeader>{ l('sections.SPLASH_MECHANISM_TITLE') }</ApSectionHeader>
-              <ApSectionBody>
                 <div>
-                  <Markdown src={ [].concat(l('sections.SPLASH_MECHANISM_TEXT')).join(EOL + EOL) }/>
-                  <img src='images/sugos-overview.png' height='300'/>
+                  <img src='images/sugos-overview.jpeg' className='splash-overview-image'/>
                 </div>
               </ApSectionBody>
             </ApSection>

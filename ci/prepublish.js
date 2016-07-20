@@ -18,7 +18,7 @@ apeTasking.runTasks('prepublish', [
   () => co(function * () {
     let { env } = process
     for (let lang of Object.keys(loc)) {
-      yield execcli('ci/compile.js', [], { env: Object.assign({ LANG: lang }, env) })
+      yield execcli('ci/build.js', [], { env: Object.assign({ LANG: lang }, env) })
     }
   })
 ], true)
