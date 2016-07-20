@@ -1,13 +1,12 @@
 'use strict'
 
-import {mount} from 'sg-react'
+import {mount, once} from 'sg-react'
 import IndexComponent from '../components/index_component'
 import {singleton as redirectService} from '../services/redirect_service'
 
 const CONTAINER_ID = 'index-wrap'
 
-function onload () {
-  window.removeEventListener('DOMContentLoaded', onload)
+once('DOMContentLoaded', () => {
   redirectService.redirectIfNotAuth()
   let { locale } = window
   mount(CONTAINER_ID, IndexComponent, {
@@ -15,6 +14,4 @@ function onload () {
   }).then(() => {
     // The component is ready.
   })
-}
-
-window.addEventListener('DOMContentLoaded', onload)
+})

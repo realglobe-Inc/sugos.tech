@@ -11,6 +11,7 @@ import {ApHtml, ApHead, ApBody, ApStyle} from 'apeman-react-basic'
 import {ApThemeStyle} from 'apeman-react-theme'
 import loc from '../../loc'
 import * as snippets from '../constants/snippet_constants'
+import * as markdowns from '../constants/markdown_constants'
 import {DOMINANT} from '../constants/color_constants'
 import {highlightJsx} from 'ape-highlighting'
 
@@ -45,7 +46,7 @@ const Html = React.createClass({
                 css={ s.getCss() }
                 js={ s.getJs() }
                 viewport={ { initialScale: 1 } }
-                globals={ { locale, snippets, lang } }
+                globals={ { locale, snippets, lang, markdowns: markdowns[lang] } }
                 base={ base }
         >
           <ApThemeStyle dominant={ DOMINANT }/>
