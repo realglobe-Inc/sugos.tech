@@ -6,7 +6,7 @@
  */
 'use strict'
 
-import apReact from 'apeman-brws-react'
+import {mount} from 'sg-react'
 import DocsComponent from '../components/docs_component'
 import { singleton as redirectService } from '../services/redirect_service'
 
@@ -16,9 +16,9 @@ function onload () {
   window.removeEventListener('DOMContentLoaded', onload)
   redirectService.redirectIfNotAuth()
   let { locale } = window
-  apReact.render(CONTAINER_ID, DocsComponent, {
+  mount(CONTAINER_ID, DocsComponent, {
     locale
-  }, function done () {
+  }).then(() => {
     // The component is ready.
   })
 }

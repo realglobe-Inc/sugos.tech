@@ -32,16 +32,16 @@ const SplashView = React.createClass({
     const s = this
     let l = s.getLocale()
     return (
-      <ApView className="splash-view">
+      <ApView className='splash-view'>
         <ApViewBody>
-          <ApJumbotron className="jumbotron"
-                       imgSrc="images/jumbotron.jpg">
-            <ApJumbotronTitle className="logo-font">SUGOS</ApJumbotronTitle>
+          <ApJumbotron className='jumbotron'
+                       imgSrc='images/jumbotron.jpg'>
+            <ApJumbotronTitle className='logo-font'>SUGOS</ApJumbotronTitle>
             <ApJumbotronText>Super Ultra Gorgeous Outstanding Special</ApJumbotronText>
           </ApJumbotron>
           <ApArticle>
 
-            <ApSection id="splash-overview-section">
+            <ApSection id='splash-overview-section'>
               <ApSectionHeader></ApSectionHeader>
               <ApSectionBody>
                 <p>
@@ -50,12 +50,12 @@ const SplashView = React.createClass({
                 <Snippet src={ snippetService.getSnippet('exampleUsage') }/>
               </ApSectionBody>
             </ApSection>
-            <ApSection id="splash-mechanism-section">
+            <ApSection id='splash-mechanism-section'>
               <ApSectionHeader>{ l('sections.SPLASH_MECHANISM_TITLE') }</ApSectionHeader>
               <ApSectionBody>
                 <div>
                   <Markdown src={ [].concat(l('sections.SPLASH_MECHANISM_TEXT')).join(EOL + EOL) }/>
-                  <img src="images/structure.png" height="300"/>
+                  <img src='images/sugos-overview.png' height='300'/>
                 </div>
               </ApSectionBody>
             </ApSection>

@@ -59,12 +59,12 @@ const GuideView = React.createClass({
                   _section('spot-run', {
                     title: l('sections.GUIDE_SPOT_RUN_TITLE'),
                     text: l('sections.GUIDE_SPOT_RUN_TEXT'),
-                    snippet: snippetService.getSnippet('exampleSpot')
+                    snippet: snippetService.getSnippet('exampleActor')
                   }),
                   _section('terminal-use', {
                     title: l('sections.GUIDE_TERMINAL_USE_TITLE'),
                     text: l('sections.GUIDE_TERMINAL_USE_TEXT'),
-                    snippet: snippetService.getSnippet('exampleTerminal')
+                    snippet: snippetService.getSnippet('exampleCaller')
                   })
                 ])
               }

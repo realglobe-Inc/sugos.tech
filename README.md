@@ -53,6 +53,7 @@ Homepage of SUGOS
 <!-- Section from "doc/guides/01.Hosted.md.hbs" Start -->
 
 <a name="section-doc-guides-01-hosted-md"></a>
+
 See Online
 ---------
 
@@ -68,6 +69,7 @@ See Online
 <!-- Section from "doc/guides/02.Run.md.hbs" Start -->
 
 <a name="section-doc-guides-02-run-md"></a>
+
 Run
 -----
 
@@ -108,7 +110,10 @@ This software is released under the [MIT License](https://github.com/realglobe-I
 Links
 ------
 
-+ [sugos](https://github.com/realglobe-Inc/sugos)
-+ [sugos-index](https://github.com/realglobe-Inc/sugos-index)
++ [sugos][sugos_url]
++ [sugos-index][sugos_index_url]
+
+[sugos_url]: https://github.com/realglobe-Inc/sugos
+[sugos_index_url]: https://github.com/realglobe-Inc/sugos-index
 
 <!-- Links End -->

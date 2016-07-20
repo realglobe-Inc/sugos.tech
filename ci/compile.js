@@ -12,12 +12,14 @@ const apeTasking = require('ape-tasking')
 const path = require('path')
 const co = require('co')
 const coz = require('coz')
-const expandglob = require('expandglob')
+const aglob = require('aglob')
 const filecopy = require('filecopy')
 const filelink = require('filelink')
-const apeCompiling = require('ape-compiling')
 const React = require('react')
 const ReactDOM = require('react-dom/server')
+const ababelReact = require('ababel-react')
+const ascss = require('ascss')
+const abrowserify = require('abrowserify')
 const loc = require('../loc')
 const lang = String(process.env.LANG || 'ja').split(/[_\.]/g).shift()
 if (!loc[ lang ]) {
@@ -41,39 +43,38 @@ apeTasking.runTasks('compile', [
       yield filelink(src, dest, { force: true })
     }
   }),
-  () => apeCompiling.compileReactJsx('**/*.jsx', {
+  () => ababelReact('**/*.jsx', {
     cwd: 'lib',
     out: 'lib'
   }),
   () => co(function * () {
     const entrypointDir = 'lib/entrypoints'
-    let filenames = yield expandglob('*_entrypoint.js', {
+    let filenames = yield aglob('*_entrypoint.js', {
       cwd: entrypointDir
     })
     for (let filename of filenames) {
-      yield apeCompiling.browserifyJs(
+      yield abrowserify(
         path.join(entrypointDir, filename),
         path.join(`${publicDir}/javascripts`, filename.replace(/_entrypoint\.js$/, '.js')),
         {
-          external: require('./config/external.config.json'),
           debug: true
         }
       )
     }
   }),
   () => co(function * () {
-    let filenames = yield expandglob('*.scss', {
+    let filenames = yield aglob('*.scss', {
       cwd: 'lib/stylesheets'
     })
     for (let filename of filenames) {
       let lib = path.join('lib/stylesheets', filename)
       let dest = path.join(`${publicDir}/stylesheets`, filename.replace(/\.scss$/, '.css'))
-      yield apeCompiling.compileScss(lib, dest)
+      yield ascss(lib, dest)
     }
   }),
   () => co(function * () {
     let htmlDir = 'lib/html'
-    let filenames = yield expandglob('*_html.js', {
+    let filenames = yield aglob('*_html.js', {
       cwd: htmlDir
     })
     yield coz.render(
@@ -88,17 +89,14 @@ apeTasking.runTasks('compile', [
         },
         data: {
           component: require(path.resolve(htmlDir, filename)),
-          props: {
-            base,
-            lang
-          }
+          props: { base, lang }
         }
       }))
     )
   }),
   () => co(function * () {
-    let src = './node_modules/sugos/doc/images/structure.png'
-    let dest = 'assets/images/structure.png'
+    let src = './node_modules/sugos/doc/images/sugos-overview.png'
+    let dest = 'assets/images/sugos-overview.png'
     let results = yield filecopy(src, dest)
     for (let filename of Object.keys(results)) {
       console.log(`File generated: ${filename}`)

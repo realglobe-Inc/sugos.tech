@@ -10,22 +10,18 @@ import  fs from 'fs'
 const exists = (filename) => fs.existsSync && fs.existsSync(filename)
 const read = (filename) => exists(filename) && fs.readFileSync(filename).toString() || null
 
-const exampleUsage = highlightJsx.code(
-  read(require.resolve('sugos/example/example-usage.js'))
-)
 const exampleCloud = highlightJsx.code(
-  read(require.resolve('sugos/example/modules/example-cloud.js'))
+  read(require.resolve('sugos/example/example-cloud.js'))
 )
-const exampleSpot = highlightJsx.code(
-  read(require.resolve('sugos/example/modules/example-spot.js'))
+const exampleActor = highlightJsx.code(
+  read(require.resolve('sugos/example/example-actor.js'))
 )
-const exampleTerminal = highlightJsx.code(
-  read(require.resolve('sugos/example/modules/example-terminal.js'))
+const exampleCaller = highlightJsx.code(
+  read(require.resolve('sugos/example/example-caller.js'))
 )
 
 export {
-  exampleUsage,
   exampleCloud,
-  exampleSpot,
-  exampleTerminal
+  exampleActor,
+  exampleCaller
 }

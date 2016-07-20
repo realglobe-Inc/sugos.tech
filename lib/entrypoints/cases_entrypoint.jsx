@@ -6,7 +6,7 @@
  */
 'use strict'
 
-import apReact from 'apeman-brws-react'
+import {mount} from 'sg-react'
 import CasesComponent from '../components/cases_component'
 import {singleton as redirectService} from '../services/redirect_service'
 import {singleton as polyfillService} from '../services/polyfill_service'
@@ -21,9 +21,9 @@ function onload () {
   window.removeEventListener('DOMContentLoaded', onload)
   redirectService.redirectIfNotAuth()
   let { locale } = window
-  apReact.render(CONTAINER_ID, CasesComponent, {
+  mount(CONTAINER_ID, CasesComponent, {
     locale
-  }, function done () {
+  }).then(() => {
     // The component is ready.
   })
 }
