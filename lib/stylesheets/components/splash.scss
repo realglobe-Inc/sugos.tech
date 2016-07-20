@@ -1,5 +1,11 @@
 
 .splash-view {
+  .ap-view-body {
+    padding: 0;
+  }
+  .ap-article {
+    padding: 16px;
+  }
   .ap-jumbotron {
     text-align: center;
     color: white;
@@ -23,5 +29,12 @@
   .splash-overview-image {
     max-width: 100%;
     max-height: 300px;
+  }
+  .splash-button-container {
+    text-align: center;
+    margin: 32px 0 0;
+    a:link, a:visited {
+      text-decoration: none;
+    }
   }
 }

@@ -19,6 +19,7 @@ import {
 import Snippet from '../fragments/snippet'
 import Markdown, {EOL} from '../fragments/markdown'
 import {singleton as snippetService} from '../../services/snippet_service'
+import {singleton as markdownService} from '../../services/markdown_service'
 
 const GuideView = React.createClass({
   mixins: [
@@ -38,10 +39,10 @@ const GuideView = React.createClass({
     let _ifToggle = (value, components) => value === state.toggle ? components : null
 
     return (
-      <ApView className="guide-view">
+      <ApView className='guide-view'>
         <ApViewHeader titleText={ l('titles.GUIDES_TITLE') }/>
         <ApViewBody>
-          <div className="guide-toggle-container">
+          <div className='guide-toggle-container'>
             <ApToggle value={ state.toggle }
                       options={ s.getToggleOptions() }
                       onToggle={ s.handleToggle }
@@ -52,18 +53,18 @@ const GuideView = React.createClass({
               {
                 _ifToggle('QUICK_START', [
                   _section('cloud-setup', {
-                    title: l('sections.GUIDE_CLOUD_SETUP_TITLE'),
-                    text: l('sections.GUIDE_CLOUD_SETUP_TEXT'),
+                    title: l('titles.GUIDE_CLOUD_TITLE'),
+                    markdown: markdownService.getMarkdown('11.setup-cloud'),
                     snippet: snippetService.getSnippet('exampleCloud')
                   }),
                   _section('spot-run', {
-                    title: l('sections.GUIDE_SPOT_RUN_TITLE'),
-                    text: l('sections.GUIDE_SPOT_RUN_TEXT'),
+                    title: l('titles.GUIDE_ACTOR_TITLE'),
+                    markdown: markdownService.getMarkdown('12.declare-on-sugo-actor'),
                     snippet: snippetService.getSnippet('exampleActor')
                   }),
-                  _section('terminal-use', {
-                    title: l('sections.GUIDE_TERMINAL_USE_TITLE'),
-                    text: l('sections.GUIDE_TERMINAL_USE_TEXT'),
+                  _section('caller-use', {
+                    title: l('titles.GUIDE_CALLER_TITLE'),
+                    markdown: markdownService.getMarkdown('13.call-from-sugo-caller'),
                     snippet: snippetService.getSnippet('exampleCaller')
                   })
                 ])
@@ -110,21 +111,21 @@ const GuideView = React.createClass({
   // ------------------
 
   _renderSection (name, config) {
-    let { title, text, snippet } = config
+    let { title, markdown, snippet } = config
     return (
       <ApSection id={ `guide-${name}-section` }
-                 className="guide-section"
+                 className='guide-section'
                  key={ name }
       >
         <ApSectionHeader>{ title }</ApSectionHeader>
         <ApSectionBody>
-          <div className="guide-text-container">
-            <div className="guide-description">
-              <Markdown src={ [].concat(text).join(EOL + EOL) }/>
+          <div className='guide-text-container'>
+            <div className='guide-description'>
+              <Markdown src={ markdown }/>
             </div>
           </div>
-          <div className="guide-image-container">
-            <div className="guide-snippet">
+          <div className='guide-image-container'>
+            <div className='guide-snippet'>
               <Snippet src={ snippet }/>
             </div>
           </div>

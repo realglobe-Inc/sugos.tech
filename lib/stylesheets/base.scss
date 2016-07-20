@@ -11,6 +11,10 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
 @import "./components/header";
 @import "./components/logo";
 @import "./components/view";
@@ -20,6 +24,7 @@ a {
 @import "./components/snippet";
 @import "./components/guide";
 @import "./components/footer";
+@import "./components/markdown";
 
 @import "./vendor/font-awesome";
 @import "./vendor/ionicons";

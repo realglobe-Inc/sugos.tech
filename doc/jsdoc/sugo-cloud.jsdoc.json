@@ -16,10 +16,10 @@
       "type": ""
     },
     {
-      "name": "TERMINAL_URL",
+      "name": "CALLER_URL",
       "access": "",
       "virtual": false,
-      "description": "URL for terminals",
+      "description": "URL for callers",
       "type": ""
     }
   ],
@@ -75,29 +75,29 @@
       ]
     },
     {
-      "name": "SpotEntity",
+      "name": "ActorEntity",
       "description": "",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "SpotEntity",
+        "name": "ActorEntity",
         "description": "Entity for spot",
         "parameters": [],
         "examples": []
       }
     },
     {
-      "name": "TerminalEntity",
+      "name": "CallerEntity",
       "description": "",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "TerminalEntity",
-        "description": "Entity for terminal",
+        "name": "CallerEntity",
+        "description": "Entity for caller",
         "parameters": [],
         "examples": []
       }
@@ -297,7 +297,7 @@
       ]
     },
     {
-      "name": "SpotService",
+      "name": "ActorService",
       "description": "",
       "extends": [
         "Service"
@@ -306,14 +306,14 @@
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "SpotService",
+        "name": "ActorService",
         "description": "",
         "parameters": [],
         "examples": []
       },
       "functions": [
         {
-          "name": "setupSpot",
+          "name": "setupActor",
           "access": "",
           "virtual": false,
           "description": "Setup a spot.",
@@ -337,7 +337,7 @@
             {
               "name": "token",
               "type": "string",
-              "description": "Spot access token.",
+              "description": "Actor access token.",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -358,7 +358,7 @@
           }
         },
         {
-          "name": "teardownSpot",
+          "name": "teardownActor",
           "access": "",
           "virtual": false,
           "description": "Teardown a spot.",
@@ -382,7 +382,7 @@
             {
               "name": "token",
               "type": "string",
-              "description": "Spot access token.",
+              "description": "Actor access token.",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -600,7 +600,7 @@
       ]
     },
     {
-      "name": "TerminalService",
+      "name": "CallerService",
       "description": "",
       "extends": [
         "Service"
@@ -609,14 +609,14 @@
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "TerminalService",
+        "name": "CallerService",
         "description": "",
         "parameters": [],
         "examples": []
       },
       "functions": [
         {
-          "name": "joinToSpot",
+          "name": "joinToActor",
           "access": "",
           "virtual": false,
           "description": "Join to a spot",
@@ -631,8 +631,8 @@
             },
             {
               "name": "spot",
-              "type": "SpotEntity",
-              "description": "Spot to join",
+              "type": "ActorEntity",
+              "description": "Actor to join",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -641,11 +641,11 @@
           "examples": [],
           "returns": {
             "type": "Promise.<Object>",
-            "description": "terminal instance"
+            "description": "caller instance"
           }
         },
         {
-          "name": "leaveFromSpot",
+          "name": "leaveFromActor",
           "access": "",
           "virtual": false,
           "description": "Leave from a spot.",
@@ -660,8 +660,8 @@
             },
             {
               "name": "spot",
-              "type": "SpotEntity",
-              "description": "Spot to leave",
+              "type": "ActorEntity",
+              "description": "Actor to leave",
               "default": "",
               "optional": "",
               "nullable": ""
@@ -670,7 +670,7 @@
           "examples": [],
           "returns": {
             "type": "Promise.<Object>",
-            "description": "terminal instance"
+            "description": "caller instance"
           }
         },
         {

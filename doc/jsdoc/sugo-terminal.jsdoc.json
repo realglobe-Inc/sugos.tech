@@ -1,15 +1,15 @@
 {
   "classes": [
     {
-      "name": "SpotAccess",
+      "name": "ActorAccess",
       "description": "",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "SpotAccess",
-        "description": "Spot client",
+        "name": "ActorAccess",
+        "description": "Actor client",
         "parameters": [],
         "examples": []
       },
@@ -54,14 +54,14 @@
       ]
     },
     {
-      "name": "SpotAccessInterface",
+      "name": "ActorAccessInterface",
       "description": "Interface of spot access",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "SpotAccessInterface",
+        "name": "ActorAccessInterface",
         "description": "",
         "parameters": [],
         "examples": []

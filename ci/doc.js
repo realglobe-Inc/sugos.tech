@@ -18,7 +18,7 @@ apeTasking.runTasks('build', [
     let config = {
       'sugo-cloud': 'node_modules/sugo-cloud/lib/**/*.js',
       'sugo-spot': 'node_modules/sugo-spot/lib/**/*.js',
-      'sugo-terminal': 'node_modules/sugo-terminal/lib/**/*.js'
+      'sugo-caller': 'node_modules/sugo-caller/lib/**/*.js'
     }
     for (let name of Object.keys(config)) {
       let src = config[ name ]

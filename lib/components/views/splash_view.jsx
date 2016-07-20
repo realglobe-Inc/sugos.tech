@@ -6,6 +6,7 @@
 
 import React, {PropTypes as types} from 'react'
 import {
+  ApButton,
   ApView,
   ApImage,
   ApViewHeader, ApViewBody,
@@ -20,6 +21,7 @@ import Markdown, {EOL} from '../fragments/markdown'
 import Footer from '../fragments/footer'
 
 import {singleton as snippetService} from '../../services/snippet_service'
+import {singleton as markdownService} from '../../services/markdown_service'
 
 const SplashView = React.createClass({
   getInitialState () {
@@ -38,17 +40,14 @@ const SplashView = React.createClass({
                        imgSrc='images/jumbotron.jpg'>
             <ApJumbotronTitle className='logo-font'>SUGOS</ApJumbotronTitle>
             <ApJumbotronText>{ description }</ApJumbotronText>
+            <p className='splash-button-container'>
+              <ApButton href='./docs'> { l('buttons.GET_STARTED') } </ApButton>
+            </p>
           </ApJumbotron>
           <ApArticle>
-
-            <ApSection id='splash-overview-section'>
-              <ApSectionHeader></ApSectionHeader>
-              <ApSectionBody>
-                <div>
-                  <img src='images/sugos-overview.jpeg' className='splash-overview-image'/>
-                </div>
-              </ApSectionBody>
-            </ApSection>
+            { s._renderSection('splash-about-section', null, '01.about-this') }
+            { s._renderSection('splash-how-section', l('captions.HOW_IT_WORKS'), '02.how-it-works') }
+            { s._renderSection('splash-why-section', l('captions.WHAT_TO_USE'), '03.what-to-use') }
           </ApArticle>
           <Footer />
         </ApViewBody>
@@ -57,6 +56,17 @@ const SplashView = React.createClass({
   },
   componentDidMount () {
 
+  },
+
+  _renderSection (id, title, markdownName) {
+    return (
+      <ApSection id={ id }>
+        <ApSectionHeader>{ title }</ApSectionHeader>
+        <ApSectionBody>
+          <Markdown src={ markdownService.getMarkdown(markdownName) }></Markdown>
+        </ApSectionBody>
+      </ApSection>
+    )
   }
 })
 

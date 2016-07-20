@@ -20,7 +20,7 @@ import {DOMINANT} from '../../constants/color_constants'
 
 const debug = require('debug')('sg:component:showcase')
 
-const ARTICLES = require('../data/articles.json')
+const cases = require('../data/cases.json')
 
 const ShowcaseView = React.createClass({
   mixins: [
@@ -29,7 +29,6 @@ const ShowcaseView = React.createClass({
   render () {
     const s = this
     let l = s.getLocale()
-    let _section = s._renderSection
     // 開発中の section の挿入・入れ替えを容易にするため
     let first = true
     let reversed = () => {
@@ -45,8 +44,8 @@ const ShowcaseView = React.createClass({
         <ApViewBody>
           <article>
             {
-              ARTICLES.map(article =>
-                _section(article.name, article.body, reversed())
+              cases.map((case_) =>
+                s._renderSection(case_.name, case_.body, reversed())
               )
             }
           </article>
@@ -68,8 +67,8 @@ const ShowcaseView = React.createClass({
     s.isIPhone = /(iPhone|iPod)/.test(ua)
 
     // defines this.videos
-    let videos = ARTICLES.map((article, i) => {
-      let { name } = article
+    let videos = cases.map((case_, i) => {
+      let { name } = case_
       let video = {
         name: name,
         inScreen: true,
@@ -162,7 +161,7 @@ const ShowcaseView = React.createClass({
       <ApSection className='showcase-section'
                  id={ `showcase-${name}-section` }
                  key={ name }>
-        <ApSectionHeader>{ l(`sections.${title}`) }</ApSectionHeader>
+        <ApSectionHeader>{ l(`titles.${title}`) }</ApSectionHeader>
         <ApSectionBody>
           <div className='showcase-text-container'>
             <div className='showcase-description'>{

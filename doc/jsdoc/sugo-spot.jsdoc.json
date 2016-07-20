@@ -1,14 +1,14 @@
 {
   "classes": [
     {
-      "name": "SpotInterface",
+      "name": "ActorInterface",
       "description": "",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "SpotInterface",
+        "name": "ActorInterface",
         "description": "Interface of edge components connected to spot",
         "parameters": [],
         "examples": []
@@ -58,14 +58,14 @@
       ]
     },
     {
-      "name": "SpotInterfacePipe",
+      "name": "ActorInterfacePipe",
       "description": "",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
-        "name": "SpotInterfacePipe",
+        "name": "ActorInterfacePipe",
         "description": "Pipe for spot interface",
         "parameters": [],
         "examples": []

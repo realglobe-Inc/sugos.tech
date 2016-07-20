@@ -2,6 +2,7 @@
   "_": {
   },
   "buttons": {
+    "GET_STARTED": "Get Started"
   },
   "dropdown": {
   },
@@ -30,14 +31,29 @@
     "CASES_PAGE": "Cases"
   },
   "placeholders": {},
-  "sections": {
+  "captions": {
+    "HOW_IT_WORKS": "How It Works",
+    "WHAT_TO_USE": "What to Use"
   },
   "titles": {
     "UI_TITLE": "SUGOS",
     "CASES_PAGE_TITLE": "Cases",
     "DOCS_PAGE_TITLE": "Docs",
     "SHOWCASE_TITLE": "Use Cases of SUGOS",
-    "GUIDES_TITLE": "Guidance Documents of SUGOS"
+    "GUIDES_TITLE": "Guidance Documents of SUGOS",
+    "CASE_REMOTE_TITLE": "Control PLEN Robot from Browser",
+    "CASE_DRONE_TITLE": "Fly ArDrone with Preset",
+    "CASE_SENSE_TITLE": "Detect Human Motions with Kinnect",
+    "CASE_SPEECH_RECOGNITION_TITLE": "Make Pepper Talk Text Input by HTML5 Recognition API",
+    "CASE_TEXT_INPUT_TITLE": "Make Pepper Talk from Chat UI",
+    "CASE_EDISON_ROOMBA_TITLE": "Control Roomba with Edison",
+    "CASE_EDISON_STREAM_TITLE": "Crate network Camera with Edison and WebCOM",
+    "CASE_CURL_RAPIRO_TITLE": "Control RAPIRO Robot via curl Command",
+    "CASE_HITOE_TITLE": "Watch HeartBeat with HITOE Sensor and Display It on Google Map",
+    "CASE_GYRO_TITLE": "Make Pepper to follow iPhone Motion",
+    "GUIDE_ACTOR_TITLE": "Declare Modules on SUGO-Actor",
+    "GUIDE_CALLER_TITLE": "Access to Modules from SUGO-Caller",
+    "GUIDE_CLOUD_TITLE": "Setup SUGO-Cloud"
   },
   "toasts": {},
   "toggles": {
