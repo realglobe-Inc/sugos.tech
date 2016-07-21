@@ -12,9 +12,7 @@ import {
   ApArticle,
   ApToggle
 } from 'apeman-react-basic'
-import {
-  ApLocaleMixin
-} from 'apeman-react-mixins'
+import { ApLocaleMixin } from 'apeman-react-mixin-locale'
 
 import Snippet from '../fragments/snippet'
 import Markdown, {EOL} from '../fragments/markdown'

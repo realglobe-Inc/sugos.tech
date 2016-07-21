@@ -5,7 +5,7 @@
 'use strict'
 
 import React, {PropTypes as types} from 'react'
-import {ApLocaleMixin} from 'apeman-react-mixins'
+import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import {ApFooter, ApImage, ApLinks} from 'apeman-react-basic'
 import links from '../../../doc/links.json'
 

@@ -11,7 +11,7 @@ import React from 'react'
 import {ApStyle} from 'apeman-react-style'
 import {ApPage, ApMain, ApViewStack} from 'apeman-react-basic'
 
-import {ApLocaleMixin} from 'apeman-react-mixins'
+import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import Header from './fragments/header'
 import GuideView from './views/guide_view'
 

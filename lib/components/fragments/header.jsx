@@ -5,7 +5,7 @@
 'use strict'
 
 import React, {PropTypes as types} from 'react'
-import {ApLocaleMixin} from 'apeman-react-mixins'
+import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import {
   ApHeader, ApHeaderLogo, ApContainer,
   ApHeaderTab, ApHeaderTabItem

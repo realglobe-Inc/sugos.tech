@@ -1,7 +1,7 @@
 'use strict'
 
 import React, {PropTypes as types} from 'react'
-import {ApLocaleMixin} from 'apeman-react-mixins'
+import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 
 const Logo = React.createClass({
   mixins: [

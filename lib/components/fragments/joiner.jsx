@@ -1,7 +1,8 @@
 'use strict'
 
 import React, {PropTypes as types} from 'react'
-import {ApLayoutMixin, ApPureMixin} from 'apeman-react-mixins'
+import {ApLayoutMixin} from 'apeman-react-mixin-layout'
+import {ApPureMixin} from 'apeman-react-mixin-pure'
 import classnames from 'classnames'
 import {DOMINANT} from '../../constants/color_constants.json'
 

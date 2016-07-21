@@ -10,9 +10,7 @@ import {
   ApViewHeader, ApViewBody,
   ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
-import {
-  ApLocaleMixin
-} from 'apeman-react-mixins'
+import { ApLocaleMixin } from 'apeman-react-mixin-locale'
 import Video from '../fragments/video'
 import VideoCanvas from '../fragments/video_canvas'
 import Joiner from '../fragments/joiner'

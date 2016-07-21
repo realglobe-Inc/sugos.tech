@@ -14,7 +14,7 @@ import {
   ApJumbotron, ApJumbotronTitle, ApJumbotronText,
   ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
-import {ApLocaleMixin} from 'apeman-react-mixins'
+import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import {description} from 'sugos/package.json'
 import Snippet from '../fragments/snippet'
 import Markdown, {EOL} from '../fragments/markdown'

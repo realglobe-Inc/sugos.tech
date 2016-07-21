@@ -9,7 +9,7 @@
 
 import React from 'react'
 import {ApPage, ApMain, ApViewStack} from 'apeman-react-basic'
-import {ApLocaleMixin} from 'apeman-react-mixins'
+import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import Header from './fragments/header'
 import ShowcaseView from './views/showcase_view'
 
