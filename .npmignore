@@ -32,3 +32,10 @@ node_modules
 .idea
 tmp
 
+# SUGOS
+.*
+tmp
+ci
+doc
+example
+test
