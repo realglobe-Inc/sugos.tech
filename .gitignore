@@ -34,3 +34,6 @@ lib/**/*.js
 
 public/*
 doc/ghpages
+
+shim/node
+shim/browser
