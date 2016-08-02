@@ -41,7 +41,7 @@
     "DOCS_PAGE_TITLE": "Docs",
     "SHOWCASE_TITLE": "Use Cases of SUGOS",
     "GUIDES_TITLE": "Guidance Documents of SUGOS",
-    "CASE_REMOTE_TITLE": "Control PLEN Robot from Browser",
+    "CASE_PLEN_TITLE": "Control PLEN Robot from Browser",
     "CASE_DRONE_TITLE": "Fly ArDrone with Preset",
     "CASE_SENSE_TITLE": "Detect Human Motions with Kinnect",
     "CASE_SPEECH_RECOGNITION_TITLE": "Make Pepper Talk Text Input by HTML5 Recognition API",

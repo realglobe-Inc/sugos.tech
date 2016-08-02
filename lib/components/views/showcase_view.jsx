@@ -10,7 +10,8 @@ import {
   ApViewHeader, ApViewBody,
   ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
-import { ApLocaleMixin } from 'apeman-react-mixin-locale'
+import {ApLocaleMixin} from 'apeman-react-mixin-locale'
+import Markdown, {EOL} from '../fragments/markdown'
 import Video from '../fragments/video'
 import VideoCanvas from '../fragments/video_canvas'
 import Joiner from '../fragments/joiner'
@@ -91,7 +92,7 @@ const ShowcaseView = React.createClass({
       return video
     })
 
-    videos.forEach(video => {
+    videos.forEach((video) => {
       let { player } = video
       player.element.load()
       player.element.addEventListener('canplaythrough', player.onCanPlay, false)
@@ -127,7 +128,7 @@ const ShowcaseView = React.createClass({
     const s = this
     let l = s.getLocale()
     let {
-      title, text,
+      title, markdown,
       video,
       canvas1, canvas2
     } = config
@@ -163,7 +164,7 @@ const ShowcaseView = React.createClass({
         <ApSectionBody>
           <div className='showcase-text-container'>
             <div className='showcase-description'>{
-              [].concat(l(`sections.${text}`)).map((text, i) => (<p key={i}>{ text }</p>))
+              <Markdown src={ markdown }/>
             }</div>
           </div>
           <div className='showcase-video-container' ref={ refs.container }>

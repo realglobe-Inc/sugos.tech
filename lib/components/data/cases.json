@@ -2,8 +2,8 @@
   {
     "name": "remote-plen",
     "body": {
-      "title": "CASE_REMOTE_TITLE",
-      "text": "CASE_REMOTE_TEXT",
+      "title": "CASE_PLEN_TITLE",
+      "markdown": "20.case-plen",
       "video": "videos/SUGOS_remote_PLEN.mp4",
       "canvas1": {
         "dx": 160,
