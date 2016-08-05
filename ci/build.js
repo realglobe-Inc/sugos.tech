@@ -41,17 +41,9 @@ runTasks('build', [
     'lib/**/.*.bud',
     'test/.*.bud'
   ]),
-  () => {
-    let libDir = `${__dirname}/../lib`
-    let shimDir = `${__dirname}/../shim/node`
-    return ababelReact('**/+(*.jsx|*.js)', {
-      cwd: libDir,
-      out: shimDir
-    })
-  },
   () => co(function * () {
     const copies = {
-      'node_modules/sugos/assets/images/sugos-overview.jpeg': 'public/images/sugos-overview.jpeg'
+      'node_modules/sugos/asset/images/sugos-overview.jpeg': 'public/images/sugos-overview.jpeg'
     }
     for (let src of Object.keys(copies)) {
       let dest = copies[ src ]
@@ -60,10 +52,10 @@ runTasks('build', [
   }),
   () => co(function * () {
     const links = {
-      'assets/videos': 'public/videos',
-      'assets/fonts': 'public/fonts',
-      'assets/images': 'public/images',
-      'assets/index.html': 'public/index.html'
+      'asset/videos': 'public/videos',
+      'asset/fonts': 'public/fonts',
+      'asset/images': 'public/images',
+      'asset/index.html': 'public/index.html'
     }
     for (let src of Object.keys(links)) {
       let dest = links[ src ]

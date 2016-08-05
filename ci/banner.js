@@ -12,6 +12,6 @@ const sugosAssets = require('sugos-assets')
 apeTasking.runTasks('banner', [
   () => sugosAssets.banner(
     'sugos',
-    'assets/images/banner.svg'
+    'asset/images/banner.svg'
   )
 ])

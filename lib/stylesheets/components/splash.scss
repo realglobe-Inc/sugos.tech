@@ -1,3 +1,4 @@
+@import "../variables/colors";
 
 .splash-view {
   .ap-view-body {
@@ -22,6 +23,10 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   }
 
+  .ap-jumbotron-filter {
+    background-color: $dominant-color;
+  }
+
   .ap-view-body {
     padding-top: 0;
   }
@@ -37,4 +42,5 @@
       text-decoration: none;
     }
   }
+
 }

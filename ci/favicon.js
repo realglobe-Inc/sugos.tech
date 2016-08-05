@@ -12,6 +12,6 @@ const sugosAssets = require('sugos-assets')
 apeTasking.runTasks('favicon', [
   () => sugosAssets.favicon(
     'sugos',
-    'assets/images/favicon.svg'
+    'asset/images/favicon.svg'
   )
 ])
