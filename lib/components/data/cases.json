@@ -21,7 +21,7 @@
     "name": "preset-drone",
     "body": {
       "title": "CASE_DRONE_TITLE",
-      "text": "CASE_DRONE_TEXT",
+      "markdown": "21.case-drone",
       "video": "videos/ardrone.mp4",
       "canvas1": {
         "dx": 0,
@@ -39,7 +39,7 @@
     "name": "kinect-analysis",
     "body": {
       "title": "CASE_SENSE_TITLE",
-      "text": "CASE_SENSE_TEXT",
+      "markdown": "22.case-kinect",
       "video": "videos/SUGOS_remote_sensor.mp4",
       "canvas1": {
         "dx": 160,
@@ -57,7 +57,7 @@
     "name": "speech-pepper",
     "body": {
       "title": "CASE_SPEECH_RECOGNITION_TITLE",
-      "text": "CASE_SPEECH_RECOGNITION_TEXT",
+      "markdown": "23.case-pepper-voice",
       "video": "videos/pepper_speech_recognition.mp4",
       "canvas1": {
         "dx": 0,
@@ -75,7 +75,7 @@
     "name": "text-input",
     "body": {
       "title": "CASE_TEXT_INPUT_TITLE",
-      "text": "CASE_TEXT_INPUT_TEXT",
+      "markdown": "CASE_TEXT_INPUT_TEXT",
       "video": "videos/pepper_text_input.mp4",
       "canvas1": {
         "dx": 164.9,
@@ -93,7 +93,7 @@
     "name": "edison_roomba",
     "body": {
       "title": "CASE_EDISON_ROOMBA_TITLE",
-      "text": "CASE_EDISON_ROOMBA_TEXT",
+      "markdown": "CASE_EDISON_ROOMBA_TEXT",
       "video": "videos/edison_roomba.mp4",
       "canvas1": {
         "dx": 12.7,
@@ -111,7 +111,7 @@
     "name": "edison-stream",
     "body": {
       "title": "CASE_EDISON_STREAM_TITLE",
-      "text": "CASE_EDISON_STREAM_TEXT",
+      "markdown": "CASE_EDISON_STREAM_TEXT",
       "video": "videos/yabee-stream.mp4",
       "canvas1": {
         "dx": 163,
@@ -129,7 +129,7 @@
     "name": "curl-rapiro",
     "body": {
       "title": "CASE_CURL_RAPIRO_TITLE",
-      "text": "CASE_CURL_RAPIRO_TEXT",
+      "markdown": "CASE_CURL_RAPIRO_TEXT",
       "video": "videos/curl_rapiro.mp4",
       "canvas1": {
         "dx": 169,
@@ -147,7 +147,7 @@
     "name": "hitoe-map",
     "body": {
       "title": "CASE_HITOE_TITLE",
-      "text": "CASE_HITOE_TEXT",
+      "markdown": "CASE_HITOE_TEXT",
       "video": "videos/hitoe-map.mp4",
       "canvas1": {
         "dx": 29.6,
@@ -165,7 +165,7 @@
     "name": "gyro-pepper",
     "body": {
       "title": "CASE_GYRO_TITLE",
-      "text": "CASE_GYRO_TEXT",
+      "markdown": "CASE_GYRO_TEXT",
       "video": "videos/gyro-pepper.mp4",
       "canvas1": {
         "dx": 0,

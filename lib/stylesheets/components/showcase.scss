@@ -26,10 +26,21 @@
       flex-wrap: wrap;
     }
 
+    &:nth-child(odd) {
+      a:link, a:visited {
+        color: #666;
+      }
+    }
     &:nth-child(even) {
       background: white;
       .showcase-video {
         border-color: $dominant-color;
+      }
+    }
+
+    .ap-markdown {
+      p {
+        margin: 0;
       }
     }
   }
@@ -59,8 +70,7 @@
   .showcase-text-container {
     width: 100%;
     box-sizing: border-box;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-bottom: 1em;
   }
   .showcase-video-container {
     display: flex;
@@ -78,6 +88,9 @@
   .showcase-view {
     .showcase-text-container {
       width: 50%;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 0;
     }
     .showcase-video-container {
       width: 50%;
