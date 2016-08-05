@@ -3,10 +3,10 @@
  * Runs with mocha.
  */
 
-describe('index', function () {
+describe('docs', function () {
   it('loads without problems', function () {
     var div = document.createElement('div')
-    div.id = 'index-wrap'
+    div.id = 'docs-wrap'
     document.body.appendChild(div)
   })
 })

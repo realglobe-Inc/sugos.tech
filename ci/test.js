@@ -9,9 +9,10 @@
 process.chdir(`${__dirname}/..`)
 
 const { runTasks } = require('ape-tasking')
-const amocha = require('amocha')
-
+const {execSync} = require('child_process')
 
 runTasks('test', [
-  () => amocha('test/*_test.js', {})
+  () => {
+    execSync('./node_modules/.bin/karma start', {stdio: 'inherit'})
+  }
 ], true)
