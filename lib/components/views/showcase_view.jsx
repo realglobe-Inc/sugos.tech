@@ -16,6 +16,7 @@ import Video from '../fragments/video'
 import VideoCanvas from '../fragments/video_canvas'
 import Joiner from '../fragments/joiner'
 import {DOMINANT} from '../../constants/color_constants'
+import {singleton as markdownService} from '../../services/markdown_service'
 
 const debug = require('debug')('sg:component:showcase')
 
@@ -164,7 +165,7 @@ const ShowcaseView = React.createClass({
         <ApSectionBody>
           <div className='showcase-text-container'>
             <div className='showcase-description'>{
-              <Markdown src={ markdown }/>
+              <Markdown src={ markdownService.getMarkdown(markdown) }/>
             }</div>
           </div>
           <div className='showcase-video-container' ref={ refs.container }>
