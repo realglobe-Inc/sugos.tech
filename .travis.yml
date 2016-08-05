@@ -13,7 +13,6 @@ before_script:
 script:
 - ./ci/build.js
 - ./ci/test.js
-- ./ci/cover.js
 - ./ci/report.js
 after_success:
 - ./ci/travis/publish.js
