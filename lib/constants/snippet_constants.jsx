@@ -11,7 +11,7 @@ const exists = (filename) => fs.existsSync && fs.existsSync(filename)
 const read = (filename) => exists(filename) && fs.readFileSync(filename).toString() || null
 
 const exampleCloud = highlightJsx.code(
-  read(require.resolve('sugos/example/example-cloud.js'))
+  read(require.resolve('sugos/example/example-hub.js'))
 )
 const exampleActor = highlightJsx.code(
   read(require.resolve('sugos/example/example-actor.js'))

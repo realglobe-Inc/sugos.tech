@@ -74,10 +74,10 @@
       "スマートフォンに搭載されているジャイロセンサーを使って、Pepper とあっちむいてホイで遊べます。"
     ],
     "GUIDE_CLOUD_SETUP_TEXT": [
-      "First of all, you need to setup [sugo-cloud](https://github.com/realglobe-Inc/sugo-cloud) on public network so that spot and caller can access it."
+      "First of all, you need to setup [sugo-hub](https://github.com/realglobe-Inc/sugo-hub) on public network so that spot and caller can access it."
     ],
     "GUIDE_SPOT_RUN_TEXT": [
-      "Run [sugo-spot](https://github.com/realglobe-Inc/sugo-spot) on local network where your machine or sensors exists and access to the sugo-cloud."
+      "Run [sugo-spot](https://github.com/realglobe-Inc/sugo-spot) on local network where your machine or sensors exists and access to the sugo-hub."
     ],
     "GUIDE_CALLER_USE_TEXT": [
       "Connect to remote spot from [sugo-caller](https://github.com/realglobe-Inc/sugo-caller) via cloud."
@@ -102,7 +102,7 @@
     "CASE_GYRO_TITLE": "スマホのジャイロセンサーを使って Pepper と遊ぶ",
     "GUIDE_ACTOR_TITLE": "SUGO-Actor側でモジュールを宣言する",
     "GUIDE_CALLER_TITLE": "SUGO-Callerからアクセスする",
-    "GUIDE_CLOUD_TITLE": "SUGO-Cloudを立ち上げる"
+    "GUIDE_CLOUD_TITLE": "SUGO-Hubを立ち上げる"
   },
   "toasts": {},
   "toggles": {

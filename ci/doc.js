@@ -16,7 +16,7 @@ const writeout = require('writeout')
 apeTasking.runTasks('build', [
   () => co(function * () {
     let config = {
-      'sugo-cloud': 'node_modules/sugo-cloud/lib/**/*.js',
+      'sugo-hub': 'node_modules/sugo-hub/lib/**/*.js',
       'sugo-spot': 'node_modules/sugo-spot/lib/**/*.js',
       'sugo-caller': 'node_modules/sugo-caller/lib/**/*.js'
     }

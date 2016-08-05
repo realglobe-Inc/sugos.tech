@@ -53,7 +53,7 @@
     "CASE_GYRO_TITLE": "Make Pepper to follow iPhone Motion",
     "GUIDE_ACTOR_TITLE": "Declare Modules on SUGO-Actor",
     "GUIDE_CALLER_TITLE": "Access to Modules from SUGO-Caller",
-    "GUIDE_CLOUD_TITLE": "Setup SUGO-Cloud"
+    "GUIDE_CLOUD_TITLE": "Setup SUGO-Hub"
   },
   "toasts": {},
   "toggles": {

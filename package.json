@@ -28,7 +28,7 @@
   "homepage": "https://github.com/realglobe-Inc/sugos.tech#readme",
   "dependencies": {
     "ape-highlighting": "^3.1.0",
-    "apeman-react-basic": "^9.0.10",
+    "apeman-react-basic": "^9.0.11",
     "apeman-react-decorative": "^2.0.10",
     "apeman-react-handy": "^4.0.7",
     "apeman-react-markdown": "^2.0.0",
@@ -36,8 +36,8 @@
     "apeman-react-mixin-locale": "^1.0.2",
     "apeman-react-mixin-pure": "^1.0.5",
     "apeman-react-mixin-touch": "^1.0.4",
-    "apeman-react-style": "^4.1.3",
-    "apeman-react-theme": "^6.0.4",
+    "apeman-react-style": "^4.1.4",
+    "apeman-react-theme": "^6.0.5",
     "apemanlocale": "^5.0.11",
     "classnames": "^2.2.5",
     "co": "^4.6.0",
@@ -47,14 +47,14 @@
     "sg-react": "^1.1.1",
     "sg-react-components": "^1.3.8",
     "stringcase": "^3.0.1",
-    "sugos-assets": "^2.0.1"
+    "sugos-assets": "^2.0.3"
   },
   "devDependencies": {
     "ababel": "^1.0.25",
     "ababel-es2015": "^1.0.5",
     "ababel-react": "^1.0.5",
     "abrowserify": "^1.0.18",
-    "aglob": "^1.0.1",
+    "aglob": "^1.0.2",
     "ape-deploying": "^5.0.5",
     "ape-releasing": "^4.0.4",
     "ape-reporting": "^3.0.2",
@@ -70,8 +70,8 @@
     "injectmock": "^2.0.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
-    "sg-travis": "^1.1.26",
-    "sugos": "^2.1.0",
+    "sg-travis": "^1.1.27",
+    "sugos": "^2.1.3",
     "writeout": "^2.0.6"
   },
   "engines": {

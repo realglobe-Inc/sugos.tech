@@ -52,7 +52,7 @@ const GuideView = React.createClass({
                 _ifToggle('QUICK_START', [
                   _section('cloud-setup', {
                     title: l('titles.GUIDE_CLOUD_TITLE'),
-                    markdown: markdownService.getMarkdown('11.setup-cloud'),
+                    markdown: markdownService.getMarkdown('11.setup-hub'),
                     snippet: snippetService.getSnippet('exampleCloud')
                   }),
                   _section('spot-run', {
