@@ -7,7 +7,7 @@
     "prepublish": "./ci/prepublish.js",
     "start": "http-server public -d false -p 3000",
     "test": "./ci/test.js",
-    "site:debug": "./ci/watch.js & npm start"
+    "debug": "export DEBUG=sg:*; ./ci/watch.js & npm start"
   },
   "repository": "realglobe-Inc/sugos.tech",
   "keywords": [

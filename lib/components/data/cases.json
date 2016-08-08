@@ -75,7 +75,7 @@
     "name": "text-input",
     "body": {
       "title": "CASE_TEXT_INPUT_TITLE",
-      "markdown": "CASE_TEXT_INPUT_TEXT",
+      "markdown": "24.case-pepper-text",
       "video": "videos/pepper_text_input.mp4",
       "canvas1": {
         "dx": 164.9,
@@ -93,7 +93,7 @@
     "name": "edison_roomba",
     "body": {
       "title": "CASE_EDISON_ROOMBA_TITLE",
-      "markdown": "CASE_EDISON_ROOMBA_TEXT",
+      "markdown": "25.roomba-edison.md",
       "video": "videos/edison_roomba.mp4",
       "canvas1": {
         "dx": 12.7,
