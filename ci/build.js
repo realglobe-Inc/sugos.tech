@@ -75,7 +75,8 @@ runTasks('build', [
           debug: true,
           extensions: [ '.jsx' ],
           transforms: [
-            ababelReactTransform()
+            [ require('abrowserify/transforms/json_transform'), { pattern: '**/lib/constants/*.*' } ],
+            [ ababelReactTransform() ]
           ]
         }
       )
