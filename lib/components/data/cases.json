@@ -129,7 +129,7 @@
     "name": "curl-rapiro",
     "body": {
       "title": "CASE_CURL_RAPIRO_TITLE",
-      "markdown": "CASE_CURL_RAPIRO_TEXT",
+      "markdown": "27.curl-rapiro",
       "video": "videos/curl_rapiro.mp4",
       "canvas1": {
         "dx": 169,
@@ -147,7 +147,7 @@
     "name": "hitoe-map",
     "body": {
       "title": "CASE_HITOE_TITLE",
-      "markdown": "CASE_HITOE_TEXT",
+      "markdown": "28.hitoe-map",
       "video": "videos/hitoe-map.mp4",
       "canvas1": {
         "dx": 29.6,
@@ -165,7 +165,7 @@
     "name": "gyro-pepper",
     "body": {
       "title": "CASE_GYRO_TITLE",
-      "markdown": "CASE_GYRO_TEXT",
+      "markdown": "29.iphone-pepper",
       "video": "videos/gyro-pepper.mp4",
       "canvas1": {
         "dx": 0,

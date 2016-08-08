@@ -34,7 +34,7 @@ const Header = React.createClass({
     let _tabItem = ApHeaderTabItem.createItem
     let _link = (...args) => linkService.resolveHtmlLink(...args)
     return (
-      <ApHeader className="header">
+      <ApHeader className='header'>
         <ApContainer>
           <ApHeaderLogo href={ _link('index.html') }>
             <Logo />

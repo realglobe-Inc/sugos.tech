@@ -19,6 +19,7 @@ import {description} from 'sugos/package.json'
 import Snippet from '../fragments/snippet'
 import Markdown, {EOL} from '../fragments/markdown'
 import Footer from '../fragments/footer'
+import {singleton as linkService} from '../../services/link_service'
 
 import {singleton as snippetService} from '../../services/snippet_service'
 import {singleton as markdownService} from '../../services/markdown_service'
@@ -33,6 +34,7 @@ const SplashView = React.createClass({
   render () {
     const s = this
     let l = s.getLocale()
+    let _link = (...args) => linkService.resolveHtmlLink(...args)
     return (
       <ApView className='splash-view'>
         <ApViewBody>
@@ -41,7 +43,7 @@ const SplashView = React.createClass({
             <ApJumbotronTitle className='logo-font'>SUGOS</ApJumbotronTitle>
             <ApJumbotronText>{ description }</ApJumbotronText>
             <p className='splash-button-container'>
-              <ApButton href='./docs'> { l('buttons.GET_STARTED') } </ApButton>
+              <ApButton href={ _link('docs.html') }> { l('buttons.GET_STARTED') } </ApButton>
             </p>
           </ApJumbotron>
           <ApArticle>
