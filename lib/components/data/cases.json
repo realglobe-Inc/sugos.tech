@@ -93,7 +93,7 @@
     "name": "edison_roomba",
     "body": {
       "title": "CASE_EDISON_ROOMBA_TITLE",
-      "markdown": "25.roomba-edison.md",
+      "markdown": "25.roomba-edison",
       "video": "videos/edison_roomba.mp4",
       "canvas1": {
         "dx": 12.7,
