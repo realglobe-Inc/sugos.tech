@@ -39,6 +39,7 @@
     "apeman-react-style": "^4.1.4",
     "apeman-react-theme": "^7.0.12",
     "apemanlocale": "^5.0.18",
+    "breact": "^1.2.0",
     "classnames": "^2.2.5",
     "co": "^4.6.0",
     "debug": "^2.2.0",

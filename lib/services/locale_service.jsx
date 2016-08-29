@@ -5,6 +5,7 @@
 
 const abind = require('abind')
 const { get } = require('bwindow')
+const loc = require('../constants/loc_constants.json')
 
 /**
  * Create a resolver function for message
@@ -62,7 +63,7 @@ class LocaleService {
     const s = this
     abind(s)
     s.setLang(lang)
-    s.setLoc({})
+    s.setLoc(loc)
   }
 
   setLoc (loc) {

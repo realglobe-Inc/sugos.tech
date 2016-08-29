@@ -69,7 +69,6 @@ const Html = React.createClass({
     const s = this
     let { props } = s
     let { lang } = props
-    setLoc(loc)
     setLang(lang)
   },
 
@@ -91,7 +90,7 @@ const Html = React.createClass({
     const s = this
     let { props } = s
     return [
-      l(`titles.${props.title}`),
+      props.title && l(`titles.${props.title}`),
       l('titles.UI_TITLE')
     ]
       .filter((component) => !!component)

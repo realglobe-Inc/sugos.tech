@@ -47,7 +47,7 @@ const SplashView = React.createClass({
             { s._renderSection('splash-how-section', l('captions.HOW_IT_WORKS'), '02.how-it-works') }
             { s._renderSection('splash-why-section', l('captions.WHAT_TO_USE'), '03.what-to-use') }
           </ApArticle>
-          <Footer />
+          <Footer l={ l } />
         </ApViewBody>
       </ApView>
     )

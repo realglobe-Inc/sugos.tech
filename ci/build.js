@@ -17,9 +17,7 @@ const co = require('co')
 const aglob = require('aglob')
 const filecopy = require('filecopy')
 const filelink = require('filelink')
-const React = require('react')
-const ReactDOM = require('react-dom/server')
-const ababelReact = require('ababel-react')
+const { markup } = require('breact')
 const ababelReactTransform = require('ababel-react/transform')
 const ascss = require('ascss')
 const abrowserify = require('abrowserify')
@@ -99,13 +97,11 @@ runTasks('build', [
     })
     yield coz.render(
       filenames.map((filename) => ({
-        path: path.resolve(publicHtmlDir, filename.replace(/\_html\.jsx$/, '.html')),
+        path: path.resolve(publicHtmlDir, filename.replace(/_html\.jsx$/, '.html')),
         mkdirp: true,
         force: true,
-        tmpl: (data) => {
-          let { component, props } = data
-          let element = React.createElement(component.default || component, props || {})
-          return ReactDOM.renderToStaticMarkup(element)
+        tmpl: ({ component, props }) => {
+          return markup(component, props)
         },
         data: {
           component: require(path.resolve(htmlDir, filename)),

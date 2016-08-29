@@ -98,6 +98,7 @@ const ShowcaseView = React.createClass({
     })
 
     s.videos = videos
+    s.forceUpdate()
   },
 
   componentWillUnmount () {
