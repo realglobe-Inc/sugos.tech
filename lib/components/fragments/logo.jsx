@@ -1,15 +1,12 @@
 'use strict'
 
 import React, {PropTypes as types} from 'react'
-import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 
 const Logo = React.createClass({
-  mixins: [
-    ApLocaleMixin
-  ],
+  mixins: [],
   render () {
     const s = this
-    let l = s.getLocale()
+    let { l } = s.props
     return (
       <h1 className="logo">{ l('logo.LOGO') }</h1>
     )

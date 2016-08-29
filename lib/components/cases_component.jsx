@@ -8,42 +8,24 @@
 'use strict'
 
 import React from 'react'
-import {ApPage, ApMain, ApViewStack} from 'apeman-react-basic'
-import {ApLocaleMixin} from 'apeman-react-mixin-locale'
+import {ApPage, ApMain} from 'apeman-react-basic'
 import Header from './fragments/header'
 import ShowcaseView from './views/showcase_view'
+import {singleton as localeService} from '../services/locale_service'
+
+const { l } = localeService
 
 const CasesComponent = React.createClass({
-  mixins: [
-    ApLocaleMixin
-  ],
-  getInitialState () {
-    return {}
-  },
-  getDefaultProps () {
-    return {
-      stacker: new (ApViewStack.Stacker)({
-        root: ShowcaseView,
-        rootProps: {}
-      })
-    }
-  },
-
-  componentWillMount () {
-    const s = this
-    let { props } = s
-    s.registerLocale(props.locale)
-  },
 
   render () {
     const s = this
     let { props } = s
-    let l = s.getLocale()
+
     return (
       <ApPage>
-        <Header tab='CASES'/>
+        <Header tab='CASES' l={ l }/>
         <ApMain>
-          <ApViewStack stacker={ props.stacker }/>
+          <ShowcaseView l={ l }/>
         </ApMain>
       </ApPage>
     )

@@ -2,42 +2,22 @@
 
 import React, {PropTypes as types} from 'react'
 import {ApPage, ApMain, ApViewStack} from 'apeman-react-basic'
-import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import Header from './fragments/header'
 import SplashView from './views/splash_view'
 
+import {singleton as localeService} from '../services/locale_service'
+
+const { l } = localeService
+
 const IndexComponent = React.createClass({
-  mixins: [
-    ApLocaleMixin
-  ],
-
-  getInitialState () {
-    return {}
-  },
-
-  getDefaultProps () {
-    return {
-      stacker: new (ApViewStack.Stacker)({
-        root: SplashView,
-        rootProps: {}
-      })
-    }
-  },
-
-  componentWillMount () {
-    const s = this
-    let { props } = s
-    s.registerLocale(props.locale)
-  },
 
   render () {
     const s = this
-    let { props } = s
     return (
       <ApPage>
-        <Header />
+        <Header l={ l }/>
         <ApMain>
-          <ApViewStack stacker={ props.stacker }/>
+          <SplashView l={ l }/>
         </ApMain>
       </ApPage>
     )

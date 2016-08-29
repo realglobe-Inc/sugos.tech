@@ -14,6 +14,9 @@ import * as snippets from '../constants/snippet_constants'
 import * as markdowns from '../constants/markdown_constants'
 import {DOMINANT} from '../constants/color_constants'
 import {highlightJsx} from 'ape-highlighting'
+import {singleton as localeService} from '../services/locale_service'
+
+const { l, setLoc, setLang } = localeService
 
 const Html = React.createClass({
   propTypes: {
@@ -36,7 +39,6 @@ const Html = React.createClass({
     const s = this
     let { props } = s
     let { base, lang } = props
-    let locale = s.getLocale()
     return (
       <ApHtml>
         <ApHead chaset="utf-8"
@@ -46,7 +48,7 @@ const Html = React.createClass({
                 css={ s.getCss() }
                 js={ s.getJs() }
                 viewport={ { initialScale: 1 } }
-                globals={ { locale, snippets, lang, markdowns: markdowns[lang] } }
+                globals={ { loc, snippets, lang, markdowns: markdowns[ lang ] } }
                 base={ base }
         >
           <ApThemeStyle dominant={ DOMINANT }/>
@@ -54,13 +56,21 @@ const Html = React.createClass({
             { highlightJsx.style() }
           </ApStyle>
         </ApHead>
-        <ApBody style={ {padding: 5} }>
+        <ApBody style={ { padding: 5 } }>
           <div id={ props.wrapId }>
-            <props.component locale={ locale }/>
+            <props.component />
           </div>
         </ApBody>
       </ApHtml>
     )
+  },
+
+  componentWillMount () {
+    const s = this
+    let { props } = s
+    let { lang } = props
+    setLoc(loc)
+    setLang(lang)
   },
 
   getCss () {
@@ -80,20 +90,14 @@ const Html = React.createClass({
   getTitle () {
     const s = this
     let { props } = s
-    let l = s.getLocale()
     return [
-      l.titles[ props.title ],
-      l.titles[ 'UI_TITLE' ]
+      l(`titles.${props.title}`),
+      l('titles.UI_TITLE')
     ]
       .filter((component) => !!component)
       .join(' - ')
-  },
-
-  getLocale () {
-    const s = this
-    let { props } = s
-    return loc[ props.lang ]
   }
+
 })
 
 export default Html

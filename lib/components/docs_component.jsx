@@ -9,43 +9,25 @@
 
 import React from 'react'
 import {ApStyle} from 'apeman-react-style'
-import {ApPage, ApMain, ApViewStack} from 'apeman-react-basic'
+import {ApPage, ApMain} from 'apeman-react-basic'
 
-import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import Header from './fragments/header'
 import GuideView from './views/guide_view'
 
-const DocsComponent = React.createClass({
-  mixins: [
-    ApLocaleMixin
-  ],
-  getInitialState () {
-    return {}
-  },
-  getDefaultProps () {
-    return {
-      stacker: new (ApViewStack.Stacker)({
-        root: GuideView,
-        rootProps: {}
-      })
-    }
-  },
+import {singleton as localeService} from '../services/locale_service'
 
-  componentWillMount () {
-    const s = this
-    let { props } = s
-    s.registerLocale(props.locale)
-  },
+const { l } = localeService
+
+const DocsComponent = React.createClass({
 
   render () {
     const s = this
     let { props } = s
-    let l = s.getLocale()
     return (
       <ApPage>
-        <Header tab="DOCS"/>
+        <Header tab="DOCS" l={ l }/>
         <ApMain>
-          <ApViewStack stacker={ props.stacker }/>
+          <GuideView l={ l }/>
         </ApMain>
       </ApPage>
     )

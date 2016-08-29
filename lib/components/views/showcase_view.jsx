@@ -10,7 +10,6 @@ import {
   ApViewHeader, ApViewBody,
   ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
-import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import Markdown, {EOL} from '../fragments/markdown'
 import Video from '../fragments/video'
 import VideoCanvas from '../fragments/video_canvas'
@@ -23,12 +22,11 @@ const debug = require('debug')('sg:component:showcase')
 const cases = require('../data/cases.json')
 
 const ShowcaseView = React.createClass({
-  mixins: [
-    ApLocaleMixin
-  ],
+  mixins: [],
   render () {
     const s = this
-    let l = s.getLocale()
+    let { l } = s.props
+
     // 開発中の section の挿入・入れ替えを容易にするため
     let first = true
     let reversed = () => {
@@ -127,7 +125,7 @@ const ShowcaseView = React.createClass({
 
   _renderSection (name, config, reversed) {
     const s = this
-    let l = s.getLocale()
+    let { l } = s.props
     let {
       title, markdown,
       video,

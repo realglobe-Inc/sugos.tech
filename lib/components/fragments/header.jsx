@@ -5,7 +5,6 @@
 'use strict'
 
 import React, {PropTypes as types} from 'react'
-import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import {
   ApHeader, ApHeaderLogo, ApContainer,
   ApHeaderTab, ApHeaderTabItem
@@ -23,21 +22,19 @@ const Header = React.createClass({
       tab: null
     }
   },
-  mixins: [
-    ApLocaleMixin
-  ],
+  mixins: [],
   render () {
     const s = this
     let { props } = s
-    let { tab } = props
-    let l = s.getLocale()
+    let { tab, l } = props
+
     let _tabItem = ApHeaderTabItem.createItem
     let _link = (...args) => linkService.resolveHtmlLink(...args)
     return (
       <ApHeader className='header'>
         <ApContainer>
           <ApHeaderLogo href={ _link('index.html') }>
-            <Logo />
+            <Logo l={ l }/>
           </ApHeaderLogo>
           <ApHeaderTab>
             { _tabItem(l('pages.DOCS_PAGE'), _link('docs.html'), { selected: tab === 'DOCS' }) }

@@ -4,6 +4,7 @@
 'use strict'
 
 const path = require('path')
+const abind = require('abind')
 
 /** @lends LinkService */
 class LinkService {

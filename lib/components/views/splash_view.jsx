@@ -14,9 +14,7 @@ import {
   ApJumbotron, ApJumbotronTitle, ApJumbotronText,
   ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
-import {ApLocaleMixin} from 'apeman-react-mixin-locale'
 import {description} from 'sugos/package.json'
-import Snippet from '../fragments/snippet'
 import Markdown, {EOL} from '../fragments/markdown'
 import Footer from '../fragments/footer'
 import {singleton as linkService} from '../../services/link_service'
@@ -28,12 +26,10 @@ const SplashView = React.createClass({
   getInitialState () {
     return {}
   },
-  mixins: [
-    ApLocaleMixin
-  ],
+  mixins: [],
   render () {
     const s = this
-    let l = s.getLocale()
+    let { l } = s.props
     let _link = (...args) => linkService.resolveHtmlLink(...args)
     return (
       <ApView className='splash-view'>

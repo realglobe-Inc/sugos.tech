@@ -12,7 +12,6 @@ import {
   ApArticle,
   ApToggle
 } from 'apeman-react-basic'
-import { ApLocaleMixin } from 'apeman-react-mixin-locale'
 
 import Snippet from '../fragments/snippet'
 import Markdown, {EOL} from '../fragments/markdown'
@@ -20,9 +19,7 @@ import {singleton as snippetService} from '../../services/snippet_service'
 import {singleton as markdownService} from '../../services/markdown_service'
 
 const GuideView = React.createClass({
-  mixins: [
-    ApLocaleMixin
-  ],
+  mixins: [],
   getInitialState () {
     return {
       toggle: 'QUICK_START'
@@ -31,7 +28,7 @@ const GuideView = React.createClass({
   render () {
     const s = this
     let { props, state } = s
-    let l = s.getLocale()
+    let { l } = props
 
     let _section = s._renderSection
     let _ifToggle = (value, components) => value === state.toggle ? components : null
@@ -96,7 +93,7 @@ const GuideView = React.createClass({
 
   getToggleOptions () {
     const s = this
-    let l = s.getLocale()
+    let { l } = s.props
     return {
       QUICK_START: (<span>{ l('toggles.QUICK_START') }</span>),
       REFERENCES: (<span>{ l('toggles.REFERENCES') }</span>),
@@ -109,7 +106,9 @@ const GuideView = React.createClass({
   // ------------------
 
   _renderSection (name, config) {
+    const s = this
     let { title, markdown, snippet } = config
+    let { l } = s.props
     return (
       <ApSection id={ `guide-${name}-section` }
                  className='guide-section'
