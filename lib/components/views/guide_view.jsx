@@ -14,6 +14,7 @@ import {
 } from 'apeman-react-basic'
 
 import Snippet from '../fragments/snippet'
+import {get} from 'bwindow'
 import Markdown, {EOL} from '../fragments/markdown'
 import {singleton as snippetService} from '../../services/snippet_service'
 import {singleton as markdownService} from '../../services/markdown_service'
@@ -33,6 +34,7 @@ const GuideView = React.createClass({
     let _section = s._renderSection
     let _ifToggle = (value, components) => value === state.toggle ? components : null
 
+    let pathname = get('location.pathname')
     return (
       <ApView className='guide-view'>
         <ApViewHeader titleText={ l('titles.GUIDES_TITLE') }/>
@@ -45,14 +47,23 @@ const GuideView = React.createClass({
           </div>
           <div>
             <ApArticle>
+              <div className='guide-lead'>
+                <p>{ l('leads.QUICK_START_LEAD_01') }</p>
+                <ol>
+                  <li><a href={ `${pathname}#hub-setup` }>{ l('titles.GUIDE_CLOUD_TITLE') }</a></li>
+                  <li><a href={ `${pathname}#actor-run` }>{ l('titles.GUIDE_ACTOR_TITLE') }</a></li>
+                  <li><a href={ `${pathname}#caller-use` }>{ l('titles.GUIDE_CALLER_TITLE') }</a></li>
+                </ol>
+                <Markdown src={ markdownService.getMarkdown('10.quick-start.md') }/>
+              </div>
               {
                 _ifToggle('QUICK_START', [
-                  _section('cloud-setup', {
+                  _section('hub-setup', {
                     title: l('titles.GUIDE_CLOUD_TITLE'),
                     markdown: markdownService.getMarkdown('11.setup-hub'),
                     snippet: snippetService.getSnippet('exampleCloud')
                   }),
-                  _section('spot-run', {
+                  _section('actor-run', {
                     title: l('titles.GUIDE_ACTOR_TITLE'),
                     markdown: markdownService.getMarkdown('12.declare-on-sugo-actor'),
                     snippet: snippetService.getSnippet('exampleActor')
@@ -114,6 +125,7 @@ const GuideView = React.createClass({
                  className='guide-section'
                  key={ name }
       >
+        <a name={ name }></a>
         <ApSectionHeader>{ title }</ApSectionHeader>
         <ApSectionBody>
           <div className='guide-text-container'>

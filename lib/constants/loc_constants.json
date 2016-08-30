@@ -112,6 +112,9 @@
       "SIGN_KEY": "Username or Email",
       "USER_KEY": "Username"
     },
+    "leads": {
+      "QUICK_START_LEAD_01": "Three steps to start"
+    },
     "links": {
       "CHANGE_EMAIL": "Change",
       "CHANGE_PASSWORD": "Change",
@@ -333,6 +336,9 @@
       "SIGN_KEY": "ユーザー名またはメールアドレス",
       "USER_KEY": "ユーザー名"
     },
+    "leads": {
+      "QUICK_START_LEAD_01": "クイックスタート手順"
+    },
     "links": {
       "CHANGE_EMAIL": "変更",
       "CHANGE_PASSWORD": "変更",
@@ -551,6 +557,9 @@
         "PROFILE_NAME": "Display Name",
         "SIGN_KEY": "Username or Email",
         "USER_KEY": "Username"
+      },
+      "leads": {
+        "QUICK_START_LEAD_01": "Three steps to start"
       },
       "links": {
         "CHANGE_EMAIL": "Change",
