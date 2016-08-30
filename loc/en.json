@@ -1,6 +1,11 @@
 {
   "_": {
   },
+  "accordions": {
+    "HUB_API": "API of SUGO-Hub",
+    "ACTOR_API": "API of SUGO-Actor",
+    "CALLER_API": "API of SUGO-Caller"
+  },
   "buttons": {
     "GET_STARTED": "Get Started"
   },

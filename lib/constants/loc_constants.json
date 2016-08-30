@@ -16,6 +16,11 @@
       "USERNAME": "Username"
     },
     "$lang": "en",
+    "accordions": {
+      "ACTOR_API": "API of SUGO-Actor",
+      "CALLER_API": "API of SUGO-Caller",
+      "HUB_API": "API of SUGO-Hub"
+    },
     "buttons": {
       "CONFIRM_NO": "No",
       "CONFIRM_YES": "Yes",
@@ -240,6 +245,11 @@
       "USERNAME": "ユーザー名"
     },
     "$lang": "ja",
+    "accordions": {
+      "ACTOR_API": "API of SUGO-Actor",
+      "CALLER_API": "API of SUGO-Caller",
+      "HUB_API": "API of SUGO-Hub"
+    },
     "buttons": {
       "CONFIRM_NO": "いいえ",
       "CONFIRM_YES": "はい",
@@ -462,6 +472,11 @@
         "USERNAME": "Username"
       },
       "$lang": "en",
+      "accordions": {
+        "ACTOR_API": "API of SUGO-Actor",
+        "CALLER_API": "API of SUGO-Caller",
+        "HUB_API": "API of SUGO-Hub"
+      },
       "buttons": {
         "CONFIRM_NO": "No",
         "CONFIRM_YES": "Yes",

@@ -53,7 +53,8 @@ runTasks('build', [
       'asset/videos': 'public/videos',
       'asset/fonts': 'public/fonts',
       'asset/images': 'public/images',
-      'asset/index.html': 'public/index.html'
+      'asset/index.html': 'public/index.html',
+      'doc/api': 'asset/markdowns/en/api'
     }
     for (let src of Object.keys(links)) {
       let dest = links[ src ]

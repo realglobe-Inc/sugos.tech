@@ -3,8 +3,16 @@
  */
 'use strict'
 
+import abind from 'abind'
+
 /** @lends MarkdownService */
 class MarkdownService {
+  constructor () {
+    const s = this
+    abind(s)
+
+  }
+
   /**
    * Get markdown with name
    * @param {string} name - Name of markdown

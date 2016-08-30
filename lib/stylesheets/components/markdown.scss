@@ -4,4 +4,8 @@
     display: inline;
     padding: 4px;
   }
+  pre > code {
+    display: block;
+    line-height: 22px;
+  }
 }
