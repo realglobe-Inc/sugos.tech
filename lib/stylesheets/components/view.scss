@@ -17,6 +17,9 @@ body {
   .ap-view-header-title {
     font-size: initial;
     color: #AAA;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 }
 

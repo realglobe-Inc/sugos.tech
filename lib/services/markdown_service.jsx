@@ -4,6 +4,7 @@
 'use strict'
 
 import abind from 'abind'
+import {EOL} from 'os'
 
 /** @lends MarkdownService */
 class MarkdownService {
@@ -22,6 +23,12 @@ class MarkdownService {
     const s = this
     let markdowns = s._getMarkdowns()
     return markdowns[ name ]
+  }
+
+  getMarkdownHeading (name) {
+    const s = this
+    let markdown = s.getMarkdown(name)
+    return markdown && markdown.trim().split(EOL).shift().trim().replace(/^#+/, '').trim()
   }
 
   _getMarkdowns () {

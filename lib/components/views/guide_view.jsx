@@ -114,6 +114,9 @@ class GuideView extends Component {
 
               {
                 _ifToggle('TIPS', [
+                  <GuideView.TipList tips={ tips }
+                                     pathname={ pathname }
+                  />,
                   ...tips.map((tip) =>
                     <GuideView.Tip key={tip}
                                    id={ spinalcase(tip) }
@@ -189,9 +192,29 @@ class GuideView extends Component {
     )
   }
 
-  static Tip ({ markdown }) {
+  static TipList ({ pathname, tips }) {
     return (
-      <div className="guide-tip">
+      <div className="guide-tip-list">
+        <ul>
+          { tips.map((tip) => (
+            <li key={ tip }>
+              <a href={ `${pathname}#${spinalcase(tip)}`}>
+                { markdownService.getMarkdownHeading(tip) }
+              </a>
+            </li>
+          ))
+          }
+        </ul>
+      </div>
+    )
+  }
+
+  static Tip ({ id, markdown }) {
+    return (
+      <div className="guide-tip"
+           id={ `guide-tip-${id}` }
+      >
+        <a name={id} className="guide-tip-anchor"></a>
         <Markdown src={ markdown }/>
       </div>
     )

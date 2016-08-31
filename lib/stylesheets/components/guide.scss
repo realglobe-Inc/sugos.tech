@@ -83,9 +83,24 @@ $border-color: #DDD;
   }
 
   .guide-tip {
+    .guide-tip-anchor {
+      display: block;
+      position: relative;
+      top: -84px;
+    }
     margin-bottom: 16px;
     h2 {
       border-bottom: 1px solid #555;
+    }
+  }
+
+  .guide-tip-list {
+    ul {
+      list-style-type: square;
+      padding-left: 16px;
+      a {
+        color: #888;
+      }
     }
   }
 }
@@ -101,6 +116,11 @@ $border-color: #DDD;
       }
       .ap-section-body {
         flex-wrap: nowrap;
+      }
+    }
+    .guide-tip {
+      .guide-tip-anchor {
+        top: -44px;
       }
     }
   }
