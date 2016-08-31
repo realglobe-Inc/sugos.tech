@@ -13,6 +13,7 @@ import {
   ApToggle,
   ApAccordion, ApAccordionArrow, ApAccordionHeader, ApAccordionBody
 } from 'apeman-react-basic'
+import {save, restore} from 'bstorage'
 
 import Snippet from '../fragments/snippet'
 import {get} from 'bwindow'
@@ -21,14 +22,16 @@ import Markdown, {EOL} from '../fragments/markdown'
 import {singleton as snippetService} from '../../services/snippet_service'
 import {singleton as markdownService} from '../../services/markdown_service'
 
+const STORAGE_KEY = 'guide.state'
+
 class GuideView extends Component {
   constructor (props) {
     super(props)
     const s = this
     abind(s)
-    s.state = {
-      toggle: 'QUICK_START'
-    }
+    s.state = restore(STORAGE_KEY) || {
+        toggle: 'QUICK_START'
+      }
   }
 
   render () {
@@ -112,6 +115,14 @@ class GuideView extends Component {
         </ApViewBody>
       </ApView>
     )
+  }
+
+  // ------------------
+  // LifeCycle
+  // ------------------
+  componentDidUpdate () {
+    const s = this
+    save(STORAGE_KEY, s.state)
   }
 
   // ------------------

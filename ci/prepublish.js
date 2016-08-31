@@ -10,14 +10,14 @@ process.chdir(`${__dirname}/..`)
 
 const apeTasking = require('ape-tasking')
 const co = require('co')
-const loc = require('../loc')
 
 let { execcli } = apeTasking
 
 apeTasking.runTasks('prepublish', [
   () => co(function * () {
     let { env } = process
-    for (let lang of Object.keys(loc)) {
+    let langs = [ 'en' ]
+    for (let lang of langs) {
       yield execcli('ci/build.js', [], { env: Object.assign({ LANG: lang }, env) })
     }
   })
