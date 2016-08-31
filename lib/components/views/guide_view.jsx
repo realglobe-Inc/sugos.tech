@@ -84,6 +84,7 @@ class GuideView extends Component {
               }
               {
                 _ifToggle('REFERENCES', [
+                  <h3 className='guide-heading'>{ l('headings.REFERENCE_API') }</h3>,
                   <GuideView.Accordion key='01' name='hub-api' { ...{
                     title: l('accordions.HUB_API'),
                     open: state[ 'accordion.hub' ],
@@ -180,7 +181,9 @@ class GuideView extends Component {
 
   static Accordion ({ name, title, open, onToggle, markdown }) {
     return (
-      <ApAccordion key={ name } open={ open }>
+      <ApAccordion key={ name } open={ open }
+                   className='guide-accordion'
+      >
         <ApAccordionHeader onToggle={ onToggle }>
           <ApAccordionArrow />
           { title }

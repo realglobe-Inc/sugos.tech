@@ -17,6 +17,10 @@
     "COPY_RIGHT": "Copyright © 2016 REALGLOBE. All Rights Reserved"
   },
   "guides": {},
+  "headings": {
+    "REFERENCE_API": "APIs",
+    "REFERENCE_README": "READMEs"
+  },
   "jumbotron": {
   },
   "leads": {

@@ -4,6 +4,14 @@
 $border-color: #DDD;
 
 .guide-view {
+  .guide-heading {
+    margin-bottom: 8px;
+    padding: 0 4px;
+  }
+
+  .ap-accordion ap-accordion-closed, .guide-accordion {
+    margin-bottom: 16px;
+  }
 
   .guide-toggle-container {
     text-align: center;

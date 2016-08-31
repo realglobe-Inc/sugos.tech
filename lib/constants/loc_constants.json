@@ -106,6 +106,10 @@
       "RECOVER_SEND": "Enter your email address and we will send you a link to reset your password.",
       "RECOVER_SEND_DONE": "Password reset link send to the following address"
     },
+    "headings": {
+      "REFERENCE_API": "APIs",
+      "REFERENCE_README": "READMEs"
+    },
     "jumbotron": {},
     "labels": {
       "CAPTCHA": "Captcha",
@@ -335,6 +339,10 @@
       "RECOVER_SEND": "入力したメールアドレスにパスワードを初期化するためのリンクを送信します。",
       "RECOVER_SEND_DONE": "パスワード初期化のためのリンクを以下のメールアドレスに送信しました。"
     },
+    "headings": {
+      "REFERENCE_API": "APIs",
+      "REFERENCE_README": "READMEs"
+    },
     "jumbotron": {},
     "labels": {
       "CAPTCHA": "Captcha",
@@ -561,6 +569,10 @@
       "guides": {
         "RECOVER_SEND": "Enter your email address and we will send you a link to reset your password.",
         "RECOVER_SEND_DONE": "Password reset link send to the following address"
+      },
+      "headings": {
+        "REFERENCE_API": "APIs",
+        "REFERENCE_README": "READMEs"
       },
       "jumbotron": {},
       "labels": {
