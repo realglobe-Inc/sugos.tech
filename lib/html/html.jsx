@@ -82,7 +82,7 @@ const Html = React.createClass({
   getJs () {
     const s = this
     let { props } = s
-    return []
+    return [ 'javascripts/external.js' ]
       .concat(props.js || [])
   },
 

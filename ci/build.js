@@ -21,6 +21,7 @@ const { markup } = require('breact')
 const ababelReactTransform = require('ababel-react/transform')
 const ascss = require('ascss')
 const abrowserify = require('abrowserify')
+const amap = require('amap')
 const loc = require('../loc')
 const lang = String(process.env.LANG || 'en').split(/[_\.]/g).shift()
 if (!loc[ lang ]) {
@@ -62,23 +63,24 @@ runTasks('build', [
     }
   }),
   () => co(function * () {
+    const externals = require('./configs/external_config')
     const entrypointDir = 'lib/entrypoints'
     let filenames = yield aglob('*_entrypoint.jsx', {
       cwd: entrypointDir
     })
     for (let filename of filenames) {
-      yield abrowserify(
-        path.join(entrypointDir, filename),
-        path.join(`${publicDir}/javascripts`, filename.replace(/_entrypoint\.jsx$/, '.js')),
-        {
-          debug: true,
-          extensions: [ '.jsx' ],
-          transforms: [
-            [ require('abrowserify/transforms/json_transform'), { pattern: '**/lib/constants/*.*' } ],
-            [ ababelReactTransform() ]
-          ]
-        }
-      )
+      let dest = path.join(`${publicDir}/javascripts`, filename.replace(/_entrypoint\.jsx$/, '.js'))
+      let src = path.join(entrypointDir, filename)
+      yield abrowserify(src, dest, {
+        debug: true,
+        externals,
+        extensions: [ '.jsx' ],
+        transforms: [
+          [ require('abrowserify/transforms/json_transform'), { pattern: '**/lib/constants/*.*' } ],
+          [ ababelReactTransform() ]
+        ]
+      })
+      yield amap(dest)
     }
   }),
   () => co(function * () {

@@ -4,7 +4,7 @@
   "description": "Homepage of SUGOS",
   "main": "lib",
   "scripts": {
-    "prepublish": "./ci/prepublish.js",
+    "prepublish": "./ci/setup.js",
     "start": "http-server public -d false -p 3000",
     "test": "./ci/test.js",
     "debug": "export DEBUG=sg:*; ./ci/watch.js & npm start"
@@ -58,6 +58,7 @@
     "ababel-react": "^1.0.5",
     "abrowserify": "^1.0.18",
     "aglob": "^1.0.2",
+    "amap": "^1.0.7",
     "ape-deploying": "^5.0.5",
     "ape-releasing": "^4.0.4",
     "ape-reporting": "^3.0.2",

@@ -7,6 +7,7 @@ module.exports = function (config) {
     singleRun: true,
 
     files: [
+      'public/javascripts/external.js',
       'test/index_test.js',
       'public/javascripts/index.js',
       'test/docs_test.js',

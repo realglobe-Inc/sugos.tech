@@ -21,8 +21,13 @@ import abind from 'abind'
 import Markdown, {EOL} from '../fragments/markdown'
 import {singleton as snippetService} from '../../services/snippet_service'
 import {singleton as markdownService} from '../../services/markdown_service'
+import {spinalcase} from 'stringcase'
 
 const STORAGE_KEY = 'guide.state'
+
+const tips = [
+  'tip-module-variations'
+]
 
 class GuideView extends Component {
   constructor (props) {
@@ -109,7 +114,11 @@ class GuideView extends Component {
 
               {
                 _ifToggle('TIPS', [
-                  <GuideView.Tip markdown={ markdownService.getMarkdown('tip-module-variations') } />
+                  ...tips.map((tip) =>
+                    <GuideView.Tip key={tip}
+                                   id={ spinalcase(tip) }
+                                   markdown={ markdownService.getMarkdown(tip) }/>
+                  )
                 ])
               }
             </ApArticle>
@@ -183,7 +192,7 @@ class GuideView extends Component {
   static Tip ({ markdown }) {
     return (
       <div className="guide-tip">
-      <Markdown src={ markdown }/>
+        <Markdown src={ markdown }/>
       </div>
     )
   }

@@ -1,4 +1,4 @@
-## Ways to Declare Actor Module
+## Ways to Declare Actor Modules
 
 There are several ways to declare a module for actor
 
@@ -34,22 +34,20 @@ For more detail, see https://github.com/realglobe-Inc/sugo-actor#declare-a-singl
 Actor accepts instances of custom class which extends `Module`. 
 
 ```javascript
-
 class CustomModule extends Module {
   doSomething () { /* ... */ }
 }
+let module03 = new CustomModule()
+```
 
 For more detail, see https://github.com/realglobe-Inc/sugo-module-base#define-custom-class
 
-let module03 = new CustomModule()
-```
 
 ### new (Module.modularize(SomeClass))()
 
 If you want use existing class which is not a sub class of `Module`, make it actor-compatible with `Module.modularize()` utility.   
 
 ```javascript
-
 class MyClass {
   doSomething () { /* ... */ }
 }
