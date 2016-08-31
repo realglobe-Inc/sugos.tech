@@ -4,7 +4,7 @@
  */
 'use strict'
 
-import React, {PropTypes as types} from 'react'
+import React, {Component, PropTypes as types} from 'react'
 import {
   ApButton,
   ApView,
@@ -22,11 +22,7 @@ import {singleton as linkService} from '../../services/link_service'
 import {singleton as snippetService} from '../../services/snippet_service'
 import {singleton as markdownService} from '../../services/markdown_service'
 
-const SplashView = React.createClass({
-  getInitialState () {
-    return {}
-  },
-  mixins: [],
+class SplashView extends Component {
   render () {
     const s = this
     let { l } = s.props
@@ -34,6 +30,7 @@ const SplashView = React.createClass({
     return (
       <ApView className='splash-view'>
         <ApViewBody>
+
           <ApJumbotron className='jumbotron'
                        imgSrc='images/jumbotron.jpg'>
             <ApJumbotronTitle className='logo-font'>SUGOS</ApJumbotronTitle>
@@ -43,30 +40,34 @@ const SplashView = React.createClass({
             </p>
           </ApJumbotron>
           <ApArticle>
-            { s._renderSection('splash-about-section', null, '01.about-this') }
-            { s._renderSection('splash-how-section', l('captions.HOW_IT_WORKS'), '02.how-it-works') }
-            { s._renderSection('splash-why-section', l('captions.WHAT_TO_USE'), '03.what-to-use') }
+            <SplashView.Section id='splash-about-section'
+                                markdownName='01.about-this'/>
+            <SplashView.Section id='splash-how-section'
+                                title={ l('captions.HOW_IT_WORKS') }
+                                markdownName={ '02.how-it-works' }/>
+            <SplashView.Section id='splash-why-section'
+                                title={ l('captions.WHAT_TO_USE') }
+                                markdownName={ '03.what-to-use' }/>
           </ApArticle>
-          <Footer l={ l } />
+          <Footer l={ l }/>
         </ApViewBody>
       </ApView>
     )
-  },
-  componentDidMount () {
+  }
 
-  },
 
-  _renderSection (id, title, markdownName) {
+
+  static Section ({ id, title = null, markdownName }) {
     return (
       <ApSection id={ id }>
         <ApSectionHeader>{ title }</ApSectionHeader>
         <ApSectionBody>
-          <Markdown src={ markdownService.getMarkdown(markdownName) }></Markdown>
+          <Markdown src={ markdownService.getMarkdown(markdownName) }/>
         </ApSectionBody>
       </ApSection>
     )
   }
-})
+}
 
 module.exports = SplashView
 

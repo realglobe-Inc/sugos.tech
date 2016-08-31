@@ -1,7 +1,19 @@
 @import "variables/colors";
+@import "variables/sizes";
 
 body {
   padding: 8px;
+
+  .ap-page {
+    position: static;
+    width: inherit;
+    height: inherit;
+    overflow: inherit;
+    left: initial;
+    right: initial;
+    top: initial;
+    bottom: initial;
+  }
 }
 
 a {
@@ -13,6 +25,21 @@ a {
 
 img {
   max-width: 100%;
+}
+
+#github-link {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 44;
+  display: inline-block;
+  width: $github-link-size;
+  height: $github-link-size;
+  img {
+    display: inline-block;
+    width: $github-link-size;
+    height: $github-link-size;
+  }
 }
 
 @import "./components/header";
