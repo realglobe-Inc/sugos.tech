@@ -5,8 +5,10 @@ $border-color: #DDD;
 
 .guide-view {
   .guide-heading {
-    margin-bottom: 8px;
+    margin: 0 0 16px;
     padding: 0 4px;
+    border-bottom: 1px solid #CCC;
+    font-weight: normal;
   }
 
   .ap-accordion, .guide-accordion {
@@ -65,7 +67,7 @@ $border-color: #DDD;
 
   .guide-readme-link-list {
     list-style: none;
-    padding-right: 8px;
+    padding-left: 8px;
     $item-height: 32px;
     a {
       display: inline-block;

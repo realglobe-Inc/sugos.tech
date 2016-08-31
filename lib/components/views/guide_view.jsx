@@ -101,6 +101,7 @@ class GuideView extends Component {
                     onToggle: () => s.flipState('accordion.caller'),
                     markdown: markdownService.getMarkdown('caller')
                   } }/>,
+                  <br/>,
                   <h3 className='guide-heading'>{ l('headings.REFERENCE_README') }</h3>,
                   <GuideView.ReadMeLink />
                 ])

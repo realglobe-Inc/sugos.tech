@@ -29,7 +29,7 @@
   "dependencies": {
     "abind": "^1.0.0",
     "ape-highlighting": "^3.1.0",
-    "apeman-react-basic": "^10.2.2",
+    "apeman-react-basic": "^10.2.3",
     "apeman-react-decorative": "^2.0.10",
     "apeman-react-handy": "^5.0.2",
     "apeman-react-markdown": "^2.0.1",
