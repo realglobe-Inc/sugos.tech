@@ -55,8 +55,6 @@ class SplashView extends Component {
     )
   }
 
-
-
   static Section ({ id, title = null, markdownName }) {
     return (
       <ApSection id={ id }>

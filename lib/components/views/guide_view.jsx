@@ -109,7 +109,7 @@ class GuideView extends Component {
 
               {
                 _ifToggle('TIPS', [
-                  'No tips available yet'
+                  <GuideView.Tip markdown={ markdownService.getMarkdown('tip-module-variations') } />
                 ])
               }
             </ApArticle>
@@ -177,6 +177,14 @@ class GuideView extends Component {
           </div>
         </ApSectionBody>
       </ApSection>
+    )
+  }
+
+  static Tip ({ markdown }) {
+    return (
+      <div className="guide-tip">
+      <Markdown src={ markdown }/>
+      </div>
     )
   }
 

@@ -81,6 +81,13 @@ $border-color: #DDD;
       margin-right: 4px;
     }
   }
+
+  .guide-tip {
+    margin-bottom: 16px;
+    h2 {
+      border-bottom: 1px solid #555;
+    }
+  }
 }
 
 @media (min-width: $small-media-width) {
