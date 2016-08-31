@@ -29,9 +29,7 @@ class GuideView extends Component {
     super(props)
     const s = this
     abind(s)
-    s.state = restore(STORAGE_KEY) || {
-        toggle: 'QUICK_START'
-      }
+    s.state = restore(STORAGE_KEY) || { toggle: 'QUICK_START' }
   }
 
   render () {
@@ -102,7 +100,9 @@ class GuideView extends Component {
                     open: state[ 'accordion.caller' ],
                     onToggle: () => s.flipState('accordion.caller'),
                     markdown: markdownService.getMarkdown('caller')
-                  } }/>
+                  } }/>,
+                  <h3 className='guide-heading'>{ l('headings.REFERENCE_README') }</h3>,
+                  <GuideView.ReadMeLink />
                 ])
               }
 
@@ -192,6 +192,28 @@ class GuideView extends Component {
           <Markdown src={ markdown }/>
         </ApAccordionBody>
       </ApAccordion>
+    )
+  }
+
+  static ReadMeLink () {
+    let links = {
+      'SUGO-Hub': 'https://github.com/realglobe-Inc/sugo-hub#readme',
+      'SUGO-Actor': 'https://github.com/realglobe-Inc/sugo-actor#readme',
+      'SUGO-Caller': 'https://github.com/realglobe-Inc/sugo-caller#readme'
+    }
+    return (
+      <ul className='guide-readme-link-list'>
+        {
+          Object.keys(links).map((name) => (
+            <li key={ name }>
+              <a href={ links[ name ] }>
+                <img src="images/GitHub-Mark-64px.png" alt=""/>
+                README of { name }
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     )
   }
 }

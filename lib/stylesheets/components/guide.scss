@@ -9,7 +9,7 @@ $border-color: #DDD;
     padding: 0 4px;
   }
 
-  .ap-accordion ap-accordion-closed, .guide-accordion {
+  .ap-accordion, .guide-accordion {
     margin-bottom: 16px;
   }
 
@@ -60,6 +60,20 @@ $border-color: #DDD;
     }
     .guide-snippet {
       padding: 0 $side-padding;
+    }
+  }
+
+  .guide-readme-link-list {
+    $item-height: 32px;
+    a {
+      display: inline-block;
+      line-height: $item-height;
+    }
+    img {
+      height: $item-height / 2;
+      vertical-align: middle;
+      display: inline-block;
+      margin-right: 2px;
     }
   }
 }
