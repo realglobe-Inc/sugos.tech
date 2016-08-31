@@ -17,6 +17,7 @@ import {
 import {description} from 'sugos/package.json'
 import Markdown, {EOL} from '../fragments/markdown'
 import Footer from '../fragments/footer'
+import SNS from '../fragments/sns'
 import {singleton as linkService} from '../../services/link_service'
 
 import {singleton as snippetService} from '../../services/snippet_service'
@@ -42,6 +43,7 @@ class SplashView extends Component {
               <ApButton href={ _link('docs.html') }> { l('buttons.GET_STARTED') } </ApButton>
             </p>
           </ApJumbotron>
+          <SNS />
           <ApArticle>
             <SplashView.Section pathname={ pathname }
                                 id='splash-about-section'
