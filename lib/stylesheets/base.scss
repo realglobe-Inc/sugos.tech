@@ -14,6 +14,12 @@ body {
     top: initial;
     bottom: initial;
   }
+
+  .scrolling-anchor {
+    position: relative;
+    top: -84px;
+    display: block;
+  }
 }
 
 a {
@@ -39,6 +45,14 @@ img {
     display: inline-block;
     width: $github-link-size;
     height: $github-link-size;
+  }
+}
+
+@media (min-width: $small-media-width) {
+  body {
+    .scrolling-anchor {
+      top: $header-height * -1;
+    }
   }
 }
 

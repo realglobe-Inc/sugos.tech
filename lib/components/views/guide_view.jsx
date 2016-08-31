@@ -119,7 +119,7 @@ class GuideView extends Component {
                   />,
                   ...tips.map((tip) =>
                     <GuideView.Tip key={tip}
-                                   id={ spinalcase(tip) }
+                                   name={ spinalcase(tip) }
                                    markdown={ markdownService.getMarkdown(tip) }/>
                   )
                 ])
@@ -173,7 +173,7 @@ class GuideView extends Component {
                  className='guide-section'
                  key={ name }
       >
-        <a name={ name }>
+        <a name={ name } id={ name } className="scrolling-anchor">
         </a>
         <ApSectionHeader>{ title }</ApSectionHeader>
         <ApSectionBody>
@@ -209,12 +209,12 @@ class GuideView extends Component {
     )
   }
 
-  static Tip ({ id, markdown }) {
+  static Tip ({ name, markdown }) {
     return (
       <div className="guide-tip"
-           id={ `guide-tip-${id}` }
+           id={ `guide-tip-${name}` }
       >
-        <a name={id} className="guide-tip-anchor"></a>
+        <a name={name} id={ name } className="guide-tip-anchor"></a>
         <Markdown src={ markdown }/>
       </div>
     )
