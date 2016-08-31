@@ -15,6 +15,7 @@ body {
     bottom: initial;
   }
 
+  .md-heading-link,
   .scrolling-anchor {
     position: relative;
     top: -84px;
@@ -50,6 +51,7 @@ img {
 
 @media (min-width: $small-media-width) {
   body {
+    .md-heading-link,
     .scrolling-anchor {
       top: $header-height * -1;
     }

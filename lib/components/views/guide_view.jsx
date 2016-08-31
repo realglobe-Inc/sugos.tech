@@ -87,34 +87,38 @@ class GuideView extends Component {
               }
               {
                 _ifToggle('REFERENCES', [
-                  <h3 className='guide-heading'>{ l('headings.REFERENCE_API') }</h3>,
+                  <h3 className='guide-heading' key='heading-api'>{ l('headings.REFERENCE_API') }</h3>,
                   <GuideView.Accordion key='01' name='hub-api' { ...{
+                    pathname,
                     title: l('accordions.HUB_API'),
                     open: state[ 'accordion.hub' ],
                     onToggle: () => s.flipState('accordion.hub'),
                     markdown: markdownService.getMarkdown('hub')
                   } }/>,
                   <GuideView.Accordion key='02' name='actor-api' { ...{
+                    pathname,
                     title: l('accordions.ACTOR_API'),
                     open: state[ 'accordion.actor' ],
                     onToggle: () => s.flipState('accordion.actor'),
                     markdown: markdownService.getMarkdown('actor')
                   } }/>,
                   <GuideView.Accordion key='03' name='caller-api' { ...{
+                    pathname,
                     title: l('accordions.CALLER_API'),
                     open: state[ 'accordion.caller' ],
                     onToggle: () => s.flipState('accordion.caller'),
                     markdown: markdownService.getMarkdown('caller')
                   } }/>,
-                  <br/>,
-                  <h3 className='guide-heading'>{ l('headings.REFERENCE_README') }</h3>,
-                  <GuideView.ReadMeLink />
+                  <br key="br-01"/>,
+                  <h3 className='guide-heading' key="heading-readme">{ l('headings.REFERENCE_README') }</h3>,
+                  <GuideView.ReadMeLink key='readme-link'/>
                 ])
               }
 
               {
                 _ifToggle('TIPS', [
                   <GuideView.TipList tips={ tips }
+                                     key='list'
                                      pathname={ pathname }
                   />,
                   ...tips.map((tip) =>
@@ -220,7 +224,8 @@ class GuideView extends Component {
     )
   }
 
-  static Accordion ({ name, title, open, onToggle, markdown }) {
+  static Accordion ({ name, title, open, onToggle, markdown, pathname }) {
+    markdown = markdown.replace(/\]\(#/g, `](${pathname}#`)
     return (
       <ApAccordion key={ name } open={ open }
                    className='guide-accordion'

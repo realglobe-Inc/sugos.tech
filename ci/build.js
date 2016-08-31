@@ -37,6 +37,7 @@ let isForked = !!process.send
 runTasks('build', [
   () => coz.render([
     '.*.bud',
+    'assert/**/.*.bud',
     'lib/**/.*.bud',
     'test/.*.bud'
   ]),
