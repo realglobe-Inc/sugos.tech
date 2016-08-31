@@ -14,12 +14,18 @@ import Markdown, {EOL} from '../fragments/markdown'
 import Video from '../fragments/video'
 import VideoCanvas from '../fragments/video_canvas'
 import Joiner from '../fragments/joiner'
+import {get} from 'bwindow'
 import {DOMINANT} from '../../constants/color_constants'
 import {singleton as markdownService} from '../../services/markdown_service'
 
 const debug = require('debug')('sg:component:showcase')
 
 const cases = require('../data/cases.json')
+
+const scrollTargets = () => [
+  get('window.document'),
+  get('window.document.body')
+].filter(Boolean)
 
 const ShowcaseView = React.createClass({
   mixins: [],
@@ -36,7 +42,7 @@ const ShowcaseView = React.createClass({
     return (
       <ApView className='showcase-view'
               spinning={ !s.mounted }
-              onScroll={s._handleScroll}
+              onScroll={ s._handleScroll }
       >
         <ApViewHeader titleText={ l('titles.SHOWCASE_TITLE') }/>
         <ApViewBody>
@@ -60,6 +66,8 @@ const ShowcaseView = React.createClass({
     const s = this
     // defines mounted value
     s.mounted = true
+
+    scrollTargets().forEach((target) => target.addEventListener('scroll', s._handleScroll))
 
     let ua = navigator.userAgent
     s.isIPhone = /(iPhone|iPod)/.test(ua)
@@ -103,6 +111,9 @@ const ShowcaseView = React.createClass({
 
   componentWillUnmount () {
     const s = this
+
+    scrollTargets().forEach((target) => target.removeEventListener('scroll', s._handleScroll))
+
     s.videos.forEach((video) => {
       s._pause(video)
       let { player } = video
@@ -265,7 +276,10 @@ const ShowcaseView = React.createClass({
   },
 
   _handleScroll (event) {
-    let { clientHeight } = event.target
+    let body = get('document.body')
+    let {
+      clientHeight = body && body.clientHeight
+    } = event.target
     this._updateInScreen(clientHeight)
   }
 })

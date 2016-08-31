@@ -21,12 +21,15 @@ import {singleton as linkService} from '../../services/link_service'
 
 import {singleton as snippetService} from '../../services/snippet_service'
 import {singleton as markdownService} from '../../services/markdown_service'
+import {get} from 'bwindow'
 
 class SplashView extends Component {
   render () {
     const s = this
     let { l } = s.props
     let _link = (...args) => linkService.resolveHtmlLink(...args)
+
+    let pathname = get('location.pathname')
     return (
       <ApView className='splash-view'>
         <ApViewBody>
@@ -40,12 +43,15 @@ class SplashView extends Component {
             </p>
           </ApJumbotron>
           <ApArticle>
-            <SplashView.Section id='splash-about-section'
+            <SplashView.Section pathname={ pathname }
+                                id='splash-about-section'
                                 markdownName='01.about-this'/>
-            <SplashView.Section id='splash-how-section'
+            <SplashView.Section pathname={ pathname }
+                                id='splash-how-section'
                                 title={ l('captions.HOW_IT_WORKS') }
                                 markdownName={ '02.how-it-works' }/>
-            <SplashView.Section id='splash-why-section'
+            <SplashView.Section pathname={ pathname }
+                                id='splash-why-section'
                                 title={ l('captions.WHAT_TO_USE') }
                                 markdownName={ '03.what-to-use' }/>
           </ApArticle>
@@ -55,12 +61,14 @@ class SplashView extends Component {
     )
   }
 
-  static Section ({ id, title = null, markdownName }) {
+  static Section ({ pathname, id, title = null, markdownName }) {
+    let markdown = markdownService.getMarkdown(markdownName)
+    markdown = markdown && markdown.replace(/\]\(\.\//g, `](${pathname}/../`)
     return (
       <ApSection id={ id }>
         <ApSectionHeader>{ title }</ApSectionHeader>
         <ApSectionBody>
-          <Markdown src={ markdownService.getMarkdown(markdownName) }/>
+          <Markdown src={ markdown }/>
         </ApSectionBody>
       </ApSection>
     )
