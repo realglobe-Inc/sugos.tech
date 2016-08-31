@@ -64,6 +64,8 @@ $border-color: #DDD;
   }
 
   .guide-readme-link-list {
+    list-style: none;
+    padding-right: 8px;
     $item-height: 32px;
     a {
       display: inline-block;
@@ -72,8 +74,9 @@ $border-color: #DDD;
     img {
       height: $item-height / 2;
       vertical-align: middle;
-      display: inline-block;
-      margin-right: 2px;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 4px;
     }
   }
 }
