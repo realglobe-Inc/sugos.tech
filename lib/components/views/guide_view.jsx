@@ -22,8 +22,7 @@ import Markdown, {EOL} from '../fragments/markdown'
 import {singleton as snippetService} from '../../services/snippet_service'
 import {singleton as markdownService} from '../../services/markdown_service'
 import {spinalcase} from 'stringcase'
-
-const STORAGE_KEY = 'guide.state'
+import {GUIDE_STATE_KEY} from '../../constants/storage_constants'
 
 const tips = [
   'tip-module-variations'
@@ -34,7 +33,7 @@ class GuideView extends Component {
     super(props)
     const s = this
     abind(s)
-    s.state = restore(STORAGE_KEY) || { toggle: 'QUICK_START' }
+    s.state = restore(GUIDE_STATE_KEY) || { toggle: 'QUICK_START' }
   }
 
   render () {
@@ -140,7 +139,7 @@ class GuideView extends Component {
   // ------------------
   componentDidUpdate () {
     const s = this
-    save(STORAGE_KEY, s.state)
+    save(GUIDE_STATE_KEY, s.state)
   }
 
   // ------------------

@@ -50,7 +50,7 @@
     "sg-react": "^1.1.1",
     "sg-react-components": "^1.3.9",
     "stringcase": "^3.0.1",
-    "sugos-assets": "^2.0.3"
+    "sugos-assets": "^2.0.4"
   },
   "devDependencies": {
     "ababel": "^1.0.25",
@@ -75,7 +75,7 @@
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
     "sg-karma": "^1.0.4",
-    "sg-templates": "^1.2.1",
+    "sg-templates": "^1.2.2",
     "sg-travis": "^1.1.27",
     "sugo-actor": "^4.4.2",
     "sugo-caller": "^3.0.3",

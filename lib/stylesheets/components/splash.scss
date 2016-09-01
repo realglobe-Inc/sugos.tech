@@ -11,7 +11,9 @@
     text-align: center;
     color: white;
     margin-bottom: 0;
+
   }
+
   $large-font-size: 72px;
   .ap-jumbotron h1,
   .ap-jumbotron-title {
@@ -24,7 +26,7 @@
   }
 
   .ap-jumbotron-filter {
-    background-color: $dominant-color;
+    background-color: rgba($dominant-color, 0.9)
   }
 
   .ap-view-body {

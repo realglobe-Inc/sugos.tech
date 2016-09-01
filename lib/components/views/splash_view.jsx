@@ -14,12 +14,15 @@ import {
   ApJumbotron, ApJumbotronTitle, ApJumbotronText,
   ApSection, ApSectionHeader, ApSectionBody
 } from 'apeman-react-basic'
+import {purge} from 'bstorage'
 import {description} from 'sugos/package.json'
 import Markdown, {EOL} from '../fragments/markdown'
 import Footer from '../fragments/footer'
 import SNS from '../fragments/sns'
-import {singleton as linkService} from '../../services/link_service'
 
+import {GUIDE_STATE_KEY} from '../../constants/storage_constants'
+
+import {singleton as linkService} from '../../services/link_service'
 import {singleton as snippetService} from '../../services/snippet_service'
 import {singleton as markdownService} from '../../services/markdown_service'
 import {get} from 'bwindow'
@@ -40,7 +43,9 @@ class SplashView extends Component {
             <ApJumbotronTitle className='logo-font'>SUGOS</ApJumbotronTitle>
             <ApJumbotronText>{ description }</ApJumbotronText>
             <p className='splash-button-container'>
-              <ApButton href={ _link('docs.html') }> { l('buttons.GET_STARTED') } </ApButton>
+              <ApButton href={ _link('docs.html') }
+                        onTap={ () => purge(GUIDE_STATE_KEY) }
+              > { l('buttons.GET_STARTED') } </ApButton>
             </p>
           </ApJumbotron>
           <SNS />
