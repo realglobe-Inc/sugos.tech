@@ -23,7 +23,8 @@ const ascss = require('ascss')
 const abrowserify = require('abrowserify')
 const amap = require('amap')
 const loc = require('../loc')
-const lang = String(process.env.LANG || 'en').split(/[_\.]/g).shift()
+// const lang = String(process.env.LANG || 'en').split(/[_\.]/g).shift()
+const lang ='en'
 if (!loc[ lang ]) {
   throw new Error(`Unknown lang: ${lang}`)
 }
