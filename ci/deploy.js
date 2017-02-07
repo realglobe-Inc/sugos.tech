@@ -17,7 +17,6 @@ const ghPagesDir = 'doc/ghpages'
 
 apeTasking.runTasks('deploy', [
   () => execcli('rm', [ '-rf', ghPagesDir ]),
-  () => execcli('mkdir', [ '-p', ghPagesDir ]),
   () => execcli('cp', [ '-r', publicDir, ghPagesDir ]),
   () => apeDeploying.deployGhPages(ghPagesDir)
 ], true)
