@@ -12,15 +12,12 @@ const apeTasking = require('ape-tasking')
 const apeDeploying = require('ape-deploying')
 const { execcli } = apeTasking
 
-// For proxy (see https://github.com/comsysto/github-pages-basic-auth-proxy )
-const OBFUSCATOR = '9ebb3fa7-66d9-4554-8b86-fb2308040afe'
-
 const publicDir = 'public'
 const ghPagesDir = 'doc/ghpages'
 
 apeTasking.runTasks('deploy', [
   () => execcli('rm', [ '-rf', ghPagesDir ]),
   () => execcli('mkdir', [ '-p', ghPagesDir ]),
-  () => execcli('cp', [ '-r', publicDir, `${ghPagesDir}/${OBFUSCATOR}` ]),
+  () => execcli('cp', [ '-r', publicDir, ghPagesDir ]),
   () => apeDeploying.deployGhPages(ghPagesDir)
 ], true)
