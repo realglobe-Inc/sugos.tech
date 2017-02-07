@@ -10,7 +10,6 @@ import {singleton as redirectService} from '../services/redirect_service'
 const CONTAINER_ID = 'docs-wrap'
 
 once('DOMContentLoaded', () => {
-  redirectService.redirectIfNotAuth()
   let { locale } = window
   mount(CONTAINER_ID, DocsComponent, {
     locale

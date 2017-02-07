@@ -7,7 +7,6 @@ import {singleton as redirectService} from '../services/redirect_service'
 const CONTAINER_ID = 'index-wrap'
 
 once('DOMContentLoaded', () => {
-  redirectService.redirectIfNotAuth()
   let { locale } = window
   mount(CONTAINER_ID, IndexComponent, {
     locale
