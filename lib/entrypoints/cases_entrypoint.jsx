@@ -15,7 +15,6 @@ window.requestAnimationFrame = polyfillService.defineRequestAnimationFrame()
 window.cancelAnimationFrame = polyfillService.defineCancelAnimationFrame()
 
 once('DOMContentLoaded', () => {
-  redirectService.redirectIfNotAuth()
   let { locale } = window
   mount(CONTAINER_ID, CasesComponent, {
     locale
