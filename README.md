@@ -110,10 +110,10 @@ This software is released under the [MIT License](https://github.com/realglobe-I
 Links
 ------
 
-+ [sugos][sugos_url]
-+ [sugos-index][sugos_index_url]
++ [SUGOS][sugos_url]
++ [Realglobe, Inc.][realglobe,_inc__url]
 
 [sugos_url]: https://github.com/realglobe-Inc/sugos
-[sugos_index_url]: https://github.com/realglobe-Inc/sugos-index
+[realglobe,_inc__url]: http://realglobe.jp
 
 <!-- Links End -->
