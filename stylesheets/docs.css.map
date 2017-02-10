@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "docs.css",
+	"sources": [
+		"../../lib/stylesheets/docs.scss",
+		"../../lib/stylesheets/variables/colors.scss"
+	],
+	"sourcesContent": [
+		"@import \"./variables/colors\";",
+		"$dominant-color: #DEC010;\n$dominant-dark-color: #98820d;\n\n$accent-color: #003cce;\n$accent-light-color: #4a7fff;\n"
+	],
+	"mappings": "",
+	"names": []
+}
