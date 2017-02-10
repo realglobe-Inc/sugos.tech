@@ -99,7 +99,7 @@ $ npm start
 
 License
 -------
-This software is released under the [MIT License](https://github.com/realglobe-Inc/sugos.tech/blob/master/LICENSE).
+This software is released under the [Apache-2.0 License](https://github.com/realglobe-Inc/sugos.tech/blob/master/LICENSE).
 
 <!-- LICENSE End -->
 
@@ -111,9 +111,11 @@ Links
 ------
 
 + [SUGOS][sugos_url]
++ [SUGOS Tutorials][s_u_g_o_s_tutorials_url]
 + [Realglobe, Inc.][realglobe,_inc__url]
 
 [sugos_url]: https://github.com/realglobe-Inc/sugos
+[s_u_g_o_s_tutorials_url]: https://github.com/realglobe-Inc/sugos-tutorial
 [realglobe,_inc__url]: http://realglobe.jp
 
 <!-- Links End -->

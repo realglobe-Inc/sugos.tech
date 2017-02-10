@@ -1,20 +1,6 @@
 {
   "en": {
-    "_": {
-      "_MASKED": "**********",
-      "ACCOUNT": "Account",
-      "EMAIL": "Email",
-      "FACEBOOK": "Facebook",
-      "GOOGLE": "Google",
-      "PASSWORD": "Password",
-      "PROFILE": "Profile",
-      "SIGNIN": "Sign In",
-      "SIGNOUT": "Sign Out",
-      "SIGNUP": "Sign Up",
-      "SITE": "__name_of_your_site___",
-      "TWITTER": "Twitter",
-      "USERNAME": "Username"
-    },
+    "_": {},
     "$lang": "en",
     "accordions": {
       "ACTOR_API": "API of SUGO-Actor",
@@ -22,50 +8,13 @@
       "HUB_API": "API of SUGO-Hub"
     },
     "buttons": {
-      "CONFIRM_NO": "No",
-      "CONFIRM_YES": "Yes",
-      "DO_ADD": "Add",
-      "DO_BACK": "Back",
-      "DO_CANCEL": "Cancel",
-      "DO_DESTROY": "Destroy",
-      "DO_EDIT": "Edit",
-      "DO_LOAD_MORE": "Load More",
-      "DO_NEXT": "Next",
-      "DO_REFRESH": "Refresh",
-      "DO_RESEND": "Send Again",
-      "DO_SAVE": "Save",
-      "DO_SEARCH": "Search",
-      "DO_SIGNIN": "Sign In",
-      "DO_SIGNUP": "Sign Up",
-      "GET_STARTED": "Get Started",
-      "SHOW_ACCOUNT_INPUT": "Register Your Profile.",
-      "SHOW_DESTROY": "Destroy",
-      "SHOW_EDIT": "Edit",
-      "SHOW_PROFILE_INPUT": "Input Profile Info",
-      "SHOW_SIGNIN": "Sign In",
-      "SHOW_SIGNUP": "Sign Up",
-      "SIGNIN_FACEBOOK": "Sign In with Facebook",
-      "SIGNIN_GOOGLE": "Sign In with Google",
-      "SIGNIN_TWITTER": "Sign In with Twitter"
+      "GET_STARTED": "Get Started"
     },
     "captions": {
-      "ABOUT_SYSTEM": "About System",
-      "ABOUT_TERMS": "About Terms",
-      "ACCOUNT_BASIC_INFO": "Basic Info",
-      "ACCOUNT_INFO": "Account Info",
-      "ACCOUNT_PROFILE_INFO": "Profile",
       "HOW_IT_WORKS": "How It Works",
-      "OTHER_MENU": "Menu",
       "WHAT_TO_USE": "What to Use"
     },
-    "checks": {
-      "DESTROY_CHECK": "Yes, I am sure to destroy"
-    },
-    "dropdown": {
-      "ACCOUNT": "Account Info",
-      "SIGNOUT": "Sign Out"
-    },
-    "errorDetails": {},
+    "dropdown": {},
     "errors": {
       "RESOURCE_DATA_CONFLICT_ERROR": "RESOURCE_DATA_CONFLICT_ERROR",
       "RESOURCE_DATA_ERROR": "RESOURCE_DATA_ERROR",
@@ -102,69 +51,29 @@
       "COPY_RIGHT": "Copyright © 2016 REALGLOBE. All Rights Reserved",
       "LINKS_TITLE": "Links"
     },
-    "guides": {
-      "RECOVER_SEND": "Enter your email address and we will send you a link to reset your password.",
-      "RECOVER_SEND_DONE": "Password reset link send to the following address"
-    },
+    "guides": {},
     "headings": {
       "REFERENCE_API": "APIs",
       "REFERENCE_README": "READMEs"
     },
     "jumbotron": {},
-    "labels": {
-      "CAPTCHA": "Captcha",
-      "EMAIL": "Email",
-      "HOMEPAGE": "homepage",
-      "PASSWORD": "Password",
-      "PROFILE_IMAGE": "Profile Image",
-      "PROFILE_NAME": "Display Name",
-      "SIGN_KEY": "Username or Email",
-      "USER_KEY": "Username"
-    },
+    "labels": {},
     "leads": {
       "QUICK_START_LEAD_01": "Three steps to start"
     },
-    "links": {
-      "CHANGE_EMAIL": "Change",
-      "CHANGE_PASSWORD": "Change",
-      "RECOVER_LINK": "Forget password?",
-      "RESIGN_LINK": "Resign",
-      "RETURN_TO_TOP": "Return to Top",
-      "SHOW_RESIGN": "Delete account"
-    },
+    "links": {},
     "logo": {
       "LOGO": "SUGOS"
     },
-    "menu": {
-      "ABOUT": "About",
-      "ABOUT_PRIVACY": "Privacy Policy",
-      "ABOUT_TERMS": "Terms of Use",
-      "SIGNOUT": "Sign Out"
-    },
-    "messages": {
-      "PROFILE_NOT_REGISTERED": "Your profile is not registered yet.",
-      "SURE_TO_DESTROY": "Once destroyed, there is no going back. Please be certain.",
-      "VERIFY_DONE": "Your verify is succeeded.",
-      "VERIFY_EMAIL_DONE": "Your email has successfully verified."
-    },
-    "notices": {
-      "NEEDS_VERIFY_EMAIL": "Your email is not verified. Confirm the verification mail we sent and follow the link there."
-    },
-    "org": {
-      "ORG_EMAIL": "__your_org_email__",
-      "ORG_HOMEPAGE": "__your_org_homepage__",
-      "ORG_NAME": "__your_org_name__"
-    },
+    "menu": {},
+    "messages": {},
+    "notices": {},
+    "org": {},
     "pages": {
       "CASES_PAGE": "Cases",
       "DOCS_PAGE": "Docs"
     },
-    "placeholders": {
-      "CAPTCHA_TEXT": "(Type the numbers above)"
-    },
-    "signature": {
-      "MAIL_BY": "__your_org_name__"
-    },
+    "placeholders": {},
     "status": {
       "400": "Bad Request",
       "401": "Authentication is required",
@@ -173,9 +82,6 @@
       "500": "Something wrong with the server",
       "502": "Bad gateway error",
       "503": "Server not available"
-    },
-    "subjects": {
-      "VERIFY_EMAIL_MAIL": "[__name_of_your_site___] Verify your email address"
     },
     "titles": {
       "CASE_CURL_RAPIRO_TITLE": "Control RAPIRO Robot via curl Command",
@@ -195,35 +101,9 @@
       "GUIDE_CLOUD_TITLE": "Setup SUGO-Hub",
       "GUIDES_TITLE": "Guidance Documents of SUGOS",
       "SHOWCASE_TITLE": "Use Cases of SUGOS",
-      "SIGNIN": "Sign In",
-      "SIGNUP": "Sign Up",
       "UI_TITLE": "SUGOS"
     },
-    "toasts": {
-      "CAPTCHA_VERIFY_FAILED": "Captcha verify did fail.",
-      "CONNECTION_FAILED": "Network unavailable.",
-      "DESTROY_FAILED": "Destroyed failed.",
-      "DESTROY_SUCCESS": "Destroyed successfully.",
-      "RECOVER_RESET_FAILED": "Failed to reset password",
-      "RECOVER_RESET_SUCCESS": "Password did reset.",
-      "RECOVER_SEND_FAILED": "Fail to send password reset mail.",
-      "RECOVER_SEND_SUCCESS": "Password reset mail sent.",
-      "RESOURCE_NOT_FOUND": "Resource not found.",
-      "SAVE_FAILED": "Saved failed.",
-      "SAVE_SUCCESS": "Saved successfully.",
-      "SIGNIN_FAILED": "Failed to sign in.",
-      "SIGNIN_SUCCESS": "Sign in succeeded.",
-      "SIGNOUT_FAILED": "Failed to sign out.",
-      "SIGNOUT_SUCCESS": "Sign out done.",
-      "SIGNUP_FAILED": "Failed to sign up.",
-      "SIGNUP_SUCCESS": "Sign up done.",
-      "UNEXPECTED_ERROR": "Unexpected error occurred.",
-      "UPDATE_SUCCESS": "Updated successfully.",
-      "VALIDATION_FAILED": "Invalid form.",
-      "VERIFY_SEND_FAILED": "Failed to send verify.",
-      "VERIFY_SEND_SUCCESS": "Verify email was sent.",
-      "VERIFY_SUCCESS": "Verify succeeded."
-    },
+    "toasts": {},
     "toggles": {
       "QUICK_START": "Quick Start",
       "REFERENCES": "References",
@@ -233,21 +113,7 @@
     "$fallback": {}
   },
   "ja": {
-    "_": {
-      "_MASKED": "**********",
-      "ACCOUNT": "アカウント",
-      "EMAIL": "メールアドレス",
-      "FACEBOOK": "Facebook",
-      "GOOGLE": "Google",
-      "PASSWORD": "パスワード",
-      "PROFILE": "プロフィール",
-      "SIGNIN": "ログイン",
-      "SIGNOUT": "ログアウト",
-      "SIGNUP": "新規登録",
-      "SITE": "__name_of_your_site___",
-      "TWITTER": "Twitter",
-      "USERNAME": "ユーザー名"
-    },
+    "_": {},
     "$lang": "ja",
     "accordions": {
       "ACTOR_API": "API of SUGO-Actor",
@@ -255,50 +121,13 @@
       "HUB_API": "API of SUGO-Hub"
     },
     "buttons": {
-      "CONFIRM_NO": "いいえ",
-      "CONFIRM_YES": "はい",
-      "DO_ADD": "追加する",
-      "DO_BACK": "戻る",
-      "DO_CANCEL": "キャンセルする",
-      "DO_DESTROY": "削除する",
-      "DO_EDIT": "編集する",
-      "DO_LOAD_MORE": "もっと読み込む",
-      "DO_NEXT": "次へ",
-      "DO_REFRESH": "再読み込み",
-      "DO_RESEND": "再送信する",
-      "DO_SAVE": "保存する",
-      "DO_SEARCH": "検索する",
-      "DO_SIGNIN": "ログイン",
-      "DO_SIGNUP": "登録する",
-      "GET_STARTED": "始めてみる",
-      "SHOW_ACCOUNT_INPUT": "プロフィール情報の登録",
-      "SHOW_DESTROY": "削除",
-      "SHOW_EDIT": "編集",
-      "SHOW_PROFILE_INPUT": "プロフィール情報を入力する",
-      "SHOW_SIGNIN": "ログイン",
-      "SHOW_SIGNUP": "新規登録",
-      "SIGNIN_FACEBOOK": "Facebookでログインする",
-      "SIGNIN_GOOGLE": "Googleでログインする",
-      "SIGNIN_TWITTER": "Twitterでログインする"
+      "GET_STARTED": "始めてみる"
     },
     "captions": {
-      "ABOUT_SYSTEM": "システムについて",
-      "ABOUT_TERMS": "規約について",
-      "ACCOUNT_BASIC_INFO": "基本情報",
-      "ACCOUNT_INFO": "アカウント情報",
-      "ACCOUNT_PROFILE_INFO": "プロフィール",
       "HOW_IT_WORKS": "How It Works",
-      "OTHER_MENU": "メニュー",
       "WHAT_TO_USE": "What to Use"
     },
-    "checks": {
-      "DESTROY_CHECK": "はい、削除して問題ありません。"
-    },
-    "dropdown": {
-      "ACCOUNT": "アカウント情報",
-      "SIGNOUT": "ログアウト"
-    },
-    "errorDetails": {},
+    "dropdown": {},
     "errors": {
       "RESOURCE_DATA_CONFLICT_ERROR": "リソースデータ競合エラー",
       "RESOURCE_DATA_ERROR": "リソースデータエラー",
@@ -335,69 +164,29 @@
       "COPY_RIGHT": "Copyright © 2016 REALGLOBE. All Rights Reserved",
       "LINKS_TITLE": "Links"
     },
-    "guides": {
-      "RECOVER_SEND": "入力したメールアドレスにパスワードを初期化するためのリンクを送信します。",
-      "RECOVER_SEND_DONE": "パスワード初期化のためのリンクを以下のメールアドレスに送信しました。"
-    },
+    "guides": {},
     "headings": {
       "REFERENCE_API": "APIs",
       "REFERENCE_README": "READMEs"
     },
     "jumbotron": {},
-    "labels": {
-      "CAPTCHA": "Captcha",
-      "EMAIL": "メールアドレス",
-      "HOMEPAGE": "ホームページ",
-      "PASSWORD": "パスワード",
-      "PROFILE_IMAGE": "プロフィール画像",
-      "PROFILE_NAME": "表示名",
-      "SIGN_KEY": "ユーザー名またはメールアドレス",
-      "USER_KEY": "ユーザー名"
-    },
+    "labels": {},
     "leads": {
       "QUICK_START_LEAD_01": "クイックスタート手順"
     },
-    "links": {
-      "CHANGE_EMAIL": "変更",
-      "CHANGE_PASSWORD": "変更",
-      "RECOVER_LINK": "パスワード忘れ",
-      "RESIGN_LINK": "退会する",
-      "RETURN_TO_TOP": "トップに戻る",
-      "SHOW_RESIGN": "アカウントの削除"
-    },
+    "links": {},
     "logo": {
       "LOGO": "SUGOS"
     },
-    "menu": {
-      "ABOUT": "サービス情報",
-      "ABOUT_PRIVACY": "プライバシーポリシー",
-      "ABOUT_TERMS": "利用規約",
-      "SIGNOUT": "ログアウト"
-    },
-    "messages": {
-      "PROFILE_NOT_REGISTERED": "プロフィールが登録されていません",
-      "SURE_TO_DESTROY": "削除してもよろしいですか？一度削除すると復元できません。",
-      "VERIFY_DONE": "確認が完了しました。",
-      "VERIFY_EMAIL_DONE": "メールアドレスの確認が完了しました。"
-    },
-    "notices": {
-      "NEEDS_VERIFY_EMAIL": "メールアドレスの確認が完了していません。確認メールにあるリンクをクリックしてください。"
-    },
-    "org": {
-      "ORG_EMAIL": "__your_org_email__",
-      "ORG_HOMEPAGE": "__your_org_homepage__",
-      "ORG_NAME": "__your_org_name__"
-    },
+    "menu": {},
+    "messages": {},
+    "notices": {},
+    "org": {},
     "pages": {
       "CASES_PAGE": "事例",
       "DOCS_PAGE": "ドキュメント"
     },
-    "placeholders": {
-      "CAPTCHA_TEXT": "(上記画像の数字を入力)"
-    },
-    "signature": {
-      "MAIL_BY": "__your_org_name__"
-    },
+    "placeholders": {},
     "status": {
       "400": "不正なリクエスト",
       "401": "認証が必要です",
@@ -406,9 +195,6 @@
       "500": "サーバーでエラーが発生しました",
       "502": "ゲートウェイエラー",
       "503": "混雑中"
-    },
-    "subjects": {
-      "VERIFY_EMAIL_MAIL": "[__name_of_your_site___] メールアドレスの確認"
     },
     "titles": {
       "CASE_CURL_RAPIRO_TITLE": "Control RAPIRO Robot via curl Command",
@@ -428,35 +214,9 @@
       "GUIDE_CLOUD_TITLE": "Setup SUGO-Hub",
       "GUIDES_TITLE": "Guidance Documents of SUGOS",
       "SHOWCASE_TITLE": "SUGOSを使った事例",
-      "SIGNIN": "ログイン",
-      "SIGNUP": "新規登録",
       "UI_TITLE": "SUGOS"
     },
-    "toasts": {
-      "CAPTCHA_VERIFY_FAILED": "Captchaが一致しません",
-      "CONNECTION_FAILED": "通信に失敗しました。",
-      "DESTROY_FAILED": "削除に失敗しました。",
-      "DESTROY_SUCCESS": "削除しました。",
-      "RECOVER_RESET_FAILED": "パスワード再設定に失敗しました。",
-      "RECOVER_RESET_SUCCESS": "パスワード再設定が完了しました。",
-      "RECOVER_SEND_FAILED": "パスワード再設定メールの送信に失敗しました。",
-      "RECOVER_SEND_SUCCESS": "パスワード再設定メールを送信しました。",
-      "RESOURCE_NOT_FOUND": "リソースが見つかりません。",
-      "SAVE_FAILED": "保存に失敗しました",
-      "SAVE_SUCCESS": "保存しました。",
-      "SIGNIN_FAILED": "ログインに失敗しました。",
-      "SIGNIN_SUCCESS": "ログインしました。",
-      "SIGNOUT_FAILED": "ログアウトに失敗しました。",
-      "SIGNOUT_SUCCESS": "ログアウトしました。",
-      "SIGNUP_FAILED": "新規登録に失敗しました。",
-      "SIGNUP_SUCCESS": "新規登録しました。",
-      "UNEXPECTED_ERROR": "予期せぬエラーが発生しました。",
-      "UPDATE_SUCCESS": "更新しました。",
-      "VALIDATION_FAILED": "内容が不正です。",
-      "VERIFY_SEND_FAILED": "確認メールの送信に失敗しました。",
-      "VERIFY_SEND_SUCCESS": "確認メールを送信しました。",
-      "VERIFY_SUCCESS": "確認が完了しました。"
-    },
+    "toasts": {},
     "toggles": {
       "QUICK_START": "Quick Start",
       "REFERENCES": "References",
@@ -464,21 +224,7 @@
     },
     "$vars": {},
     "$fallback": {
-      "_": {
-        "_MASKED": "**********",
-        "ACCOUNT": "Account",
-        "EMAIL": "Email",
-        "FACEBOOK": "Facebook",
-        "GOOGLE": "Google",
-        "PASSWORD": "Password",
-        "PROFILE": "Profile",
-        "SIGNIN": "Sign In",
-        "SIGNOUT": "Sign Out",
-        "SIGNUP": "Sign Up",
-        "SITE": "__name_of_your_site___",
-        "TWITTER": "Twitter",
-        "USERNAME": "Username"
-      },
+      "_": {},
       "$lang": "en",
       "accordions": {
         "ACTOR_API": "API of SUGO-Actor",
@@ -486,50 +232,13 @@
         "HUB_API": "API of SUGO-Hub"
       },
       "buttons": {
-        "CONFIRM_NO": "No",
-        "CONFIRM_YES": "Yes",
-        "DO_ADD": "Add",
-        "DO_BACK": "Back",
-        "DO_CANCEL": "Cancel",
-        "DO_DESTROY": "Destroy",
-        "DO_EDIT": "Edit",
-        "DO_LOAD_MORE": "Load More",
-        "DO_NEXT": "Next",
-        "DO_REFRESH": "Refresh",
-        "DO_RESEND": "Send Again",
-        "DO_SAVE": "Save",
-        "DO_SEARCH": "Search",
-        "DO_SIGNIN": "Sign In",
-        "DO_SIGNUP": "Sign Up",
-        "GET_STARTED": "Get Started",
-        "SHOW_ACCOUNT_INPUT": "Register Your Profile.",
-        "SHOW_DESTROY": "Destroy",
-        "SHOW_EDIT": "Edit",
-        "SHOW_PROFILE_INPUT": "Input Profile Info",
-        "SHOW_SIGNIN": "Sign In",
-        "SHOW_SIGNUP": "Sign Up",
-        "SIGNIN_FACEBOOK": "Sign In with Facebook",
-        "SIGNIN_GOOGLE": "Sign In with Google",
-        "SIGNIN_TWITTER": "Sign In with Twitter"
+        "GET_STARTED": "Get Started"
       },
       "captions": {
-        "ABOUT_SYSTEM": "About System",
-        "ABOUT_TERMS": "About Terms",
-        "ACCOUNT_BASIC_INFO": "Basic Info",
-        "ACCOUNT_INFO": "Account Info",
-        "ACCOUNT_PROFILE_INFO": "Profile",
         "HOW_IT_WORKS": "How It Works",
-        "OTHER_MENU": "Menu",
         "WHAT_TO_USE": "What to Use"
       },
-      "checks": {
-        "DESTROY_CHECK": "Yes, I am sure to destroy"
-      },
-      "dropdown": {
-        "ACCOUNT": "Account Info",
-        "SIGNOUT": "Sign Out"
-      },
-      "errorDetails": {},
+      "dropdown": {},
       "errors": {
         "RESOURCE_DATA_CONFLICT_ERROR": "RESOURCE_DATA_CONFLICT_ERROR",
         "RESOURCE_DATA_ERROR": "RESOURCE_DATA_ERROR",
@@ -566,69 +275,29 @@
         "COPY_RIGHT": "Copyright © 2016 REALGLOBE. All Rights Reserved",
         "LINKS_TITLE": "Links"
       },
-      "guides": {
-        "RECOVER_SEND": "Enter your email address and we will send you a link to reset your password.",
-        "RECOVER_SEND_DONE": "Password reset link send to the following address"
-      },
+      "guides": {},
       "headings": {
         "REFERENCE_API": "APIs",
         "REFERENCE_README": "READMEs"
       },
       "jumbotron": {},
-      "labels": {
-        "CAPTCHA": "Captcha",
-        "EMAIL": "Email",
-        "HOMEPAGE": "homepage",
-        "PASSWORD": "Password",
-        "PROFILE_IMAGE": "Profile Image",
-        "PROFILE_NAME": "Display Name",
-        "SIGN_KEY": "Username or Email",
-        "USER_KEY": "Username"
-      },
+      "labels": {},
       "leads": {
         "QUICK_START_LEAD_01": "Three steps to start"
       },
-      "links": {
-        "CHANGE_EMAIL": "Change",
-        "CHANGE_PASSWORD": "Change",
-        "RECOVER_LINK": "Forget password?",
-        "RESIGN_LINK": "Resign",
-        "RETURN_TO_TOP": "Return to Top",
-        "SHOW_RESIGN": "Delete account"
-      },
+      "links": {},
       "logo": {
         "LOGO": "SUGOS"
       },
-      "menu": {
-        "ABOUT": "About",
-        "ABOUT_PRIVACY": "Privacy Policy",
-        "ABOUT_TERMS": "Terms of Use",
-        "SIGNOUT": "Sign Out"
-      },
-      "messages": {
-        "PROFILE_NOT_REGISTERED": "Your profile is not registered yet.",
-        "SURE_TO_DESTROY": "Once destroyed, there is no going back. Please be certain.",
-        "VERIFY_DONE": "Your verify is succeeded.",
-        "VERIFY_EMAIL_DONE": "Your email has successfully verified."
-      },
-      "notices": {
-        "NEEDS_VERIFY_EMAIL": "Your email is not verified. Confirm the verification mail we sent and follow the link there."
-      },
-      "org": {
-        "ORG_EMAIL": "__your_org_email__",
-        "ORG_HOMEPAGE": "__your_org_homepage__",
-        "ORG_NAME": "__your_org_name__"
-      },
+      "menu": {},
+      "messages": {},
+      "notices": {},
+      "org": {},
       "pages": {
         "CASES_PAGE": "Cases",
         "DOCS_PAGE": "Docs"
       },
-      "placeholders": {
-        "CAPTCHA_TEXT": "(Type the numbers above)"
-      },
-      "signature": {
-        "MAIL_BY": "__your_org_name__"
-      },
+      "placeholders": {},
       "status": {
         "400": "Bad Request",
         "401": "Authentication is required",
@@ -637,9 +306,6 @@
         "500": "Something wrong with the server",
         "502": "Bad gateway error",
         "503": "Server not available"
-      },
-      "subjects": {
-        "VERIFY_EMAIL_MAIL": "[__name_of_your_site___] Verify your email address"
       },
       "titles": {
         "CASE_CURL_RAPIRO_TITLE": "Control RAPIRO Robot via curl Command",
@@ -659,35 +325,9 @@
         "GUIDE_CLOUD_TITLE": "Setup SUGO-Hub",
         "GUIDES_TITLE": "Guidance Documents of SUGOS",
         "SHOWCASE_TITLE": "Use Cases of SUGOS",
-        "SIGNIN": "Sign In",
-        "SIGNUP": "Sign Up",
         "UI_TITLE": "SUGOS"
       },
-      "toasts": {
-        "CAPTCHA_VERIFY_FAILED": "Captcha verify did fail.",
-        "CONNECTION_FAILED": "Network unavailable.",
-        "DESTROY_FAILED": "Destroyed failed.",
-        "DESTROY_SUCCESS": "Destroyed successfully.",
-        "RECOVER_RESET_FAILED": "Failed to reset password",
-        "RECOVER_RESET_SUCCESS": "Password did reset.",
-        "RECOVER_SEND_FAILED": "Fail to send password reset mail.",
-        "RECOVER_SEND_SUCCESS": "Password reset mail sent.",
-        "RESOURCE_NOT_FOUND": "Resource not found.",
-        "SAVE_FAILED": "Saved failed.",
-        "SAVE_SUCCESS": "Saved successfully.",
-        "SIGNIN_FAILED": "Failed to sign in.",
-        "SIGNIN_SUCCESS": "Sign in succeeded.",
-        "SIGNOUT_FAILED": "Failed to sign out.",
-        "SIGNOUT_SUCCESS": "Sign out done.",
-        "SIGNUP_FAILED": "Failed to sign up.",
-        "SIGNUP_SUCCESS": "Sign up done.",
-        "UNEXPECTED_ERROR": "Unexpected error occurred.",
-        "UPDATE_SUCCESS": "Updated successfully.",
-        "VALIDATION_FAILED": "Invalid form.",
-        "VERIFY_SEND_FAILED": "Failed to send verify.",
-        "VERIFY_SEND_SUCCESS": "Verify email was sent.",
-        "VERIFY_SUCCESS": "Verify succeeded."
-      },
+      "toasts": {},
       "toggles": {
         "QUICK_START": "Quick Start",
         "REFERENCES": "References",

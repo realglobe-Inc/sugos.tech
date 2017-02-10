@@ -18,9 +18,6 @@ before_script:
 script:
 - ./ci/build.js
 - ./ci/test.js
-- ./ci/report.js
 after_success:
 - ./ci/travis/publish.js
 - ./ci/travis/push_sugos.js
-env:
-  secure: "b01tvn9gcIYIjr7w5YSSUGSEHa3WpMXPkJDsOsjLL/y2n8ttytXvVrettfvcG6JgUu/Q+OJs7GAoYNGRgJxNBBj3TwZxDtov2HFUIEgxKWgLEzuZS7jo5YJWIfkhsb+Ak70bMMIgQ8dWVBQjE4tvtssfxZKteY1VAq2gkaG1G/1EGNdW0zffpgw2/AEWBI3rrtWIJgPx4bKgQwNVIDqb9qEHUi8AmBMRC0ScusIjZPBvB+b8BCWRFqVKr6smoAoMrvvJZ4pYn1B07y7EDl7Y8/AKmFFURJMshgnCR8utjW1URBGLS0gOQXJgAFENasNMXZwd5h3pBmaRF23iG6ImUA4qFK2GIIhF2y97VIDrRgiI68Pmdkk++0dUdmKb12d+HW/k2BpwEIjUcWP8gUHvm4Ey8+Vur7i+vk8gT8fj0YoNcX2RkoLAKKzVWcp5+iIrmJoc/wKns8T0KNMvDE6hUifamPbxWWak4+d0axqjkFLLN1/VQNOIh3oiWyQFTb2hW7FBTAUbsEt7rBxnnk1CGcOJQfnfMhlqfZw7fvayEExaHH62eFFo7WblRPcsU8wkL9pRbVMx/VJWxRMICFh1f1v2yXQgDd4i4ELbS+jdiU1JWgIdwj75mM1K55MnpBB8UbJ86zzwlxY2HnQ4EuRoN3rYLsPyKz5jxqddaNt7BiQ="
